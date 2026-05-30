@@ -178,18 +178,20 @@
   </div>
 
   <div class="controls">
-    <div class="wrap inner">
-      <div class="search">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
-        <input id="q" type="search" placeholder="Search tools, tasks, or keywords…" autocomplete="off" />
+    <div class="wrap">
+      <div class="inner">
+        <div class="search">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+          <input id="q" type="search" placeholder="Search tools, tasks, or keywords…" autocomplete="off" />
+        </div>
+        <div class="filtgroup" id="ctxFilters"><span class="label">For</span></div>
+        <div class="filtgroup" id="costFilters"><span class="label">Cost</span></div>
+        <div class="filtgroup" id="lvlFilters"><span class="label">Level</span></div>
+        <button class="clear" id="clear" hidden>Reset</button>
+        <span class="count" id="count"></span>
       </div>
-      <div class="filtgroup" id="ctxFilters"><span class="label">For</span></div>
-      <div class="filtgroup" id="costFilters"><span class="label">Cost</span></div>
-      <div class="filtgroup" id="lvlFilters"><span class="label">Level</span></div>
-      <button class="clear" id="clear" hidden>Reset</button>
-      <span class="count" id="count"></span>
+      <nav class="catnav" id="catnav"></nav>
     </div>
-    <div class="wrap"><nav class="catnav" id="catnav"></nav></div>
   </div>
 
   <div class="wrap">
