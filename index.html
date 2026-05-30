@@ -20,7 +20,7 @@
   html{scroll-behavior:smooth}
   body{margin:0; background:var(--paper); color:var(--ink); font-family:"Public Sans",ui-sans-serif,system-ui,sans-serif; font-size:16px; line-height:1.55; -webkit-font-smoothing:antialiased}
   body::before{content:""; position:fixed; inset:0; pointer-events:none; z-index:0; opacity:.5; background-image:radial-gradient(rgba(31,27,22,.04) 1px, transparent 1px); background-size:4px 4px}
-  .wrap{max-width:1140px; margin:0 auto; padding:0 24px; position:relative; z-index:1}
+  .wrap{max-width:min(2000px,92vw); margin:0 auto; padding:0 clamp(24px,4vw,64px); position:relative; z-index:1}
   a{color:var(--purple); text-underline-offset:3px; text-decoration-thickness:1px}
   a:hover{color:var(--purple-soft)}
 
