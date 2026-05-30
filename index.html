@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>KIRIN AI Tools — Foster HMBA Field Guide</title>
+<meta name="description" content="A curated, maintained guide to AI tools for Foster Hybrid MBA students — find the right tool for any problem, personal, professional, or educational." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,900&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --paper:#f6f1e7; --card:#fffdf8; --ink:#1f1b16; --ink-soft:#5c5346;
+    --line:#ddd2bc; --line-soft:#e7ddca;
+    --purple:#4b2e83; --purple-soft:#6a4ea8; --gold:#b7a57a; --gold-deep:#8a6d1f;
+    --green:#3f6b3a; --amber:#9a6b15; --clay:#9c3b2e; --slate:#475569;
+    --shadow:0 1px 2px rgba(31,27,22,.05), 0 8px 24px -12px rgba(31,27,22,.18);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0; background:var(--paper); color:var(--ink); font-family:"Public Sans",ui-sans-serif,system-ui,sans-serif; font-size:16px; line-height:1.55; -webkit-font-smoothing:antialiased}
+  body::before{content:""; position:fixed; inset:0; pointer-events:none; z-index:0; opacity:.5; background-image:radial-gradient(rgba(31,27,22,.04) 1px, transparent 1px); background-size:4px 4px}
+  .wrap{max-width:1140px; margin:0 auto; padding:0 24px; position:relative; z-index:1}
+  a{color:var(--purple); text-underline-offset:3px; text-decoration-thickness:1px}
+  a:hover{color:var(--purple-soft)}
+
+  .topstrip{height:5px; background:linear-gradient(90deg,var(--purple) 0 60%,var(--gold) 60% 100%)}
+  header.site{padding:46px 0 18px}
+  .kicker{font-size:12px; letter-spacing:.22em; text-transform:uppercase; color:var(--gold-deep); font-weight:600; margin:0 0 14px}
+  h1{font-family:"Fraunces",serif; font-optical-sizing:auto; font-weight:900; font-size:clamp(40px,6.2vw,76px); line-height:.98; letter-spacing:-.015em; margin:0 0 16px}
+  h1 .amp{color:var(--purple); font-style:italic; font-weight:500}
+  .lede{font-size:clamp(17px,2vw,20px); max-width:62ch; color:var(--ink-soft); margin:0 0 10px}
+  .byline{font-size:14px; color:var(--ink-soft); margin-top:18px; padding-top:16px; border-top:1px solid var(--line)}
+  .byline b{color:var(--ink); font-weight:600}
+
+  .panels{display:grid; grid-template-columns:1.4fr 1fr; gap:20px; margin:30px 0 8px}
+  .panel{background:var(--card); border:1px solid var(--line); border-radius:14px; padding:22px 24px; box-shadow:var(--shadow)}
+  .panel h3{font-family:"Fraunces",serif; font-weight:600; font-size:21px; margin:0 0 10px; letter-spacing:-.01em}
+  .panel ol{margin:0; padding-left:20px} .panel ol li{margin:7px 0}
+  .panel.accent{background:#fbf7ec; border-color:var(--gold)}
+  .panel.accent h3{color:var(--gold-deep)}
+  .stack-note{font-size:14.5px; color:var(--ink-soft)} .stack-note b{color:var(--ink)}
+
+  .legend{display:flex; flex-wrap:wrap; gap:18px; font-size:13px; color:var(--ink-soft); margin:22px 2px 0}
+  .legend .dot{display:inline-block; width:9px; height:9px; border-radius:50%; margin-right:6px; vertical-align:middle}
+
+  /* recently added strip */
+  .recent{margin:26px 0 0; background:#fbf7ec; border:1px solid var(--gold); border-radius:14px; padding:16px 20px; display:flex; flex-wrap:wrap; align-items:center; gap:10px 14px}
+  .recent .rlabel{font-family:"Fraunces",serif; font-weight:600; font-size:16px; color:var(--gold-deep); margin-right:4px}
+  .recent .rlabel .tag{display:inline-block; background:var(--clay); color:#fff; font-family:"Public Sans"; font-size:10px; font-weight:700; letter-spacing:.08em; padding:2px 7px; border-radius:6px; vertical-align:middle; margin-right:8px}
+  .recent a{font-size:13.5px; text-decoration:none; background:var(--card); border:1px solid var(--line); padding:5px 11px; border-radius:999px}
+  .recent a:hover{border-color:var(--purple)}
+
+  .controls{position:sticky; top:0; z-index:20; background:rgba(246,241,231,.92); backdrop-filter:blur(8px); border-bottom:1px solid var(--line); margin-top:30px}
+  .controls .inner{display:flex; flex-wrap:wrap; align-items:center; gap:12px 16px; padding:14px 0}
+  .search{flex:1 1 260px; min-width:200px; position:relative}
+  .search input{width:100%; padding:11px 14px 11px 38px; border:1px solid var(--line); border-radius:10px; background:var(--card); font:inherit; font-size:15px; color:var(--ink)}
+  .search input:focus{outline:2px solid var(--purple); outline-offset:1px; border-color:transparent}
+  .search svg{position:absolute; left:12px; top:50%; transform:translateY(-50%); opacity:.45}
+  .filtgroup{display:flex; align-items:center; gap:7px; flex-wrap:wrap}
+  .filtgroup .label{font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-soft); font-weight:600; margin-right:2px}
+  .chip{font:inherit; font-size:13px; font-weight:500; padding:6px 12px; border:1px solid var(--line); background:var(--card); border-radius:999px; cursor:pointer; color:var(--ink-soft); transition:all .12s}
+  .chip:hover{border-color:var(--purple); color:var(--purple)}
+  .chip[aria-pressed="true"]{background:var(--purple); border-color:var(--purple); color:#fff}
+  .chip.ctx[aria-pressed="true"]{background:var(--gold-deep); border-color:var(--gold-deep)}
+  .count{font-size:13px; color:var(--ink-soft); margin-left:auto} .count b{color:var(--ink)}
+  .clear{font-size:13px; background:none; border:none; color:var(--purple); cursor:pointer; text-decoration:underline; text-underline-offset:2px; padding:0}
+  .catnav{display:flex; flex-wrap:wrap; gap:8px; padding:14px 0 4px}
+  .catnav a{font-size:12.5px; color:var(--ink-soft); text-decoration:none; padding:5px 11px; border:1px solid var(--line-soft); border-radius:999px}
+  .catnav a:hover{border-color:var(--purple); color:var(--purple)}
+
+  main{padding:10px 0 40px}
+  section.cat{padding-top:40px; scroll-margin-top:150px}
+  .cat-head{display:flex; align-items:baseline; gap:14px; border-bottom:2px solid var(--ink); padding-bottom:10px; margin-bottom:6px}
+  .cat-head h2{font-family:"Fraunces",serif; font-weight:600; font-size:clamp(24px,3vw,32px); margin:0; letter-spacing:-.01em}
+  .cat-head .num{font-family:"Fraunces",serif; font-size:15px; color:var(--gold-deep); font-weight:500}
+  .cat-blurb{color:var(--ink-soft); max-width:72ch; margin:12px 0 22px; font-size:15px}
+  .grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(310px,1fr)); gap:18px}
+  .card{position:relative; background:var(--card); border:1px solid var(--line); border-radius:14px; padding:20px 20px 16px; display:flex; flex-direction:column; box-shadow:var(--shadow); transition:transform .14s, border-color .14s; scroll-margin-top:160px}
+  .card:hover{transform:translateY(-3px); border-color:var(--purple)}
+  .card.flash{animation:flash 1.6s ease}
+  @keyframes flash{0%,100%{box-shadow:var(--shadow)} 20%{box-shadow:0 0 0 3px var(--gold)}}
+  .newbadge{position:absolute; top:14px; right:14px; background:var(--clay); color:#fff; font-size:10px; font-weight:700; letter-spacing:.08em; padding:3px 8px; border-radius:6px}
+  .ctxtags{display:flex; flex-wrap:wrap; gap:5px; margin:0 0 10px}
+  .ctxtags span{font-size:10.5px; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-soft); border:1px solid var(--line); border-radius:5px; padding:2px 6px; background:var(--paper)}
+  .card h4{margin:0 0 8px; font-size:18px; font-weight:700; letter-spacing:-.01em; padding-right:46px}
+  .card h4 a{text-decoration:none}
+  .card h4 a::after{content:"↗"; font-size:12px; opacity:.4; margin-left:5px; vertical-align:super}
+  .what{font-size:14.5px; margin:0 0 12px; color:var(--ink)}
+  .best{font-size:13.5px; color:var(--ink-soft); margin:0 0 4px}
+  .best b{color:var(--ink); font-weight:600}
+  .note{font-size:12.5px; color:var(--gold-deep); margin:8px 0 0; padding-left:16px; position:relative; line-height:1.4}
+  .note::before{content:"!"; position:absolute; left:0; top:0; font-weight:700; color:var(--gold-deep)}
+  .meta{display:flex; align-items:center; justify-content:space-between; gap:10px; margin-top:auto; padding-top:14px; border-top:1px solid var(--line-soft)}
+  .cost{display:inline-flex; flex-direction:column; font-size:12.5px; font-weight:600}
+  .cost .price{font-weight:400; color:var(--ink-soft); font-size:11px; margin-top:1px}
+  .lvl{display:flex; align-items:center; gap:5px; font-size:11px; color:var(--ink-soft); text-transform:uppercase; letter-spacing:.06em; white-space:nowrap}
+  .pips{display:inline-flex; gap:3px}
+  .pip{width:7px; height:7px; border-radius:50%; background:var(--line)}
+  .pip.on{background:var(--purple)}
+  .noresults{display:none; text-align:center; padding:70px 0; color:var(--ink-soft)}
+  .noresults.show{display:block}
+
+  .rules{margin-top:54px; background:#241a33; color:#efe9f7; border-radius:18px; padding:36px 36px 30px; position:relative; overflow:hidden}
+  .rules::after{content:""; position:absolute; right:-40px; top:-40px; width:200px; height:200px; border-radius:50%; background:radial-gradient(circle,var(--gold) 0,transparent 70%); opacity:.25}
+  .rules .kicker{color:var(--gold)}
+  .rules h2{font-family:"Fraunces",serif; font-weight:600; font-size:30px; margin:0 0 6px; color:#fff; letter-spacing:-.01em}
+  .rules p.sub{color:#c9bfdd; max-width:70ch; margin:0 0 20px; font-size:15px}
+  .rules ol{margin:0; padding-left:0; list-style:none; counter-reset:r; display:grid; grid-template-columns:1fr 1fr; gap:16px 28px}
+  .rules ol li{counter-increment:r; padding-left:42px; position:relative; font-size:14.5px; color:#e3dcef}
+  .rules ol li::before{content:counter(r); position:absolute; left:0; top:-2px; width:28px; height:28px; border-radius:8px; background:var(--gold); color:#241a33; font-weight:700; font-family:"Fraunces",serif; display:flex; align-items:center; justify-content:center; font-size:15px}
+  .rules ol li b{color:#fff}
+
+  .changelog{margin-top:48px}
+  .changelog h2{font-family:"Fraunces",serif; font-weight:600; font-size:26px; margin:0 0 4px; letter-spacing:-.01em}
+  .changelog p.sub{color:var(--ink-soft); margin:0 0 18px; font-size:14.5px}
+  .clentry{display:flex; gap:18px; padding:14px 0; border-top:1px solid var(--line)}
+  .clentry .mo{font-family:"Fraunces",serif; font-weight:600; font-size:15px; color:var(--gold-deep); flex:0 0 110px; padding-top:2px}
+  .clentry .items{font-size:14px; color:var(--ink-soft)}
+  .clentry .items a{text-decoration:none} .clentry .items a:hover{text-decoration:underline}
+
+  footer{border-top:1px solid var(--line); margin-top:54px; padding:30px 0 60px; font-size:13.5px; color:var(--ink-soft)}
+  footer .frow{display:flex; flex-wrap:wrap; gap:8px 28px; align-items:center}
+  footer b{color:var(--ink)}
+  footer code{background:#ece3d0; padding:2px 6px; border-radius:5px; font-size:12.5px}
+
+  @media(max-width:760px){
+    .panels{grid-template-columns:1fr}
+    .rules ol{grid-template-columns:1fr}
+    .rules{padding:28px 22px}
+    .count{width:100%; margin-left:0; order:6}
+    .clentry{flex-direction:column; gap:4px}
+  }
+</style>
+</head>
+<body>
+  <div class="topstrip"></div>
+
+  <div class="wrap">
+    <header class="site">
+      <p class="kicker">Foster HMBA · AI Cabinet</p>
+      <h1>The AI Tools <span class="amp">Field&nbsp;Guide</span></h1>
+      <p class="lede">Find the right AI tool for the problem in front of you — whether it's <em>personal, professional, or for your coursework</em>. Organized by what you're trying to get done, not by hype.</p>
+      <p class="byline"><b>Pick one tool per task, learn it well, and read the ground rules before graded work.</b> &nbsp;Maintained by the Foster HMBA AI Cabinet.</p>
+    </header>
+
+    <div class="panels">
+      <div class="panel">
+        <h3>Start here — the 60-second plan</h3>
+        <ol>
+          <li><b>Pick one daily driver</b> from General-Purpose Assistants. Learn it well before adding anything else.</li>
+          <li><b>Add a research tool</b> when you need citations — Perplexity or NotebookLM.</li>
+          <li><b>Reach for a specialist only when a task demands it</b> — a deck, a dashboard, audio for your readings.</li>
+          <li><b>Read the Ground Rules</b> before using any of it on graded work.</li>
+        </ol>
+      </div>
+      <div class="panel accent">
+        <h3>The near-zero-cost stack</h3>
+        <p class="stack-note">A free general assistant + <b>Gemini's free student year</b> + <b>Perplexity Education Pro</b> + <b>GitHub Copilot Student</b> covers ~90% of MBA needs at almost no cost. Paid tiers earn their keep only once you hit free limits regularly. <b>Don't pay on day one.</b></p>
+      </div>
+    </div>
+
+    <div class="legend" id="legend"></div>
+    <div class="recent" id="recent" hidden></div>
+  </div>
+
+  <div class="controls">
+    <div class="wrap inner">
+      <div class="search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        <input id="q" type="search" placeholder="Search tools, tasks, or keywords…" autocomplete="off" />
+      </div>
+      <div class="filtgroup" id="ctxFilters"><span class="label">For</span></div>
+      <div class="filtgroup" id="costFilters"><span class="label">Cost</span></div>
+      <div class="filtgroup" id="lvlFilters"><span class="label">Level</span></div>
+      <button class="clear" id="clear" hidden>Reset</button>
+      <span class="count" id="count"></span>
+    </div>
+    <div class="wrap"><nav class="catnav" id="catnav"></nav></div>
+  </div>
+
+  <div class="wrap">
+    <main id="main"></main>
+    <div class="noresults" id="noresults">No tools match those filters. <button class="clear" id="clear2">Reset filters</button></div>
+
+    <section class="rules" id="ground-rules">
+      <p class="kicker">Before graded work</p>
+      <h2>Ground Rules</h2>
+      <p class="sub">How we use AI reflects on the program. These six principles sit behind the Governance category above.</p>
+      <ol>
+        <li><b>Course policy wins.</b> Rules differ by course and assignment. If a syllabus is silent, ask — don't assume permission.</li>
+        <li><b>Disclose, disclose, disclose.</b> Undisclosed use carries the heaviest penalties; proactive disclosure, the lightest.</li>
+        <li><b>Never paste confidential or personal data</b> into a consumer AI tool — no employer data, client info, NDAs, or PII.</li>
+        <li><b>AI is a starting point, not a source.</b> Verify every fact, number, and citation. Models invent plausible references.</li>
+        <li><b>Get consent before recording people.</b> Transcription and voice tools capture others — tell the room first.</li>
+        <li><b>Beating a detector is still misconduct.</b> Detectors are imperfect; disclosure is the real protection, not obfuscation.</li>
+      </ol>
+    </section>
+
+    <section class="changelog" id="changelog"></section>
+
+    <footer>
+      <div class="frow"><span>Pricing accurate as of <b id="asof">—</b> — always verify on the provider's page.</span></div>
+      <div class="frow" style="margin-top:8px">
+        <span><b id="toolcount">—</b> tools · <b id="catcount">—</b> categories</span>
+        <span>Maintained by <b id="maintainers">the Foster HMBA AI Cabinet</b></span>
+        <span>To update: edit <code>tools.yaml</code> → run <code>build.py</code> → push.</span>
+        <span>Content licensed <b>CC BY 4.0</b>.</span>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Tool data is injected here by scripts/build.py from tools.yaml. Do not hand-edit. -->
+  <script id="tools-data" type="application/json">{"meta": {"title": "KIRIN AI Tools Repository", "audience": "Foster Hybrid MBA students new to AI", "pricing_as_of": "2026-05", "maintainers": ["Tyler Futch (Technical & Governance Lead)", "Nick Trezza (AI Chair)"], "handoff_to": "Cohort 10 (Sept 2026 onboarding)"}, "categories": [{"id": "general", "title": "💬 General-Purpose Assistants", "order": 1, "blurb": "Start here. These are the Swiss-army tools that handle writing, analysis, brainstorming, summarizing, and light coding in one chat box. Pick ONE as your daily driver before reaching for anything specialized."}, {"id": "research", "title": "🔎 Research & Literature", "order": 2, "blurb": "Cited answers, paper discovery, and synthesis of sources. Use these when \"I need evidence\" matters more than \"I need a draft.\""}, {"id": "writing", "title": "✍️ Writing & Editing", "order": 3, "blurb": "Polish, paraphrase, and clarity. These refine what you've written rather than replace your thinking."}, {"id": "data", "title": "📊 Data Analysis & Visualization", "order": 4, "blurb": "Turn spreadsheets and datasets into analysis and dashboards — from chat-based analysts to enterprise BI."}, {"id": "design", "title": "🖼️ Image, Design & Brand", "order": 5, "blurb": "Generate visuals, graphics, and brand assets. Watch licensing for anything you publish."}, {"id": "slides", "title": "🎤 Presentations & Slides", "order": 6, "blurb": "Get a first-draft deck in minutes. Always rework AI slides before presenting — they read as generic out of the box."}, {"id": "audio", "title": "🎧 Audio & Voice", "order": 7, "blurb": "Turn text into audio and audio into text. Listen to readings on your commute, or generate clean voiceovers for presentations."}, {"id": "meetings", "title": "🎙️ Meetings & Note-Taking", "order": 8, "blurb": "Transcribe lectures and team calls, capture action items, and organize notes. Get consent before recording others."}, {"id": "automation", "title": "⚙️ Productivity & Workflow Automation", "order": 9, "blurb": "Connect your apps and kill repetitive busywork."}, {"id": "coding", "title": "💻 Coding & Technical", "order": 10, "blurb": "For the analytics, data, and tech-track electives — or anyone learning to build."}, {"id": "career", "title": "💼 Career & Recruiting", "order": 11, "blurb": "Résumés, networking, interview prep, and application tracking."}, {"id": "governance", "title": "🛡️ Governance, Responsible Use & Compliance", "order": 12, "blurb": "The part most tool lists skip. Read the Ground Rules on the site before using anything above in graded work."}], "tools": [{"name": "ChatGPT", "url": "https://chatgpt.com", "category": "general", "what": "Conversational assistant for writing, analysis, brainstorming, and light coding; built-in data analysis, image generation, and web browsing.", "best_for": "A reliable all-rounder and most people's first tool.", "pricing": "Free (ad-supported in the US since Feb 2026); Go $8/mo, Plus $20/mo, Pro $100–200/mo", "cost_tier": "Freemium", "difficulty": "Beginner", "contexts": ["education", "professional", "personal"], "added": "2026-04-20", "notes": "Free tier is enough for most coursework. Verify before pasting anything confidential."}, {"name": "Claude", "url": "https://claude.ai", "category": "general", "what": "Conversational assistant especially strong at long-document analysis, careful reasoning, and natural writing.", "best_for": "Nuanced writing, reading large PDFs/case packs, and work where tone matters.", "pricing": "Free; Pro $20/mo; Max $100–200/mo", "cost_tier": "Freemium", "difficulty": "Beginner", "contexts": ["education", "professional", "personal"], "added": "2026-04-20", "notes": "Large context window handles full case packs in one go."}, {"name": "Google Gemini", "url": "https://gemini.google.com", "category": "general", "what": "Google's assistant with a very large context window, deeply integrated into Gmail, Docs, Drive, and Sheets; also generates images.", "best_for": "Students who live in Google Workspace; fits an entire semester of notes in context.", "pricing": "Free; AI Plus $7.99/mo, AI Pro $19.99/mo — free for ~1 year for verified students", "cost_tier": "Free for students", "difficulty": "Beginner", "contexts": ["education", "professional", "personal"], "added": "2026-04-20", "notes": "Student year free via google.com/students — strong value."}, {"name": "Microsoft Copilot", "url": "https://copilot.microsoft.com", "category": "general", "what": "Microsoft's assistant, embedded across Word, Excel, Outlook, PowerPoint, and Teams.", "best_for": "Office-heavy workflows where you want AI inside the apps you already use.", "pricing": "Free chat; M365 Copilot is a paid add-on (check school licensing)", "cost_tier": "Freemium", "difficulty": "Beginner", "contexts": ["professional", "education"], "added": "2026-04-20", "notes": "Foster/UW may provide M365 Copilot access — check before paying."}, {"name": "Perplexity", "url": "https://www.perplexity.ai", "category": "research", "what": "AI answer engine that searches the live web and returns sourced, cited answers.", "best_for": "Cited research, fact-checking, and current-events questions where a citation trail matters.", "pricing": "Free; Pro $20/mo; Education Pro $4.99/mo (free ~1 year for verified students)", "cost_tier": "Free for students", "difficulty": "Beginner", "contexts": ["education", "professional", "personal"], "added": "2026-04-20", "notes": ".gov / some .mil emails get a free Pro year with zero data retention — relevant for veterans/feds."}, {"name": "NotebookLM", "url": "https://notebooklm.google.com", "category": "research", "what": "Grounded research assistant that answers only from sources YOU upload; generates summaries, study guides, and podcast-style audio overviews.", "best_for": "Synthesizing assigned readings and case packs with minimal hallucination.", "pricing": "Free", "cost_tier": "Free", "difficulty": "Beginner", "contexts": ["education", "professional"], "added": "2026-04-20", "notes": "Its audio-overview feature turns your sources into a two-host podcast — great for the commute."}, {"name": "Elicit", "url": "https://elicit.com", "category": "research", "what": "Research assistant that finds academic papers and extracts findings into comparison tables.", "best_for": "Literature reviews and evidence synthesis for term papers.", "pricing": "Free tier; paid plans for higher volume", "cost_tier": "Freemium", "difficulty": "Intermediate", "contexts": ["education", "professional"], "added": "2026-04-20"}, {"name": "Consensus", "url": "https://consensus.app", "category": "research", "what": "Search engine that surfaces conclusions from peer-reviewed research for a given question.", "best_for": "Quickly answering \"what does the research say about X?\" with citations.", "pricing": "Free tier; Premium paid", "cost_tier": "Freemium", "difficulty": "Beginner", "contexts": ["education", "professional"], "added": "2026-04-20"}, {"name": "SciSpace", "url": "https://scispace.com", "category": "research", "what": "Reads and explains dense academic papers, clarifies jargon and math, and supports literature search.", "best_for": "Getting through technical PDFs you'd otherwise bounce off.", "pricing": "Free tier; paid plans", "cost_tier": "Freemium", "difficulty": "Intermediate", "contexts": ["education"], "added": "2026-04-20"}, {"name": "Grammarly", "url": "https://www.grammarly.com", "category": "writing", "what": "Grammar, clarity, and tone checking, plus generative drafting and rewriting help.", "best_for": "Polishing assignments, emails, and professional communication.", "pricing": "Free; Pro paid (student pricing available)", "cost_tier": "Freemium", "difficulty": "Beginner", "contexts": ["education", "professional", "personal"], "added": "2026-04-20"}, {"name": "QuillBot", "url": "https://quillbot.com", "category": "writing", "what": "Paraphrasing, summarizing, grammar checking, and citation generation.", "best_for": "Tightening and rephrasing drafts without changing meaning.", "pricing": "Free tier; Premium paid", "cost_tier": "Freemium", "difficulty": "Beginner", "contexts": ["education", "professional"], "added": "2026-04-20", "notes": "Paraphrasing to dodge a detector is not a free pass — disclosure rules still apply."}, {"name": "Jasper", "url": "https://www.jasper.ai", "category": "writing", "what": "Marketing and brand copy generation at scale with reusable brand-voice profiles.", "best_for": "Marketing electives and content/brand projects.", "pricing": "Paid (free trial)", "cost_tier": "Paid", "difficulty": "Intermediate", "contexts": ["professional"], "added": "2026-04-20"}, {"name": "Julius AI", "url": "https://julius.ai", "category": "data", "what": "Chat-based data analyst — upload a dataset, ask questions in plain English, get charts and statistics.", "best_for": "Analyzing CSVs/Excel without writing formulas or code.", "pricing": "Free tier; paid plans", "cost_tier": "Freemium", "difficulty": "Beginner", "contexts": ["education", "professional"], "added": "2026-04-20"}, {"name": "Excel + Copilot", "url": "https://www.microsoft.com/microsoft-365/excel", "category": "data", "what": "Natural-language formulas, analysis, and chart generation inside Excel.", "best_for": "Spreadsheet analysis when you'd rather describe the task than build the formula.", "pricing": "Excel paid; Copilot in Excel requires M365 Copilot", "cost_tier": "Paid", "difficulty": "Intermediate", "contexts": ["professional", "education"], "added": "2026-04-20"}, {"name": "Microsoft Power BI", "url": "https://powerbi.microsoft.com", "category": "data", "what": "Business-intelligence dashboards with a Copilot for natural-language reporting; integrates tightly with Excel.", "best_for": "Enterprise-style reporting and dashboards for projects and capstones.", "pricing": "Power BI Desktop free; Pro paid (student options via Microsoft)", "cost_tier": "Freemium", "difficulty": "Intermediate", "contexts": ["professional", "education"], "added": "2026-04-20"}, {"name": "Tableau", "url": "https://www.tableau.com", "category": "data", "what": "Industry-standard visual analytics platform with AI-assisted insights.", "best_for": "Serious data viz and analytics-track work; a résumé-worthy skill.", "pricing": "Paid; free 1-year license for students via Tableau Academic", "cost_tier": "Free for students", "difficulty": "Advanced", "contexts": ["professional", "education"], "added": "2026-04-20"}, {"name": "Canva", "url": "https://www.canva.com", "category": "design", "what": "Design platform with AI (Magic Studio) for slides, social graphics, and image generation.", "best_for": "Producing polished visuals and decks with zero design background.", "pricing": "Free; Pro paid (free for some students/educators)", "cost_tier": "Freemium", "difficulty": "Beginner", "contexts": ["education", "professional", "personal"], "added": "2026-04-20"}, {"name": "Adobe Firefly", "url": "https://firefly.adobe.com", "category": "design", "what": "Generative image tool trained for commercial safety, integrated with Adobe apps.", "best_for": "Brand-safe imagery you intend to publish or reuse.", "pricing": "Free monthly credits; paid plans", "cost_tier": "Freemium", "difficulty": "Intermediate", "contexts": ["professional", "personal"], "added": "2026-04-20", "notes": "Marketed as commercially safer than open image generators — relevant for brand work."}, {"name": "Midjourney", "url": "https://www.midjourney.com", "category": "design", "what": "High-quality generative image creation from text prompts.", "best_for": "Original, striking imagery for projects and pitches.", "pricing": "Paid (from ~$10/mo)", "cost_tier": "Paid", "difficulty": "Intermediate", "contexts": ["personal", "professional"], "added": "2026-04-20"}, {"name": "Ideogram", "url": "https://ideogram.ai", "category": "design", "what": "Image generation with best-in-class legible text rendering — posters, logos, and graphics with words in them.", "best_for": "Branded graphics and social images where the text has to look right.", "pricing": "Free tier; paid plans", "cost_tier": "Freemium", "difficulty": "Beginner", "contexts": ["professional", "personal"], "added": "2026-05-29"}, {"name": "Gamma", "url": "https://gamma.app", "category": "slides", "what": "Generates full slide decks, docs, and simple webpages from a prompt or outline.", "best_for": "Getting a first-draft deck in minutes, then editing.", "pricing": "Free credits; paid plans", "cost_tier": "Freemium", "difficulty": "Beginner", "contexts": ["education", "professional"], "added": "2026-04-20"}, {"name": "Copilot in PowerPoint", "url": "https://www.microsoft.com/microsoft-365/powerpoint", "category": "slides", "what": "Builds and redesigns slides from prompts inside PowerPoint.", "best_for": "Office users who want AI slides in the tool they already present from.", "pricing": "Requires M365 Copilot (paid)", "cost_tier": "Paid", "difficulty": "Beginner", "contexts": ["professional", "education"], "added": "2026-04-20"}, {"name": "Speechify", "url": "https://speechify.com", "category": "audio", "what": "Text-to-speech that reads articles, PDFs, and assigned readings aloud in natural voices, at your own speed.", "best_for": "Listening to reading assignments on the commute instead of reading them.", "pricing": "Free tier; Premium paid (student pricing available)", "cost_tier": "Freemium", "difficulty": "Beginner", "contexts": ["education", "professional", "personal"], "added": "2026-05-29", "notes": "A cohort favorite for turning case readings into audio. Pairs well with NotebookLM's audio overviews."}, {"name": "ElevenLabs", "url": "https://elevenlabs.io", "category": "audio", "what": "High-quality AI voice generation and text-to-speech for narration and voiceovers.", "best_for": "Clean voiceover for presentation videos and recorded walkthroughs.", "pricing": "Free tier; paid plans", "cost_tier": "Freemium", "difficulty": "Intermediate", "contexts": ["professional", "personal", "education"], "added": "2026-05-29"}, {"name": "Otter.ai", "url": "https://otter.ai", "category": "meetings", "what": "Live transcription with AI-generated meeting and lecture notes and summaries.", "best_for": "Transcribing classes and capturing what was said in real time.", "pricing": "Free tier; paid plans", "cost_tier": "Freemium", "difficulty": "Beginner", "contexts": ["education", "professional"], "added": "2026-04-20"}, {"name": "Fireflies.ai", "url": "https://fireflies.ai", "category": "meetings", "what": "Records, transcribes, and summarizes meetings across Zoom, Meet, and Teams; searchable archive and action items.", "best_for": "Team-project meetings — auto-captured notes and to-dos.", "pricing": "Free tier; paid plans", "cost_tier": "Freemium", "difficulty": "Beginner", "contexts": ["professional", "education"], "added": "2026-04-20", "notes": "Tell participants they're being recorded before it joins."}, {"name": "Notion AI", "url": "https://www.notion.so/product/ai", "category": "meetings", "what": "AI built into Notion for notes, task management, summaries, and project docs in one workspace.", "best_for": "Keeping notes, study plans, and group projects organized in a single place.", "pricing": "Paid add-on (student pricing available)", "cost_tier": "Freemium", "difficulty": "Intermediate", "contexts": ["education", "professional", "personal"], "added": "2026-04-20"}, {"name": "Zapier", "url": "https://zapier.com", "category": "automation", "what": "Connects 6,000+ apps to automate multi-step workflows, now with AI steps and agents.", "best_for": "Automating repetitive cross-app tasks (e.g., form to sheet to email).", "pricing": "Free tier; paid plans", "cost_tier": "Freemium", "difficulty": "Intermediate", "contexts": ["professional", "personal"], "added": "2026-04-20"}, {"name": "Make", "url": "https://www.make.com", "category": "automation", "what": "Visual, node-based automation platform — a flexible Zapier alternative.", "best_for": "More complex automations on a tighter budget.", "pricing": "Free tier; paid plans", "cost_tier": "Freemium", "difficulty": "Intermediate", "contexts": ["professional", "personal"], "added": "2026-04-20"}, {"name": "GitHub Copilot", "url": "https://github.com/features/copilot", "category": "coding", "what": "AI pair-programmer that autocompletes and explains code inside your editor.", "best_for": "Coding assignments and learning to program.", "pricing": "Free for verified students (Copilot Student, launched Mar 2026)", "cost_tier": "Free for students", "difficulty": "Intermediate", "contexts": ["education", "professional"], "added": "2026-04-20", "notes": "Verify through the GitHub Student Developer Pack."}, {"name": "Cursor", "url": "https://www.cursor.com", "category": "coding", "what": "An AI-first code editor that can read and edit your whole project conversationally.", "best_for": "Building apps, scripts, or analyses with heavy AI assistance.", "pricing": "Free tier; Pro paid (student discount available)", "cost_tier": "Freemium", "difficulty": "Intermediate", "contexts": ["education", "professional"], "added": "2026-04-20"}, {"name": "LinkedIn (AI features)", "url": "https://www.linkedin.com", "category": "career", "what": "AI-assisted profile and résumé feedback, job matching, and interview prep.", "best_for": "Networking, internship/job search, and positioning.", "pricing": "Free; Premium paid (frequent free trials)", "cost_tier": "Freemium", "difficulty": "Beginner", "contexts": ["professional"], "added": "2026-04-20"}, {"name": "Teal", "url": "https://www.tealhq.com", "category": "career", "what": "Résumé builder and job-application tracker with AI tailoring to job postings.", "best_for": "Tailoring résumés to specific roles and tracking applications in one place.", "pricing": "Free tier; paid plans", "cost_tier": "Freemium", "difficulty": "Beginner", "contexts": ["professional"], "added": "2026-04-20", "notes": "Pair with a general assistant to draft STAR interview stories."}, {"name": "Your course / Foster AI policy", "url": "https://foster.uw.edu", "category": "governance", "what": "The single most important \"tool\" here — the AI-use rules for each specific course and assignment.", "best_for": "Knowing what's allowed before you use anything else on this list.", "pricing": "Free", "cost_tier": "Free", "difficulty": "Beginner", "contexts": ["education"], "added": "2026-04-20", "notes": "Rules vary by course and instructor. When in doubt, ask and disclose."}, {"name": "APA AI Citation Guidance", "url": "https://apastyle.apa.org/blog/how-to-cite-chatgpt", "category": "governance", "what": "How to cite and disclose AI assistance in academic work.", "best_for": "Getting disclosure right — undisclosed use carries the heaviest penalties.", "pricing": "Free", "cost_tier": "Free", "difficulty": "Beginner", "contexts": ["education", "professional"], "added": "2026-04-20"}, {"name": "Turnitin (awareness)", "url": "https://www.turnitin.com", "category": "governance", "what": "Plagiarism and AI-writing detection used by many institutions.", "best_for": "Understanding how submissions may be screened — and that detectors produce false positives.", "pricing": "Institutional (used by your school, not bought by you)", "cost_tier": "Institutional", "difficulty": "Beginner", "contexts": ["education"], "added": "2026-04-20", "notes": "Proactive disclosure beats arguing with a detector after the fact."}, {"name": "Credo AI", "url": "https://www.credo.ai", "category": "governance", "what": "Enterprise AI governance platform — policy packs, generative-AI guardrails, and audit trails.", "best_for": "Anyone exploring AI risk, GRC, or compliance as a career direction.", "pricing": "Paid / Enterprise", "cost_tier": "Paid", "difficulty": "Advanced", "contexts": ["professional"], "added": "2026-04-20", "notes": "Included as a career-relevant signal of where enterprise AI governance is heading."}]}</script>
+
+  <script>
+  (function(){
+    const DATA = JSON.parse(document.getElementById('tools-data').textContent);
+    const COST = {
+      "Free":{label:"Free",color:"var(--green)"},
+      "Freemium":{label:"Freemium",color:"var(--amber)"},
+      "Paid":{label:"Paid",color:"var(--clay)"},
+      "Free for students":{label:"Free for students",color:"var(--purple)"},
+      "Institutional":{label:"Institutional",color:"var(--slate)"}
+    };
+    const LVL = {Beginner:1, Intermediate:2, Advanced:3};
+    const CTX = {education:"Education", professional:"Professional", personal:"Personal"};
+    const esc = s => (s||"").replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+    const slug = s => s.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+    const DAY = 86400000, now = new Date();
+    const isNew = d => { const x=(now-new Date(d))/DAY; return x>=0 && x<=30; };
+
+    const meta = DATA.meta || {};
+    document.getElementById('asof').textContent = meta.pricing_as_of || "—";
+    document.getElementById('toolcount').textContent = DATA.tools.length;
+    document.getElementById('catcount').textContent = DATA.categories.length;
+    if (Array.isArray(meta.maintainers) && meta.maintainers.length)
+      document.getElementById('maintainers').textContent = meta.maintainers.join(' · ');
+
+    const usedCosts = [...new Set(DATA.tools.map(t=>t.cost_tier))];
+    document.getElementById('legend').innerHTML = usedCosts.map(c=>{
+      const m = COST[c]||{label:c,color:"var(--ink-soft)"};
+      return `<span><span class="dot" style="background:${m.color}"></span>${esc(m.label)}</span>`;
+    }).join('') + `<span><span class="dot" style="background:var(--purple)"></span>Level: ● beginner · ●● intermediate · ●●● advanced</span>`;
+
+    // ---- sections + cards ----
+    const cats = [...DATA.categories].sort((a,b)=>a.order-b.order);
+    const byCat = {}; DATA.tools.forEach(t=>(byCat[t.category]=byCat[t.category]||[]).push(t));
+    const main = document.getElementById('main'), catnav = document.getElementById('catnav');
+
+    cats.forEach((c,i)=>{
+      const rows = byCat[c.id]||[]; if(!rows.length) return;
+      catnav.insertAdjacentHTML('beforeend', `<a href="#cat-${c.id}">${esc(c.title)}</a>`);
+      const cards = rows.map(t=>{
+        const m = COST[t.cost_tier]||{label:t.cost_tier,color:"var(--ink-soft)"};
+        const n = LVL[t.difficulty]||1;
+        const pips = [1,2,3].map(k=>`<span class="pip ${k<=n?'on':''}"></span>`).join('');
+        const note = t.notes ? `<p class="note">${esc(t.notes)}</p>` : '';
+        const ctx = (t.contexts||[]);
+        const ctxTags = ctx.map(x=>`<span>${esc(CTX[x]||x)}</span>`).join('');
+        const badge = isNew(t.added) ? `<span class="newbadge">NEW</span>` : '';
+        const hay = (t.name+' '+t.what+' '+t.best_for+' '+(t.notes||'')+' '+c.title+' '+ctx.join(' ')).toLowerCase();
+        return `<article class="card" id="card-${slug(t.name)}" data-hay="${esc(hay)}" data-cost="${esc(t.cost_tier)}" data-lvl="${esc(t.difficulty)}" data-ctx="${esc(ctx.join(' '))}">
+          ${badge}
+          <div class="ctxtags">${ctxTags}</div>
+          <h4><a href="${esc(t.url)}" target="_blank" rel="noopener">${esc(t.name)}</a></h4>
+          <p class="what">${esc(t.what)}</p>
+          <p class="best"><b>Best for:</b> ${esc(t.best_for)}</p>
+          ${note}
+          <div class="meta">
+            <span class="cost" style="color:${m.color}">${esc(m.label)}<span class="price">${esc(t.pricing)}</span></span>
+            <span class="lvl"><span class="pips">${pips}</span>${esc(t.difficulty)}</span>
+          </div>
+        </article>`;
+      }).join('');
+      main.insertAdjacentHTML('beforeend', `<section class="cat" id="cat-${c.id}" data-cat="${c.id}">
+        <div class="cat-head"><span class="num">${String(i+1).padStart(2,'0')}</span><h2>${esc(c.title)}</h2></div>
+        <p class="cat-blurb">${esc(c.blurb)}</p>
+        <div class="grid">${cards}</div>
+      </section>`);
+    });
+
+    // ---- recently added strip ----
+    const recents = DATA.tools.filter(t=>isNew(t.added)).sort((a,b)=>new Date(b.added)-new Date(a.added)).slice(0,8);
+    if(recents.length){
+      const box = document.getElementById('recent');
+      box.hidden = false;
+      box.innerHTML = `<span class="rlabel"><span class="tag">NEW</span>Recently added</span>` +
+        recents.map(t=>`<a href="#card-${slug(t.name)}">${esc(t.name)}</a>`).join('');
+    }
+
+    // ---- changelog (grouped by month, newest first) ----
+    const groups = {};
+    DATA.tools.forEach(t=>{ const k=t.added.slice(0,7); (groups[k]=groups[k]||[]).push(t); });
+    const months = Object.keys(groups).sort().reverse();
+    const fmtMonth = k => { const [y,m]=k.split('-'); return new Date(y,m-1,1).toLocaleString('en-US',{month:'long',year:'numeric'}); };
+    document.getElementById('changelog').innerHTML =
+      `<h2>📜 Changelog</h2><p class="sub">What's been added, newest first. The <b>NEW</b> badge on a card clears automatically 30 days after it's added.</p>` +
+      months.map(k=>{
+        const items = groups[k].sort((a,b)=>a.name.localeCompare(b.name))
+          .map(t=>`<a href="#card-${slug(t.name)}">${esc(t.name)}</a>`).join(', ');
+        return `<div class="clentry"><div class="mo">${fmtMonth(k)}</div><div class="items">Added (${groups[k].length}): ${items}</div></div>`;
+      }).join('');
+
+    // smooth-scroll + flash when jumping to a card
+    document.addEventListener('click', e=>{
+      const a = e.target.closest('a[href^="#card-"]'); if(!a) return;
+      const el = document.querySelector(a.getAttribute('href'));
+      if(el){ el.classList.remove('flash'); void el.offsetWidth; el.classList.add('flash'); }
+    });
+
+    // ---- filters ----
+    const ctxSet=new Set(), costSet=new Set(), lvlSet=new Set();
+    function chipRow(host, items, set, cls){
+      items.forEach(([val,lbl])=>{
+        const b=document.createElement('button'); b.className='chip'+(cls?' '+cls:''); b.textContent=lbl; b.setAttribute('aria-pressed','false');
+        b.onclick=()=>{ const on=b.getAttribute('aria-pressed')==='true'; b.setAttribute('aria-pressed',!on); on?set.delete(val):set.add(val); apply(); };
+        host.appendChild(b);
+      });
+    }
+    chipRow(document.getElementById('ctxFilters'), Object.entries(CTX), ctxSet, 'ctx');
+    chipRow(document.getElementById('costFilters'), usedCosts.map(c=>[c,COST[c]?COST[c].label:c]), costSet);
+    chipRow(document.getElementById('lvlFilters'), [['Beginner','Beginner'],['Intermediate','Intermediate'],['Advanced','Advanced']], lvlSet);
+
+    const q=document.getElementById('q'), count=document.getElementById('count'),
+          clearBtn=document.getElementById('clear'), nores=document.getElementById('noresults');
+    function apply(){
+      const term=q.value.trim().toLowerCase(); let shown=0;
+      document.querySelectorAll('.card').forEach(card=>{
+        const cardCtx = card.dataset.ctx.split(' ');
+        const ok = (!term || card.dataset.hay.includes(term))
+          && (!costSet.size || costSet.has(card.dataset.cost))
+          && (!lvlSet.size  || lvlSet.has(card.dataset.lvl))
+          && (!ctxSet.size  || [...ctxSet].some(x=>cardCtx.includes(x)));
+        card.style.display = ok?'':'none'; if(ok) shown++;
+      });
+      document.querySelectorAll('section.cat').forEach(s=>{
+        const any=[...s.querySelectorAll('.card')].some(c=>c.style.display!=='none');
+        s.style.display=any?'':'none';
+      });
+      count.innerHTML = `<b>${shown}</b> of ${DATA.tools.length} tools`;
+      clearBtn.hidden = !(term||costSet.size||lvlSet.size||ctxSet.size);
+      nores.classList.toggle('show', shown===0);
+    }
+    function reset(){ q.value=''; ctxSet.clear(); costSet.clear(); lvlSet.clear();
+      document.querySelectorAll('.chip').forEach(c=>c.setAttribute('aria-pressed','false')); apply(); }
+    q.addEventListener('input', apply);
+    clearBtn.addEventListener('click', reset);
+    document.getElementById('clear2').addEventListener('click', reset);
+    apply();
+  })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,660 @@
+{
+  "meta": {
+    "title": "KIRIN AI Tools Repository",
+    "audience": "Foster Hybrid MBA students new to AI",
+    "pricing_as_of": "2026-05",
+    "maintainers": [
+      "Tyler Futch (Technical & Governance Lead)",
+      "Nick Trezza (AI Chair)"
+    ],
+    "handoff_to": "Cohort 10 (Sept 2026 onboarding)"
+  },
+  "categories": [
+    {
+      "id": "general",
+      "title": "💬 General-Purpose Assistants",
+      "order": 1,
+      "blurb": "Start here. These are the Swiss-army tools that handle writing, analysis, brainstorming, summarizing, and light coding in one chat box. Pick ONE as your daily driver before reaching for anything specialized."
+    },
+    {
+      "id": "research",
+      "title": "🔎 Research & Literature",
+      "order": 2,
+      "blurb": "Cited answers, paper discovery, and synthesis of sources. Use these when \"I need evidence\" matters more than \"I need a draft.\""
+    },
+    {
+      "id": "writing",
+      "title": "✍️ Writing & Editing",
+      "order": 3,
+      "blurb": "Polish, paraphrase, and clarity. These refine what you've written rather than replace your thinking."
+    },
+    {
+      "id": "data",
+      "title": "📊 Data Analysis & Visualization",
+      "order": 4,
+      "blurb": "Turn spreadsheets and datasets into analysis and dashboards — from chat-based analysts to enterprise BI."
+    },
+    {
+      "id": "design",
+      "title": "🖼️ Image, Design & Brand",
+      "order": 5,
+      "blurb": "Generate visuals, graphics, and brand assets. Watch licensing for anything you publish."
+    },
+    {
+      "id": "slides",
+      "title": "🎤 Presentations & Slides",
+      "order": 6,
+      "blurb": "Get a first-draft deck in minutes. Always rework AI slides before presenting — they read as generic out of the box."
+    },
+    {
+      "id": "audio",
+      "title": "🎧 Audio & Voice",
+      "order": 7,
+      "blurb": "Turn text into audio and audio into text. Listen to readings on your commute, or generate clean voiceovers for presentations."
+    },
+    {
+      "id": "meetings",
+      "title": "🎙️ Meetings & Note-Taking",
+      "order": 8,
+      "blurb": "Transcribe lectures and team calls, capture action items, and organize notes. Get consent before recording others."
+    },
+    {
+      "id": "automation",
+      "title": "⚙️ Productivity & Workflow Automation",
+      "order": 9,
+      "blurb": "Connect your apps and kill repetitive busywork."
+    },
+    {
+      "id": "coding",
+      "title": "💻 Coding & Technical",
+      "order": 10,
+      "blurb": "For the analytics, data, and tech-track electives — or anyone learning to build."
+    },
+    {
+      "id": "career",
+      "title": "💼 Career & Recruiting",
+      "order": 11,
+      "blurb": "Résumés, networking, interview prep, and application tracking."
+    },
+    {
+      "id": "governance",
+      "title": "🛡️ Governance, Responsible Use & Compliance",
+      "order": 12,
+      "blurb": "The part most tool lists skip. Read the Ground Rules on the site before using anything above in graded work."
+    }
+  ],
+  "tools": [
+    {
+      "name": "ChatGPT",
+      "url": "https://chatgpt.com",
+      "category": "general",
+      "what": "Conversational assistant for writing, analysis, brainstorming, and light coding; built-in data analysis, image generation, and web browsing.",
+      "best_for": "A reliable all-rounder and most people's first tool.",
+      "pricing": "Free (ad-supported in the US since Feb 2026); Go $8/mo, Plus $20/mo, Pro $100–200/mo",
+      "cost_tier": "Freemium",
+      "difficulty": "Beginner",
+      "contexts": [
+        "education",
+        "professional",
+        "personal"
+      ],
+      "added": "2026-04-20",
+      "notes": "Free tier is enough for most coursework. Verify before pasting anything confidential."
+    },
+    {
+      "name": "Claude",
+      "url": "https://claude.ai",
+      "category": "general",
+      "what": "Conversational assistant especially strong at long-document analysis, careful reasoning, and natural writing.",
+      "best_for": "Nuanced writing, reading large PDFs/case packs, and work where tone matters.",
+      "pricing": "Free; Pro $20/mo; Max $100–200/mo",
+      "cost_tier": "Freemium",
+      "difficulty": "Beginner",
+      "contexts": [
+        "education",
+        "professional",
+        "personal"
+      ],
+      "added": "2026-04-20",
+      "notes": "Large context window handles full case packs in one go."
+    },
+    {
+      "name": "Google Gemini",
+      "url": "https://gemini.google.com",
+      "category": "general",
+      "what": "Google's assistant with a very large context window, deeply integrated into Gmail, Docs, Drive, and Sheets; also generates images.",
+      "best_for": "Students who live in Google Workspace; fits an entire semester of notes in context.",
+      "pricing": "Free; AI Plus $7.99/mo, AI Pro $19.99/mo — free for ~1 year for verified students",
+      "cost_tier": "Free for students",
+      "difficulty": "Beginner",
+      "contexts": [
+        "education",
+        "professional",
+        "personal"
+      ],
+      "added": "2026-04-20",
+      "notes": "Student year free via google.com/students — strong value."
+    },
+    {
+      "name": "Microsoft Copilot",
+      "url": "https://copilot.microsoft.com",
+      "category": "general",
+      "what": "Microsoft's assistant, embedded across Word, Excel, Outlook, PowerPoint, and Teams.",
+      "best_for": "Office-heavy workflows where you want AI inside the apps you already use.",
+      "pricing": "Free chat; M365 Copilot is a paid add-on (check school licensing)",
+      "cost_tier": "Freemium",
+      "difficulty": "Beginner",
+      "contexts": [
+        "professional",
+        "education"
+      ],
+      "added": "2026-04-20",
+      "notes": "Foster/UW may provide M365 Copilot access — check before paying."
+    },
+    {
+      "name": "Perplexity",
+      "url": "https://www.perplexity.ai",
+      "category": "research",
+      "what": "AI answer engine that searches the live web and returns sourced, cited answers.",
+      "best_for": "Cited research, fact-checking, and current-events questions where a citation trail matters.",
+      "pricing": "Free; Pro $20/mo; Education Pro $4.99/mo (free ~1 year for verified students)",
+      "cost_tier": "Free for students",
+      "difficulty": "Beginner",
+      "contexts": [
+        "education",
+        "professional",
+        "personal"
+      ],
+      "added": "2026-04-20",
+      "notes": ".gov / some .mil emails get a free Pro year with zero data retention — relevant for veterans/feds."
+    },
+    {
+      "name": "NotebookLM",
+      "url": "https://notebooklm.google.com",
+      "category": "research",
+      "what": "Grounded research assistant that answers only from sources YOU upload; generates summaries, study guides, and podcast-style audio overviews.",
+      "best_for": "Synthesizing assigned readings and case packs with minimal hallucination.",
+      "pricing": "Free",
+      "cost_tier": "Free",
+      "difficulty": "Beginner",
+      "contexts": [
+        "education",
+        "professional"
+      ],
+      "added": "2026-04-20",
+      "notes": "Its audio-overview feature turns your sources into a two-host podcast — great for the commute."
+    },
+    {
+      "name": "Elicit",
+      "url": "https://elicit.com",
+      "category": "research",
+      "what": "Research assistant that finds academic papers and extracts findings into comparison tables.",
+      "best_for": "Literature reviews and evidence synthesis for term papers.",
+      "pricing": "Free tier; paid plans for higher volume",
+      "cost_tier": "Freemium",
+      "difficulty": "Intermediate",
+      "contexts": [
+        "education",
+        "professional"
+      ],
+      "added": "2026-04-20"
+    },
+    {
+      "name": "Consensus",
+      "url": "https://consensus.app",
+      "category": "research",
+      "what": "Search engine that surfaces conclusions from peer-reviewed research for a given question.",
+      "best_for": "Quickly answering \"what does the research say about X?\" with citations.",
+      "pricing": "Free tier; Premium paid",
+      "cost_tier": "Freemium",
+      "difficulty": "Beginner",
+      "contexts": [
+        "education",
+        "professional"
+      ],
+      "added": "2026-04-20"
+    },
+    {
+      "name": "SciSpace",
+      "url": "https://scispace.com",
+      "category": "research",
+      "what": "Reads and explains dense academic papers, clarifies jargon and math, and supports literature search.",
+      "best_for": "Getting through technical PDFs you'd otherwise bounce off.",
+      "pricing": "Free tier; paid plans",
+      "cost_tier": "Freemium",
+      "difficulty": "Intermediate",
+      "contexts": [
+        "education"
+      ],
+      "added": "2026-04-20"
+    },
+    {
+      "name": "Grammarly",
+      "url": "https://www.grammarly.com",
+      "category": "writing",
+      "what": "Grammar, clarity, and tone checking, plus generative drafting and rewriting help.",
+      "best_for": "Polishing assignments, emails, and professional communication.",
+      "pricing": "Free; Pro paid (student pricing available)",
+      "cost_tier": "Freemium",
+      "difficulty": "Beginner",
+      "contexts": [
+        "education",
+        "professional",
+        "personal"
+      ],
+      "added": "2026-04-20"
+    },
+    {
+      "name": "QuillBot",
+      "url": "https://quillbot.com",
+      "category": "writing",
+      "what": "Paraphrasing, summarizing, grammar checking, and citation generation.",
+      "best_for": "Tightening and rephrasing drafts without changing meaning.",
+      "pricing": "Free tier; Premium paid",
+      "cost_tier": "Freemium",
+      "difficulty": "Beginner",
+      "contexts": [
+        "education",
+        "professional"
+      ],
+      "added": "2026-04-20",
+      "notes": "Paraphrasing to dodge a detector is not a free pass — disclosure rules still apply."
+    },
+    {
+      "name": "Jasper",
+      "url": "https://www.jasper.ai",
+      "category": "writing",
+      "what": "Marketing and brand copy generation at scale with reusable brand-voice profiles.",
+      "best_for": "Marketing electives and content/brand projects.",
+      "pricing": "Paid (free trial)",
+      "cost_tier": "Paid",
+      "difficulty": "Intermediate",
+      "contexts": [
+        "professional"
+      ],
+      "added": "2026-04-20"
+    },
+    {
+      "name": "Julius AI",
+      "url": "https://julius.ai",
+      "category": "data",
+      "what": "Chat-based data analyst — upload a dataset, ask questions in plain English, get charts and statistics.",
+      "best_for": "Analyzing CSVs/Excel without writing formulas or code.",
+      "pricing": "Free tier; paid plans",
+      "cost_tier": "Freemium",
+      "difficulty": "Beginner",
+      "contexts": [
+        "education",
+        "professional"
+      ],
+      "added": "2026-04-20"
+    },
+    {
+      "name": "Excel + Copilot",
+      "url": "https://www.microsoft.com/microsoft-365/excel",
+      "category": "data",
+      "what": "Natural-language formulas, analysis, and chart generation inside Excel.",
+      "best_for": "Spreadsheet analysis when you'd rather describe the task than build the formula.",
+      "pricing": "Excel paid; Copilot in Excel requires M365 Copilot",
+      "cost_tier": "Paid",
+      "difficulty": "Intermediate",
+      "contexts": [
+        "professional",
+        "education"
+      ],
+      "added": "2026-04-20"
+    },
+    {
+      "name": "Microsoft Power BI",
+      "url": "https://powerbi.microsoft.com",
+      "category": "data",
+      "what": "Business-intelligence dashboards with a Copilot for natural-language reporting; integrates tightly with Excel.",
+      "best_for": "Enterprise-style reporting and dashboards for projects and capstones.",
+      "pricing": "Power BI Desktop free; Pro paid (student options via Microsoft)",
+      "cost_tier": "Freemium",
+      "difficulty": "Intermediate",
+      "contexts": [
+        "professional",
+        "education"
+      ],
+      "added": "2026-04-20"
+    },
+    {
+      "name": "Tableau",
+      "url": "https://www.tableau.com",
+      "category": "data",
+      "what": "Industry-standard visual analytics platform with AI-assisted insights.",
+      "best_for": "Serious data viz and analytics-track work; a résumé-worthy skill.",
+      "pricing": "Paid; free 1-year license for students via Tableau Academic",
+      "cost_tier": "Free for students",
+      "difficulty": "Advanced",
+      "contexts": [
+        "professional",
+        "education"
+      ],
+      "added": "2026-04-20"
+    },
+    {
+      "name": "Canva",
+      "url": "https://www.canva.com",
+      "category": "design",
+      "what": "Design platform with AI (Magic Studio) for slides, social graphics, and image generation.",
+      "best_for": "Producing polished visuals and decks with zero design background.",
+      "pricing": "Free; Pro paid (free for some students/educators)",
+      "cost_tier": "Freemium",
+      "difficulty": "Beginner",
+      "contexts": [
+        "education",
+        "professional",
+        "personal"
+      ],
+      "added": "2026-04-20"
+    },
+    {
+      "name": "Adobe Firefly",
+      "url": "https://firefly.adobe.com",
+      "category": "design",
+      "what": "Generative image tool trained for commercial safety, integrated with Adobe apps.",
+      "best_for": "Brand-safe imagery you intend to publish or reuse.",
+      "pricing": "Free monthly credits; paid plans",
+      "cost_tier": "Freemium",
+      "difficulty": "Intermediate",
+      "contexts": [
+        "professional",
+        "personal"
+      ],
+      "added": "2026-04-20",
+      "notes": "Marketed as commercially safer than open image generators — relevant for brand work."
+    },
+    {
+      "name": "Midjourney",
+      "url": "https://www.midjourney.com",
+      "category": "design",
+      "what": "High-quality generative image creation from text prompts.",
+      "best_for": "Original, striking imagery for projects and pitches.",
+      "pricing": "Paid (from ~$10/mo)",
+      "cost_tier": "Paid",
+      "difficulty": "Intermediate",
+      "contexts": [
+        "personal",
+        "professional"
+      ],
+      "added": "2026-04-20"
+    },
+    {
+      "name": "Ideogram",
+      "url": "https://ideogram.ai",
+      "category": "design",
+      "what": "Image generation with best-in-class legible text rendering — posters, logos, and graphics with words in them.",
+      "best_for": "Branded graphics and social images where the text has to look right.",
+      "pricing": "Free tier; paid plans",
+      "cost_tier": "Freemium",
+      "difficulty": "Beginner",
+      "contexts": [
+        "professional",
+        "personal"
+      ],
+      "added": "2026-05-29"
+    },
+    {
+      "name": "Gamma",
+      "url": "https://gamma.app",
+      "category": "slides",
+      "what": "Generates full slide decks, docs, and simple webpages from a prompt or outline.",
+      "best_for": "Getting a first-draft deck in minutes, then editing.",
+      "pricing": "Free credits; paid plans",
+      "cost_tier": "Freemium",
+      "difficulty": "Beginner",
+      "contexts": [
+        "education",
+        "professional"
+      ],
+      "added": "2026-04-20"
+    },
+    {
+      "name": "Copilot in PowerPoint",
+      "url": "https://www.microsoft.com/microsoft-365/powerpoint",
+      "category": "slides",
+      "what": "Builds and redesigns slides from prompts inside PowerPoint.",
+      "best_for": "Office users who want AI slides in the tool they already present from.",
+      "pricing": "Requires M365 Copilot (paid)",
+      "cost_tier": "Paid",
+      "difficulty": "Beginner",
+      "contexts": [
+        "professional",
+        "education"
+      ],
+      "added": "2026-04-20"
+    },
+    {
+      "name": "Speechify",
+      "url": "https://speechify.com",
+      "category": "audio",
+      "what": "Text-to-speech that reads articles, PDFs, and assigned readings aloud in natural voices, at your own speed.",
+      "best_for": "Listening to reading assignments on the commute instead of reading them.",
+      "pricing": "Free tier; Premium paid (student pricing available)",
+      "cost_tier": "Freemium",
+      "difficulty": "Beginner",
+      "contexts": [
+        "education",
+        "professional",
+        "personal"
+      ],
+      "added": "2026-05-29",
+      "notes": "A cohort favorite for turning case readings into audio. Pairs well with NotebookLM's audio overviews."
+    },
+    {
+      "name": "ElevenLabs",
+      "url": "https://elevenlabs.io",
+      "category": "audio",
+      "what": "High-quality AI voice generation and text-to-speech for narration and voiceovers.",
+      "best_for": "Clean voiceover for presentation videos and recorded walkthroughs.",
+      "pricing": "Free tier; paid plans",
+      "cost_tier": "Freemium",
+      "difficulty": "Intermediate",
+      "contexts": [
+        "professional",
+        "personal",
+        "education"
+      ],
+      "added": "2026-05-29"
+    },
+    {
+      "name": "Otter.ai",
+      "url": "https://otter.ai",
+      "category": "meetings",
+      "what": "Live transcription with AI-generated meeting and lecture notes and summaries.",
+      "best_for": "Transcribing classes and capturing what was said in real time.",
+      "pricing": "Free tier; paid plans",
+      "cost_tier": "Freemium",
+      "difficulty": "Beginner",
+      "contexts": [
+        "education",
+        "professional"
+      ],
+      "added": "2026-04-20"
+    },
+    {
+      "name": "Fireflies.ai",
+      "url": "https://fireflies.ai",
+      "category": "meetings",
+      "what": "Records, transcribes, and summarizes meetings across Zoom, Meet, and Teams; searchable archive and action items.",
+      "best_for": "Team-project meetings — auto-captured notes and to-dos.",
+      "pricing": "Free tier; paid plans",
+      "cost_tier": "Freemium",
+      "difficulty": "Beginner",
+      "contexts": [
+        "professional",
+        "education"
+      ],
+      "added": "2026-04-20",
+      "notes": "Tell participants they're being recorded before it joins."
+    },
+    {
+      "name": "Notion AI",
+      "url": "https://www.notion.so/product/ai",
+      "category": "meetings",
+      "what": "AI built into Notion for notes, task management, summaries, and project docs in one workspace.",
+      "best_for": "Keeping notes, study plans, and group projects organized in a single place.",
+      "pricing": "Paid add-on (student pricing available)",
+      "cost_tier": "Freemium",
+      "difficulty": "Intermediate",
+      "contexts": [
+        "education",
+        "professional",
+        "personal"
+      ],
+      "added": "2026-04-20"
+    },
+    {
+      "name": "Zapier",
+      "url": "https://zapier.com",
+      "category": "automation",
+      "what": "Connects 6,000+ apps to automate multi-step workflows, now with AI steps and agents.",
+      "best_for": "Automating repetitive cross-app tasks (e.g., form to sheet to email).",
+      "pricing": "Free tier; paid plans",
+      "cost_tier": "Freemium",
+      "difficulty": "Intermediate",
+      "contexts": [
+        "professional",
+        "personal"
+      ],
+      "added": "2026-04-20"
+    },
+    {
+      "name": "Make",
+      "url": "https://www.make.com",
+      "category": "automation",
+      "what": "Visual, node-based automation platform — a flexible Zapier alternative.",
+      "best_for": "More complex automations on a tighter budget.",
+      "pricing": "Free tier; paid plans",
+      "cost_tier": "Freemium",
+      "difficulty": "Intermediate",
+      "contexts": [
+        "professional",
+        "personal"
+      ],
+      "added": "2026-04-20"
+    },
+    {
+      "name": "GitHub Copilot",
+      "url": "https://github.com/features/copilot",
+      "category": "coding",
+      "what": "AI pair-programmer that autocompletes and explains code inside your editor.",
+      "best_for": "Coding assignments and learning to program.",
+      "pricing": "Free for verified students (Copilot Student, launched Mar 2026)",
+      "cost_tier": "Free for students",
+      "difficulty": "Intermediate",
+      "contexts": [
+        "education",
+        "professional"
+      ],
+      "added": "2026-04-20",
+      "notes": "Verify through the GitHub Student Developer Pack."
+    },
+    {
+      "name": "Cursor",
+      "url": "https://www.cursor.com",
+      "category": "coding",
+      "what": "An AI-first code editor that can read and edit your whole project conversationally.",
+      "best_for": "Building apps, scripts, or analyses with heavy AI assistance.",
+      "pricing": "Free tier; Pro paid (student discount available)",
+      "cost_tier": "Freemium",
+      "difficulty": "Intermediate",
+      "contexts": [
+        "education",
+        "professional"
+      ],
+      "added": "2026-04-20"
+    },
+    {
+      "name": "LinkedIn (AI features)",
+      "url": "https://www.linkedin.com",
+      "category": "career",
+      "what": "AI-assisted profile and résumé feedback, job matching, and interview prep.",
+      "best_for": "Networking, internship/job search, and positioning.",
+      "pricing": "Free; Premium paid (frequent free trials)",
+      "cost_tier": "Freemium",
+      "difficulty": "Beginner",
+      "contexts": [
+        "professional"
+      ],
+      "added": "2026-04-20"
+    },
+    {
+      "name": "Teal",
+      "url": "https://www.tealhq.com",
+      "category": "career",
+      "what": "Résumé builder and job-application tracker with AI tailoring to job postings.",
+      "best_for": "Tailoring résumés to specific roles and tracking applications in one place.",
+      "pricing": "Free tier; paid plans",
+      "cost_tier": "Freemium",
+      "difficulty": "Beginner",
+      "contexts": [
+        "professional"
+      ],
+      "added": "2026-04-20",
+      "notes": "Pair with a general assistant to draft STAR interview stories."
+    },
+    {
+      "name": "Your course / Foster AI policy",
+      "url": "https://foster.uw.edu",
+      "category": "governance",
+      "what": "The single most important \"tool\" here — the AI-use rules for each specific course and assignment.",
+      "best_for": "Knowing what's allowed before you use anything else on this list.",
+      "pricing": "Free",
+      "cost_tier": "Free",
+      "difficulty": "Beginner",
+      "contexts": [
+        "education"
+      ],
+      "added": "2026-04-20",
+      "notes": "Rules vary by course and instructor. When in doubt, ask and disclose."
+    },
+    {
+      "name": "APA AI Citation Guidance",
+      "url": "https://apastyle.apa.org/blog/how-to-cite-chatgpt",
+      "category": "governance",
+      "what": "How to cite and disclose AI assistance in academic work.",
+      "best_for": "Getting disclosure right — undisclosed use carries the heaviest penalties.",
+      "pricing": "Free",
+      "cost_tier": "Free",
+      "difficulty": "Beginner",
+      "contexts": [
+        "education",
+        "professional"
+      ],
+      "added": "2026-04-20"
+    },
+    {
+      "name": "Turnitin (awareness)",
+      "url": "https://www.turnitin.com",
+      "category": "governance",
+      "what": "Plagiarism and AI-writing detection used by many institutions.",
+      "best_for": "Understanding how submissions may be screened — and that detectors produce false positives.",
+      "pricing": "Institutional (used by your school, not bought by you)",
+      "cost_tier": "Institutional",
+      "difficulty": "Beginner",
+      "contexts": [
+        "education"
+      ],
+      "added": "2026-04-20",
+      "notes": "Proactive disclosure beats arguing with a detector after the fact."
+    },
+    {
+      "name": "Credo AI",
+      "url": "https://www.credo.ai",
+      "category": "governance",
+      "what": "Enterprise AI governance platform — policy packs, generative-AI guardrails, and audit trails.",
+      "best_for": "Anyone exploring AI risk, GRC, or compliance as a career direction.",
+      "pricing": "Paid / Enterprise",
+      "cost_tier": "Paid",
+      "difficulty": "Advanced",
+      "contexts": [
+        "professional"
+      ],
+      "added": "2026-04-20",
+      "notes": "Included as a career-relevant signal of where enterprise AI governance is heading."
+    }
+  ]
+}
