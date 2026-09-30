@@ -99,6 +99,7 @@
         "personal"
       ],
       "added": "2026-04-20",
+      "last_verified": "2026-04-20",
       "notes": "Free tier is enough for most coursework. Verify before pasting anything confidential."
     },
     {
@@ -116,6 +117,7 @@
         "personal"
       ],
       "added": "2026-04-20",
+      "last_verified": "2026-04-20",
       "notes": "Large context window handles full case packs in one go."
     },
     {
@@ -133,6 +135,7 @@
         "personal"
       ],
       "added": "2026-04-20",
+      "last_verified": "2026-04-20",
       "notes": "Student year free via google.com/students — strong value."
     },
     {
@@ -149,6 +152,7 @@
         "education"
       ],
       "added": "2026-04-20",
+      "last_verified": "2026-04-20",
       "notes": "Foster/UW may provide M365 Copilot access — check before paying."
     },
     {
@@ -166,6 +170,7 @@
         "personal"
       ],
       "added": "2026-04-20",
+      "last_verified": "2026-04-20",
       "notes": ".gov / some .mil emails get a free Pro year with zero data retention — relevant for veterans/feds."
     },
     {
@@ -182,6 +187,7 @@
         "professional"
       ],
       "added": "2026-04-20",
+      "last_verified": "2026-04-20",
       "notes": "Its audio-overview feature turns your sources into a two-host podcast — great for the commute."
     },
     {
@@ -197,7 +203,8 @@
         "education",
         "professional"
       ],
-      "added": "2026-04-20"
+      "added": "2026-04-20",
+      "last_verified": "2026-04-20"
     },
     {
       "name": "Consensus",
@@ -212,7 +219,8 @@
         "education",
         "professional"
       ],
-      "added": "2026-04-20"
+      "added": "2026-04-20",
+      "last_verified": "2026-04-20"
     },
     {
       "name": "SciSpace",
@@ -226,7 +234,8 @@
       "contexts": [
         "education"
       ],
-      "added": "2026-04-20"
+      "added": "2026-04-20",
+      "last_verified": "2026-04-20"
     },
     {
       "name": "Grammarly",
@@ -242,7 +251,8 @@
         "professional",
         "personal"
       ],
-      "added": "2026-04-20"
+      "added": "2026-04-20",
+      "last_verified": "2026-04-20"
     },
     {
       "name": "QuillBot",
@@ -258,6 +268,7 @@
         "professional"
       ],
       "added": "2026-04-20",
+      "last_verified": "2026-04-20",
       "notes": "Paraphrasing to dodge a detector is not a free pass — disclosure rules still apply."
     },
     {
@@ -272,7 +283,8 @@
       "contexts": [
         "professional"
       ],
-      "added": "2026-04-20"
+      "added": "2026-04-20",
+      "last_verified": "2026-04-20"
     },
     {
       "name": "Julius AI",
@@ -287,7 +299,8 @@
         "education",
         "professional"
       ],
-      "added": "2026-04-20"
+      "added": "2026-04-20",
+      "last_verified": "2026-04-20"
     },
     {
       "name": "Excel + Copilot",
@@ -302,7 +315,8 @@
         "professional",
         "education"
       ],
-      "added": "2026-04-20"
+      "added": "2026-04-20",
+      "last_verified": "2026-04-20"
     },
     {
       "name": "Microsoft Power BI",
@@ -317,7 +331,8 @@
         "professional",
         "education"
       ],
-      "added": "2026-04-20"
+      "added": "2026-04-20",
+      "last_verified": "2026-04-20"
     },
     {
       "name": "Tableau",
@@ -332,7 +347,8 @@
         "professional",
         "education"
       ],
-      "added": "2026-04-20"
+      "added": "2026-04-20",
+      "last_verified": "2026-04-20"
     },
     {
       "name": "Canva",
@@ -348,7 +364,8 @@
         "professional",
         "personal"
       ],
-      "added": "2026-04-20"
+      "added": "2026-04-20",
+      "last_verified": "2026-04-20"
     },
     {
       "name": "Adobe Firefly",
@@ -364,6 +381,7 @@
         "personal"
       ],
       "added": "2026-04-20",
+      "last_verified": "2026-04-20",
       "notes": "Marketed as commercially safer than open image generators — relevant for brand work."
     },
     {
@@ -379,7 +397,8 @@
         "personal",
         "professional"
       ],
-      "added": "2026-04-20"
+      "added": "2026-04-20",
+      "last_verified": "2026-04-20"
     },
     {
       "name": "Ideogram",
@@ -394,7 +413,8 @@
         "professional",
         "personal"
       ],
-      "added": "2026-05-29"
+      "added": "2026-05-29",
+      "last_verified": "2026-05-29"
     },
     {
       "name": "Gamma",
@@ -409,7 +429,8 @@
         "education",
         "professional"
       ],
-      "added": "2026-04-20"
+      "added": "2026-04-20",
+      "last_verified": "2026-04-20"
     },
     {
       "name": "Copilot in PowerPoint",
@@ -424,7 +445,8 @@
         "professional",
         "education"
       ],
-      "added": "2026-04-20"
+      "added": "2026-04-20",
+      "last_verified": "2026-04-20"
     },
     {
       "name": "Speechify",
@@ -441,6 +463,7 @@
         "personal"
       ],
       "added": "2026-05-29",
+      "last_verified": "2026-05-29",
       "notes": "A cohort favorite for turning case readings into audio. Pairs well with NotebookLM's audio overviews."
     },
     {
@@ -457,7 +480,8 @@
         "personal",
         "education"
       ],
-      "added": "2026-05-29"
+      "added": "2026-05-29",
+      "last_verified": "2026-05-29"
     },
     {
       "name": "Otter.ai",
@@ -472,7 +496,8 @@
         "education",
         "professional"
       ],
-      "added": "2026-04-20"
+      "added": "2026-04-20",
+      "last_verified": "2026-04-20"
     },
     {
       "name": "Fireflies.ai",
@@ -488,6 +513,7 @@
         "education"
       ],
       "added": "2026-04-20",
+      "last_verified": "2026-04-20",
       "notes": "Tell participants they're being recorded before it joins."
     },
     {
@@ -504,7 +530,8 @@
         "professional",
         "personal"
       ],
-      "added": "2026-04-20"
+      "added": "2026-04-20",
+      "last_verified": "2026-04-20"
     },
     {
       "name": "Zapier",
@@ -519,7 +546,8 @@
         "professional",
         "personal"
       ],
-      "added": "2026-04-20"
+      "added": "2026-04-20",
+      "last_verified": "2026-04-20"
     },
     {
       "name": "Make",
@@ -534,7 +562,8 @@
         "professional",
         "personal"
       ],
-      "added": "2026-04-20"
+      "added": "2026-04-20",
+      "last_verified": "2026-04-20"
     },
     {
       "name": "GitHub Copilot",
@@ -550,6 +579,7 @@
         "professional"
       ],
       "added": "2026-04-20",
+      "last_verified": "2026-04-20",
       "notes": "Verify through the GitHub Student Developer Pack."
     },
     {
@@ -565,7 +595,8 @@
         "education",
         "professional"
       ],
-      "added": "2026-04-20"
+      "added": "2026-04-20",
+      "last_verified": "2026-04-20"
     },
     {
       "name": "LinkedIn (AI features)",
@@ -579,7 +610,8 @@
       "contexts": [
         "professional"
       ],
-      "added": "2026-04-20"
+      "added": "2026-04-20",
+      "last_verified": "2026-04-20"
     },
     {
       "name": "Teal",
@@ -594,6 +626,7 @@
         "professional"
       ],
       "added": "2026-04-20",
+      "last_verified": "2026-04-20",
       "notes": "Pair with a general assistant to draft STAR interview stories."
     },
     {
@@ -609,6 +642,7 @@
         "education"
       ],
       "added": "2026-04-20",
+      "last_verified": "2026-04-20",
       "notes": "Rules vary by course and instructor. When in doubt, ask and disclose."
     },
     {
@@ -624,7 +658,8 @@
         "education",
         "professional"
       ],
-      "added": "2026-04-20"
+      "added": "2026-04-20",
+      "last_verified": "2026-04-20"
     },
     {
       "name": "Turnitin (awareness)",
@@ -639,6 +674,7 @@
         "education"
       ],
       "added": "2026-04-20",
+      "last_verified": "2026-04-20",
       "notes": "Proactive disclosure beats arguing with a detector after the fact."
     },
     {
@@ -654,6 +690,7 @@
         "professional"
       ],
       "added": "2026-04-20",
+      "last_verified": "2026-04-20",
       "notes": "Included as a career-relevant signal of where enterprise AI governance is heading."
     }
   ]

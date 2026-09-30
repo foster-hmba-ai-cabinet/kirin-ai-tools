@@ -12,6 +12,7 @@ This repo is a living reference. It only stays useful if it's maintained — and
 | `README.md` | Human-readable front door. Tables are **generated** from `tools.yaml`. |
 | `index.html` | The **website** — generated from `tools.yaml` (data injected). |
 | `scripts/build.py` | Generator: rebuilds the site **and** README tables from `tools.yaml`. |
+| `scripts/stale.py` | Lists tools whose pricing hasn't been re-verified in 90 days (quarterly refresh). |
 | `TEMPLATE.md` | Copy-paste template for proposing a new tool. |
 
 **Golden rule:** never hand-edit the tables in `README.md`. Edit `tools.yaml`, then run the script.
@@ -33,9 +34,14 @@ This repo is a living reference. It only stays useful if it's maintained — and
      cost_tier: Freemium                # Free | Freemium | Paid | Free for students | Institutional
      difficulty: Beginner               # Beginner | Intermediate | Advanced
      contexts: [education, professional]# any of: education, professional, personal
-     added: 2026-06-15                  # today's date (YYYY-MM-DD)
+     added: "2026-06-15"                # today's date (YYYY-MM-DD, quoted)
+     last_verified: "2026-06-15"        # date pricing was checked on the provider's page (quoted)
      notes: Optional caveat (renders as a ⚠ line).
    ```
+
+   > **Quote your dates.** Write `added: "2026-06-15"`, not `added: 2026-06-15`. Unquoted, YAML reads the value as a date object instead of a string, which older versions of `build.py` couldn't serialize to JSON (the build crashed with `TypeError: Object of type date is not JSON serializable`). The build now normalizes them, but quoted dates are the convention and keep `tools.yaml` unambiguous.
+   >
+   > **`added` vs `last_verified`:** `added` is when the tool entered the catalog and never changes. `last_verified` is when someone last checked its pricing / free-tier claim on the provider's page — bump it on every re-check, even if nothing changed. It must be on or after `added`, and it's shown on each tool card (amber once it's more than 90 days old).
 
 3. Regenerate and commit:
 
@@ -65,6 +71,7 @@ A tool earns a spot only if it **clearly serves an MBA-student workflow**. Befor
 - [ ] If it touches student data, the `notes` field flags the privacy consideration.
 - [ ] `contexts` reflects where it's actually useful (education / professional / personal).
 - [ ] `added` is today's date — this is what drives the NEW badge and changelog.
+- [ ] `last_verified` is the date you checked the pricing (usually the same as `added` for a new tool).
 
 Curated beats comprehensive. A focused list of ~30–40 great tools is more useful to a new student than 150 entries. Prune aggressively.
 
@@ -75,9 +82,20 @@ Curated beats comprehensive. A focused list of ~30–40 great tools is more usef
 | When | Task |
 |------|------|
 | **Each term** | Spot-check that links resolve and nothing major was discontinued. |
-| **Quarterly** | Pricing refresh — AI pricing shifts fast. Update `pricing` strings and bump `meta.pricing_as_of` in `tools.yaml`. |
+| **Quarterly** | Pricing refresh — AI pricing shifts fast. See below. |
 | **Each major model launch** | Sanity-check the General-Purpose Assistants section. |
 | **Annually (Sept onboarding)** | Ownership handoff to the incoming cohort (below). |
+
+### Quarterly pricing refresh
+
+```bash
+python scripts/stale.py              # tools not verified in the last 90 days
+python scripts/stale.py --markdown   # same list as a checklist — paste into the refresh PR
+```
+
+For each tool listed: open its provider page, update `pricing` (and `cost_tier` if it moved), set `last_verified` to the date you checked, then run `python scripts/build.py` and open a PR. `stale.py` exits non-zero while anything is stale, so the refresh is done when it prints `0 of N tools`.
+
+`meta.pricing_as_of` is the older, catalog-wide pricing date. Keep bumping it after a full refresh until it's retired (see the comment in `tools.yaml`).
 
 ---
 

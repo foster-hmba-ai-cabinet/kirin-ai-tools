@@ -3,7 +3,9 @@
 build.py — regenerate the website and the README from tools.yaml.
 
 `tools.yaml` is the single source of truth. This script:
-  1. Injects the tool data (as JSON) into index.html  -> the live website.
+  1. Injects the tool data (as JSON) into index.html  -> the live website,
+     plus static fallbacks for the tool/category counts and pricing date so
+     they read correctly even without JavaScript.
   2. Renders the Markdown tables in README.md          -> the repo's docs page.
 
 Everything outside the injected regions is hand-written and left untouched.
@@ -13,6 +15,7 @@ Usage:
     python scripts/build.py
 """
 
+import datetime as dt
 import json
 import re
 import sys
@@ -40,12 +43,28 @@ COST_BADGE = {
 
 
 CONTEXTS = {"education", "professional", "personal"}
+DATE_FIELDS = ("added", "last_verified")
+
+
+def load_catalog() -> dict:
+    """Load tools.yaml, normalizing date fields to 'YYYY-MM-DD' strings.
+
+    Unquoted YAML dates (added: 2026-06-15) load as datetime.date objects,
+    which json.dumps can't serialize — normalize them here so either form works.
+    """
+    catalog = yaml.safe_load(CATALOG.read_text(encoding="utf-8"))
+    for t in catalog.get("tools", []):
+        for f in DATE_FIELDS:
+            if isinstance(t.get(f), dt.date):
+                t[f] = t[f].isoformat()
+    return catalog
 
 
 def validate(catalog: dict) -> None:
     cat_ids = {c["id"] for c in catalog["categories"]}
     req = {"name", "url", "category", "what", "best_for", "pricing",
-           "cost_tier", "difficulty", "contexts", "added"}
+           "cost_tier", "difficulty", "contexts", "added", "last_verified"}
+    today = dt.date.today()
     for t in catalog["tools"]:
         missing = req - t.keys()
         if missing:
@@ -58,9 +77,19 @@ def validate(catalog: dict) -> None:
         if bad_ctx:
             sys.exit(f"Tool '{t['name']}' has invalid contexts {bad_ctx}; "
                      f"allowed: {CONTEXTS}")
-        if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", str(t["added"])):
-            sys.exit(f"Tool '{t['name']}' 'added' must be YYYY-MM-DD, "
-                     f"got '{t['added']}'")
+        dates = {}
+        for f in DATE_FIELDS:
+            try:
+                dates[f] = dt.date.fromisoformat(str(t[f]))
+            except ValueError:
+                sys.exit(f"Tool '{t['name']}' '{f}' must be YYYY-MM-DD, "
+                         f"got '{t[f]}'")
+        if dates["last_verified"] < dates["added"]:
+            sys.exit(f"Tool '{t['name']}' last_verified ({t['last_verified']}) "
+                     f"is before added ({t['added']})")
+        if dates["last_verified"] > today:
+            sys.exit(f"Tool '{t['name']}' last_verified ({t['last_verified']}) "
+                     f"is in the future")
 
 
 def build_site(catalog: dict) -> None:
@@ -81,8 +110,26 @@ def build_site(catalog: dict) -> None:
     )
     if not pattern.search(html):
         sys.exit('Could not find <script id="tools-data"> block in index.html')
-    new = pattern.sub(lambda m: m.group(1) + blob + m.group(2), html, count=1)
-    INDEX.write_text(new, encoding="utf-8")
+    html = pattern.sub(lambda m: m.group(1) + blob + m.group(2), html, count=1)
+    # Static fallbacks: real values in the markup; the page script overwrites
+    # them on load, so no-JS visitors and link previews still see real numbers.
+    static = {
+        "toolcount": str(len(catalog["tools"])),
+        "catcount": str(len(catalog["categories"])),
+        "asof": str(catalog.get("meta", {}).get("pricing_as_of", "—")),
+    }
+    for el_id, value in static.items():
+        el = re.compile(rf'(<b id="{el_id}">)[^<]*(</b>)')
+        if not el.search(html):
+            sys.exit(f'Could not find <b id="{el_id}"> in index.html')
+        html = el.sub(lambda m: m.group(1) + esc_html(value) + m.group(2),
+                      html, count=1)
+    INDEX.write_text(html, encoding="utf-8")
+
+
+def esc_html(text: str) -> str:
+    return (text.replace("&", "&amp;").replace("<", "&lt;")
+            .replace(">", "&gt;"))
 
 
 def esc(text: str) -> str:
@@ -117,7 +164,8 @@ def build_readme(catalog: dict) -> None:
             badge = COST_BADGE.get(t["cost_tier"], esc(t["cost_tier"]))
             lines.append(
                 f"| **[{esc(t['name'])}]({t['url']})** | {esc(t['what'])} "
-                f"| {best} | {badge}<br><sub>{esc(t['pricing'])}</sub> "
+                f"| {best} | {badge}<br><sub>{esc(t['pricing'])}</sub>"
+                f"<br><sub>✓ verified {t['last_verified']}</sub> "
                 f"| {esc(t['difficulty'])} |"
             )
         lines.append("")
@@ -131,7 +179,7 @@ def build_readme(catalog: dict) -> None:
 
 
 def main() -> None:
-    catalog = yaml.safe_load(CATALOG.read_text(encoding="utf-8"))
+    catalog = load_catalog()
     validate(catalog)
     build_site(catalog)
     build_readme(catalog)
