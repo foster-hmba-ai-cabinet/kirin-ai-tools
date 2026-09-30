@@ -19,7 +19,9 @@ Most "best AI tools" lists are SEO bait. This one is built by your cohort, for y
 3. **Add specialized tools only when a task demands it** — a deck (Gamma), a dashboard (Power BI), meeting notes (Otter).
 4. **Read the [Ground Rules](#-ground-rules-read-before-graded-work) before using any of it on graded work.**
 
-**The near-zero-cost stack** (honest version): a free general assistant + **Gemini's free student year** + **Perplexity Education Pro** + **GitHub Copilot Student** covers ~90% of MBA needs without a paid subscription. Paid tiers are worth it only once you hit free-tier limits regularly. Don't pay on day one.
+**The near-zero-cost stack** (honest version): the free tier of **ChatGPT, Claude, or Gemini** plus **NotebookLM** (free) handles most day-to-day coursework without a paid subscription. Two verified student offers stretch that further: **Gemini AI Pro free for 12 months** for verified US college students (verify through SheerID, redeem by 2026-12-31, auto-renews at full price afterward) and **GitHub Copilot Student**, free for verified students. Paid tiers are worth it only once you hit free-tier limits regularly. Don't pay on day one.
+
+> **Student offers expire and change.** Before relying on one, check the **✓ verified** date on that tool's entry, then confirm on the provider's page.
 
 > **Cost legend:** 🟢 Free · 🟡 Freemium (free tier + paid upgrade) · 🔴 Paid · 🎓 Free for students · 🏛️ Institutional (your school provides it)
 > **Levels:** Beginner = open it and go · Intermediate = a learning curve · Advanced = real setup or skill required.
