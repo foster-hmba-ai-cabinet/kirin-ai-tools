@@ -14,6 +14,7 @@ This repo is a living reference. It only stays useful if it's maintained — and
 | `scripts/build.py` | Generator: rebuilds the site **and** README tables from `tools.yaml`. |
 | `scripts/stale.py` | Lists tools whose pricing hasn't been re-verified in 90 days (quarterly refresh). |
 | `TEMPLATE.md` | Copy-paste template for proposing a new tool. |
+| `CHANGELOG.md` | Human-written log of edits and corrections ([Keep a Changelog](https://keepachangelog.com/en/1.1.0/) format). |
 
 **Golden rule:** never hand-edit the tables in `README.md`. Edit `tools.yaml`, then run the script.
 
@@ -43,12 +44,14 @@ This repo is a living reference. It only stays useful if it's maintained — and
    >
    > **`added` vs `last_verified`:** `added` is when the tool entered the catalog and never changes. `last_verified` is when someone last checked its pricing / free-tier claim on the provider's page — bump it on every re-check, even if nothing changed. It must be on or after `added`, and it's shown on each tool card (amber once it's more than 90 days old).
 
-3. Regenerate and commit:
+3. **Add a changelog entry.** Any change to `tools.yaml` requires an entry in `CHANGELOG.md` under today's date (`## YYYY-MM-DD`), filed as Added / Changed / Removed / Fixed. That includes adding a tool (under Added). Say what changed for students (e.g. "Perplexity: the $4.99/mo Education Pro rate no longer exists"), not just "updated pricing".
+
+4. Regenerate and commit:
 
    ```bash
    pip install pyyaml
    python scripts/build.py
-   git add tools.yaml index.html README.md tools.json
+   git add tools.yaml index.html README.md tools.json CHANGELOG.md
    git commit -m "tools: add Tool Name"
    git push
    ```
@@ -72,6 +75,7 @@ A tool earns a spot only if it **clearly serves an MBA-student workflow**. Befor
 - [ ] `contexts` reflects where it's actually useful (education / professional / personal).
 - [ ] `added` is today's date — this is what drives the NEW badge and changelog.
 - [ ] `last_verified` is the date you checked the pricing (usually the same as `added` for a new tool).
+- [ ] Every `tools.yaml` change (new tool, pricing, rename, notes, cost tier) has a `CHANGELOG.md` entry.
 
 Curated beats comprehensive. A focused list of ~30–40 great tools is more useful to a new student than 150 entries. Prune aggressively.
 
