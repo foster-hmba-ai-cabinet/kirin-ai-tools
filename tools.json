@@ -90,7 +90,7 @@
       "category": "general",
       "what": "Conversational assistant for writing, analysis, brainstorming, and light coding; built-in data analysis, image generation, and web browsing.",
       "best_for": "A reliable all-rounder and most people's first tool.",
-      "pricing": "Free (ad-supported in the US since Feb 2026); Go $8/mo, Plus $20/mo, Pro $100–200/mo",
+      "pricing": "Free; Go $8/mo (Free and Go may include ads in the US); Plus $20/mo; Pro from $100/mo (3 usage tiers) — Plus and Pro are ad-free",
       "cost_tier": "Freemium",
       "difficulty": "Beginner",
       "contexts": [
@@ -99,7 +99,7 @@
         "personal"
       ],
       "added": "2026-04-20",
-      "last_verified": "2026-04-20",
+      "last_verified": "2026-09-30",
       "notes": "Free tier is enough for most coursework. Verify before pasting anything confidential."
     },
     {
@@ -108,7 +108,7 @@
       "category": "general",
       "what": "Conversational assistant especially strong at long-document analysis, careful reasoning, and natural writing.",
       "best_for": "Nuanced writing, reading large PDFs/case packs, and work where tone matters.",
-      "pricing": "Free; Pro $20/mo; Max $100–200/mo",
+      "pricing": "Free; Pro $20/mo ($17/mo billed annually); Max $100–200/mo",
       "cost_tier": "Freemium",
       "difficulty": "Beginner",
       "contexts": [
@@ -117,7 +117,7 @@
         "personal"
       ],
       "added": "2026-04-20",
-      "last_verified": "2026-04-20",
+      "last_verified": "2026-09-30",
       "notes": "Large context window handles full case packs in one go."
     },
     {
@@ -126,7 +126,7 @@
       "category": "general",
       "what": "Google's assistant with a very large context window, deeply integrated into Gmail, Docs, Drive, and Sheets; also generates images.",
       "best_for": "Students who live in Google Workspace; fits an entire semester of notes in context.",
-      "pricing": "Free; AI Plus $7.99/mo, AI Pro $19.99/mo — free for ~1 year for verified students",
+      "pricing": "Free; AI Plus ~$7.99/mo, AI Pro $19.99/mo — verified US college students get 12 months of AI Pro free, redeem by 2026-12-31",
       "cost_tier": "Free for students",
       "difficulty": "Beginner",
       "contexts": [
@@ -135,8 +135,8 @@
         "personal"
       ],
       "added": "2026-04-20",
-      "last_verified": "2026-04-20",
-      "notes": "Student year free via google.com/students — strong value."
+      "last_verified": "2026-09-30",
+      "notes": "Free student year of AI Pro: verify student status through SheerID and redeem by 2026-12-31. Auto-renews at full price afterward."
     },
     {
       "name": "Microsoft Copilot",
@@ -161,8 +161,8 @@
       "category": "research",
       "what": "AI answer engine that searches the live web and returns sourced, cited answers.",
       "best_for": "Cited research, fact-checking, and current-events questions where a citation trail matters.",
-      "pricing": "Free; Pro $20/mo; Education Pro $4.99/mo (free ~1 year for verified students)",
-      "cost_tier": "Free for students",
+      "pricing": "Free; Pro paid, ~$9/mo on a limited-time 50% off annual promo as of 2026-09-30 (standard rate is higher) — the previously listed $4.99/mo Education Pro rate no longer appears on the plan page",
+      "cost_tier": "Freemium",
       "difficulty": "Beginner",
       "contexts": [
         "education",
@@ -170,8 +170,7 @@
         "personal"
       ],
       "added": "2026-04-20",
-      "last_verified": "2026-04-20",
-      "notes": ".gov / some .mil emails get a free Pro year with zero data retention — relevant for veterans/feds."
+      "last_verified": "2026-09-30"
     },
     {
       "name": "NotebookLM",
@@ -340,7 +339,7 @@
       "category": "data",
       "what": "Industry-standard visual analytics platform with AI-assisted insights.",
       "best_for": "Serious data viz and analytics-track work; a résumé-worthy skill.",
-      "pricing": "Paid; free 1-year license for students via Tableau Academic",
+      "pricing": "Tableau Desktop paid; Tableau Desktop Public Edition free for students via Tableau Academic (non-commercial, publishes to Tableau Public only)",
       "cost_tier": "Free for students",
       "difficulty": "Advanced",
       "contexts": [
@@ -348,7 +347,7 @@
         "education"
       ],
       "added": "2026-04-20",
-      "last_verified": "2026-04-20"
+      "last_verified": "2026-09-30"
     },
     {
       "name": "Canva",
@@ -390,7 +389,7 @@
       "category": "design",
       "what": "High-quality generative image creation from text prompts.",
       "best_for": "Original, striking imagery for projects and pitches.",
-      "pricing": "Paid (from ~$10/mo)",
+      "pricing": "Paid only, from ~$10/mo (no free tier)",
       "cost_tier": "Paid",
       "difficulty": "Intermediate",
       "contexts": [
@@ -398,7 +397,7 @@
         "professional"
       ],
       "added": "2026-04-20",
-      "last_verified": "2026-04-20"
+      "last_verified": "2026-09-30"
     },
     {
       "name": "Ideogram",
@@ -522,7 +521,7 @@
       "category": "meetings",
       "what": "AI built into Notion for notes, task management, summaries, and project docs in one workspace.",
       "best_for": "Keeping notes, study plans, and group projects organized in a single place.",
-      "pricing": "Paid add-on (student pricing available)",
+      "pricing": "Bundled into Notion plans, not a separate add-on: Free has limited AI, Plus $10/user/mo, Business $20/user/mo has full AI — Plus is free for students and educators (1 member)",
       "cost_tier": "Freemium",
       "difficulty": "Intermediate",
       "contexts": [
@@ -531,7 +530,7 @@
         "personal"
       ],
       "added": "2026-04-20",
-      "last_verified": "2026-04-20"
+      "last_verified": "2026-09-30"
     },
     {
       "name": "Zapier",
@@ -571,7 +570,7 @@
       "category": "coding",
       "what": "AI pair-programmer that autocompletes and explains code inside your editor.",
       "best_for": "Coding assignments and learning to program.",
-      "pricing": "Free for verified students (Copilot Student, launched Mar 2026)",
+      "pricing": "Free tier; Pro $10/mo, Pro+ $39/mo, Max $100/mo — Copilot Student is free for verified students",
       "cost_tier": "Free for students",
       "difficulty": "Intermediate",
       "contexts": [
@@ -579,7 +578,7 @@
         "professional"
       ],
       "added": "2026-04-20",
-      "last_verified": "2026-04-20",
+      "last_verified": "2026-09-30",
       "notes": "Verify through the GitHub Student Developer Pack."
     },
     {
