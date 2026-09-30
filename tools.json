@@ -136,7 +136,7 @@
       ],
       "added": "2026-04-20",
       "last_verified": "2026-09-30",
-      "notes": "Student year free via google.com/students — strong value."
+      "notes": "Free student year of AI Pro: verify student status through SheerID and redeem by 2026-12-31. Auto-renews at full price afterward."
     },
     {
       "name": "Microsoft Copilot",
@@ -162,7 +162,7 @@
       "what": "AI answer engine that searches the live web and returns sourced, cited answers.",
       "best_for": "Cited research, fact-checking, and current-events questions where a citation trail matters.",
       "pricing": "Free; Pro paid, ~$9/mo on a limited-time 50% off annual promo as of 2026-09-30 (standard rate is higher) — the previously listed $4.99/mo Education Pro rate no longer appears on the plan page",
-      "cost_tier": "Free for students",
+      "cost_tier": "Freemium",
       "difficulty": "Beginner",
       "contexts": [
         "education",
@@ -170,8 +170,7 @@
         "personal"
       ],
       "added": "2026-04-20",
-      "last_verified": "2026-09-30",
-      "notes": ".gov / some .mil emails get a free Pro year with zero data retention — relevant for veterans/feds."
+      "last_verified": "2026-09-30"
     },
     {
       "name": "NotebookLM",
