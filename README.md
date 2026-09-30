@@ -7,6 +7,7 @@ Most "best AI tools" lists are SEO bait. This one is built by your cohort, for y
 **🌐 Live site:** `index.html` is a standalone website (open it locally, or deploy — see below). This README is the maintainers' page; the website is what you send students.
 **Maintained by the Foster HMBA AI Cabinet** · Technical & Governance Lead: Tyler Futch · AI Chair: Nick Trezza
 **Handoff:** This repo passes to **Cohort 10** at the Sept 2026 onboarding. See [`CONTRIBUTING.md`](CONTRIBUTING.md).
+**What's changed:** pricing corrections, renames, and other edits are logged in [`CHANGELOG.md`](CHANGELOG.md).
 
 ---
 
@@ -195,7 +196,7 @@ pip install pyyaml          # one-time
 python scripts/build.py
 
 # 3. Commit
-git add tools.yaml index.html README.md tools.json
+git add tools.yaml index.html README.md tools.json CHANGELOG.md
 git commit -m "tools: <what changed>"
 git push
 ```
