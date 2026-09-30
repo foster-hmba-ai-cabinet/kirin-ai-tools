@@ -173,12 +173,12 @@
       "last_verified": "2026-09-30"
     },
     {
-      "name": "NotebookLM",
-      "url": "https://notebooklm.google.com",
+      "name": "Gemini Notebook (formerly NotebookLM)",
+      "url": "https://notebook.google.com/",
       "category": "research",
       "what": "Grounded research assistant that answers only from sources YOU upload; generates summaries, study guides, and podcast-style audio overviews.",
       "best_for": "Synthesizing assigned readings and case packs with minimal hallucination.",
-      "pricing": "Free",
+      "pricing": "Free with usage limits",
       "cost_tier": "Free",
       "difficulty": "Beginner",
       "contexts": [
@@ -186,8 +186,8 @@
         "professional"
       ],
       "added": "2026-04-20",
-      "last_verified": "2026-04-20",
-      "notes": "Its audio-overview feature turns your sources into a two-host podcast — great for the commute."
+      "last_verified": "2026-09-30",
+      "notes": "Its audio-overview feature turns your sources into a two-host podcast — great for the commute. Renamed from NotebookLM in July 2026."
     },
     {
       "name": "Elicit",
@@ -463,7 +463,7 @@
       ],
       "added": "2026-05-29",
       "last_verified": "2026-05-29",
-      "notes": "A cohort favorite for turning case readings into audio. Pairs well with NotebookLM's audio overviews."
+      "notes": "A cohort favorite for turning case readings into audio. Pairs well with Gemini Notebook's audio overviews."
     },
     {
       "name": "ElevenLabs",
