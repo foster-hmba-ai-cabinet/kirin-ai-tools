@@ -15,11 +15,11 @@ Most "best AI tools" lists are SEO bait. This one is built by your cohort, for y
 **New to all of this?** Don't install ten things. Do this:
 
 1. **Pick one daily driver** from *General-Purpose Assistants* — ChatGPT, Claude, or Gemini. Learn it well.
-2. **Add a research tool** when you need citations — Perplexity or NotebookLM.
+2. **Add a research tool** when you need citations — Perplexity or Gemini Notebook (formerly NotebookLM).
 3. **Add specialized tools only when a task demands it** — a deck (Gamma), a dashboard (Power BI), meeting notes (Otter).
 4. **Read the [Ground Rules](#-ground-rules-read-before-graded-work) before using any of it on graded work.**
 
-**The near-zero-cost stack** (honest version): the free tier of **ChatGPT, Claude, or Gemini** plus **NotebookLM** (free) handles most day-to-day coursework without a paid subscription. Two verified student offers stretch that further: **Gemini AI Pro free for 12 months** for verified US college students (verify through SheerID, redeem by 2026-12-31, auto-renews at full price afterward) and **GitHub Copilot Student**, free for verified students. Paid tiers are worth it only once you hit free-tier limits regularly. Don't pay on day one.
+**The near-zero-cost stack** (honest version): the free tier of **ChatGPT, Claude, or Gemini** plus **Gemini Notebook** (free) handles most day-to-day coursework without a paid subscription. Two verified student offers stretch that further: **Gemini AI Pro free for 12 months** for verified US college students (verify through SheerID, redeem by 2026-12-31, auto-renews at full price afterward) and **GitHub Copilot Student**, free for verified students. Paid tiers are worth it only once you hit free-tier limits regularly. Don't pay on day one.
 
 > **Student offers expire and change.** Before relying on one, check the **✓ verified** date on that tool's entry, then confirm on the provider's page.
 
@@ -52,7 +52,7 @@ Cited answers, paper discovery, and synthesis of sources. Use these when "I need
 | Tool | What it does | Best for | Cost | Level |
 |------|--------------|----------|------|-------|
 | **[Perplexity](https://www.perplexity.ai)** | AI answer engine that searches the live web and returns sourced, cited answers. | Cited research, fact-checking, and current-events questions where a citation trail matters. | 🟡 Freemium<br><sub>Free; Pro paid, ~$9/mo on a limited-time 50% off annual promo as of 2026-09-30 (standard rate is higher) — the previously listed $4.99/mo Education Pro rate no longer appears on the plan page</sub><br><sub>✓ verified 2026-09-30</sub> | Beginner |
-| **[NotebookLM](https://notebooklm.google.com)** | Grounded research assistant that answers only from sources YOU upload; generates summaries, study guides, and podcast-style audio overviews. | Synthesizing assigned readings and case packs with minimal hallucination. <br>_⚠ Its audio-overview feature turns your sources into a two-host podcast — great for the commute._ | 🟢 Free<br><sub>Free</sub><br><sub>✓ verified 2026-04-20</sub> | Beginner |
+| **[Gemini Notebook (formerly NotebookLM)](https://notebook.google.com/)** | Grounded research assistant that answers only from sources YOU upload; generates summaries, study guides, and podcast-style audio overviews. | Synthesizing assigned readings and case packs with minimal hallucination. <br>_⚠ Its audio-overview feature turns your sources into a two-host podcast — great for the commute. Renamed from NotebookLM in July 2026._ | 🟢 Free<br><sub>Free with usage limits</sub><br><sub>✓ verified 2026-09-30</sub> | Beginner |
 | **[Elicit](https://elicit.com)** | Research assistant that finds academic papers and extracts findings into comparison tables. | Literature reviews and evidence synthesis for term papers. | 🟡 Freemium<br><sub>Free tier; paid plans for higher volume</sub><br><sub>✓ verified 2026-04-20</sub> | Intermediate |
 | **[Consensus](https://consensus.app)** | Search engine that surfaces conclusions from peer-reviewed research for a given question. | Quickly answering "what does the research say about X?" with citations. | 🟡 Freemium<br><sub>Free tier; Premium paid</sub><br><sub>✓ verified 2026-04-20</sub> | Beginner |
 | **[SciSpace](https://scispace.com)** | Reads and explains dense academic papers, clarifies jargon and math, and supports literature search. | Getting through technical PDFs you'd otherwise bounce off. | 🟡 Freemium<br><sub>Free tier; paid plans</sub><br><sub>✓ verified 2026-04-20</sub> | Intermediate |
@@ -104,7 +104,7 @@ Turn text into audio and audio into text. Listen to readings on your commute, or
 
 | Tool | What it does | Best for | Cost | Level |
 |------|--------------|----------|------|-------|
-| **[Speechify](https://speechify.com)** | Text-to-speech that reads articles, PDFs, and assigned readings aloud in natural voices, at your own speed. | Listening to reading assignments on the commute instead of reading them. <br>_⚠ A cohort favorite for turning case readings into audio. Pairs well with NotebookLM's audio overviews._ | 🟡 Freemium<br><sub>Free tier; Premium paid (student pricing available)</sub><br><sub>✓ verified 2026-05-29</sub> | Beginner |
+| **[Speechify](https://speechify.com)** | Text-to-speech that reads articles, PDFs, and assigned readings aloud in natural voices, at your own speed. | Listening to reading assignments on the commute instead of reading them. <br>_⚠ A cohort favorite for turning case readings into audio. Pairs well with Gemini Notebook's audio overviews._ | 🟡 Freemium<br><sub>Free tier; Premium paid (student pricing available)</sub><br><sub>✓ verified 2026-05-29</sub> | Beginner |
 | **[ElevenLabs](https://elevenlabs.io)** | High-quality AI voice generation and text-to-speech for narration and voiceovers. | Clean voiceover for presentation videos and recorded walkthroughs. | 🟡 Freemium<br><sub>Free tier; paid plans</sub><br><sub>✓ verified 2026-05-29</sub> | Intermediate |
 
 ### 🎙️ Meetings & Note-Taking
