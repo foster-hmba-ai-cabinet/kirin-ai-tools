@@ -38,10 +38,10 @@ Start here. These are the Swiss-army tools that handle writing, analysis, brains
 
 | Tool | What it does | Best for | Cost | Level |
 |------|--------------|----------|------|-------|
-| **[ChatGPT](https://chatgpt.com)** | Conversational assistant for writing, analysis, brainstorming, and light coding; built-in data analysis, image generation, and web browsing. | A reliable all-rounder and most people's first tool. <br>_⚠ Free tier is enough for most coursework. Verify before pasting anything confidential._ | 🟡 Freemium<br><sub>Free (ad-supported in the US since Feb 2026); Go $8/mo, Plus $20/mo, Pro $100–200/mo</sub> | Beginner |
-| **[Claude](https://claude.ai)** | Conversational assistant especially strong at long-document analysis, careful reasoning, and natural writing. | Nuanced writing, reading large PDFs/case packs, and work where tone matters. <br>_⚠ Large context window handles full case packs in one go._ | 🟡 Freemium<br><sub>Free; Pro $20/mo; Max $100–200/mo</sub> | Beginner |
-| **[Google Gemini](https://gemini.google.com)** | Google's assistant with a very large context window, deeply integrated into Gmail, Docs, Drive, and Sheets; also generates images. | Students who live in Google Workspace; fits an entire semester of notes in context. <br>_⚠ Student year free via google.com/students — strong value._ | 🎓 Free for students<br><sub>Free; AI Plus $7.99/mo, AI Pro $19.99/mo — free for ~1 year for verified students</sub> | Beginner |
-| **[Microsoft Copilot](https://copilot.microsoft.com)** | Microsoft's assistant, embedded across Word, Excel, Outlook, PowerPoint, and Teams. | Office-heavy workflows where you want AI inside the apps you already use. <br>_⚠ Foster/UW may provide M365 Copilot access — check before paying._ | 🟡 Freemium<br><sub>Free chat; M365 Copilot is a paid add-on (check school licensing)</sub> | Beginner |
+| **[ChatGPT](https://chatgpt.com)** | Conversational assistant for writing, analysis, brainstorming, and light coding; built-in data analysis, image generation, and web browsing. | A reliable all-rounder and most people's first tool. <br>_⚠ Free tier is enough for most coursework. Verify before pasting anything confidential._ | 🟡 Freemium<br><sub>Free (ad-supported in the US since Feb 2026); Go $8/mo, Plus $20/mo, Pro $100–200/mo</sub><br><sub>✓ verified 2026-04-20</sub> | Beginner |
+| **[Claude](https://claude.ai)** | Conversational assistant especially strong at long-document analysis, careful reasoning, and natural writing. | Nuanced writing, reading large PDFs/case packs, and work where tone matters. <br>_⚠ Large context window handles full case packs in one go._ | 🟡 Freemium<br><sub>Free; Pro $20/mo; Max $100–200/mo</sub><br><sub>✓ verified 2026-04-20</sub> | Beginner |
+| **[Google Gemini](https://gemini.google.com)** | Google's assistant with a very large context window, deeply integrated into Gmail, Docs, Drive, and Sheets; also generates images. | Students who live in Google Workspace; fits an entire semester of notes in context. <br>_⚠ Student year free via google.com/students — strong value._ | 🎓 Free for students<br><sub>Free; AI Plus $7.99/mo, AI Pro $19.99/mo — free for ~1 year for verified students</sub><br><sub>✓ verified 2026-04-20</sub> | Beginner |
+| **[Microsoft Copilot](https://copilot.microsoft.com)** | Microsoft's assistant, embedded across Word, Excel, Outlook, PowerPoint, and Teams. | Office-heavy workflows where you want AI inside the apps you already use. <br>_⚠ Foster/UW may provide M365 Copilot access — check before paying._ | 🟡 Freemium<br><sub>Free chat; M365 Copilot is a paid add-on (check school licensing)</sub><br><sub>✓ verified 2026-04-20</sub> | Beginner |
 
 ### 🔎 Research & Literature
 
@@ -49,11 +49,11 @@ Cited answers, paper discovery, and synthesis of sources. Use these when "I need
 
 | Tool | What it does | Best for | Cost | Level |
 |------|--------------|----------|------|-------|
-| **[Perplexity](https://www.perplexity.ai)** | AI answer engine that searches the live web and returns sourced, cited answers. | Cited research, fact-checking, and current-events questions where a citation trail matters. <br>_⚠ .gov / some .mil emails get a free Pro year with zero data retention — relevant for veterans/feds._ | 🎓 Free for students<br><sub>Free; Pro $20/mo; Education Pro $4.99/mo (free ~1 year for verified students)</sub> | Beginner |
-| **[NotebookLM](https://notebooklm.google.com)** | Grounded research assistant that answers only from sources YOU upload; generates summaries, study guides, and podcast-style audio overviews. | Synthesizing assigned readings and case packs with minimal hallucination. <br>_⚠ Its audio-overview feature turns your sources into a two-host podcast — great for the commute._ | 🟢 Free<br><sub>Free</sub> | Beginner |
-| **[Elicit](https://elicit.com)** | Research assistant that finds academic papers and extracts findings into comparison tables. | Literature reviews and evidence synthesis for term papers. | 🟡 Freemium<br><sub>Free tier; paid plans for higher volume</sub> | Intermediate |
-| **[Consensus](https://consensus.app)** | Search engine that surfaces conclusions from peer-reviewed research for a given question. | Quickly answering "what does the research say about X?" with citations. | 🟡 Freemium<br><sub>Free tier; Premium paid</sub> | Beginner |
-| **[SciSpace](https://scispace.com)** | Reads and explains dense academic papers, clarifies jargon and math, and supports literature search. | Getting through technical PDFs you'd otherwise bounce off. | 🟡 Freemium<br><sub>Free tier; paid plans</sub> | Intermediate |
+| **[Perplexity](https://www.perplexity.ai)** | AI answer engine that searches the live web and returns sourced, cited answers. | Cited research, fact-checking, and current-events questions where a citation trail matters. <br>_⚠ .gov / some .mil emails get a free Pro year with zero data retention — relevant for veterans/feds._ | 🎓 Free for students<br><sub>Free; Pro $20/mo; Education Pro $4.99/mo (free ~1 year for verified students)</sub><br><sub>✓ verified 2026-04-20</sub> | Beginner |
+| **[NotebookLM](https://notebooklm.google.com)** | Grounded research assistant that answers only from sources YOU upload; generates summaries, study guides, and podcast-style audio overviews. | Synthesizing assigned readings and case packs with minimal hallucination. <br>_⚠ Its audio-overview feature turns your sources into a two-host podcast — great for the commute._ | 🟢 Free<br><sub>Free</sub><br><sub>✓ verified 2026-04-20</sub> | Beginner |
+| **[Elicit](https://elicit.com)** | Research assistant that finds academic papers and extracts findings into comparison tables. | Literature reviews and evidence synthesis for term papers. | 🟡 Freemium<br><sub>Free tier; paid plans for higher volume</sub><br><sub>✓ verified 2026-04-20</sub> | Intermediate |
+| **[Consensus](https://consensus.app)** | Search engine that surfaces conclusions from peer-reviewed research for a given question. | Quickly answering "what does the research say about X?" with citations. | 🟡 Freemium<br><sub>Free tier; Premium paid</sub><br><sub>✓ verified 2026-04-20</sub> | Beginner |
+| **[SciSpace](https://scispace.com)** | Reads and explains dense academic papers, clarifies jargon and math, and supports literature search. | Getting through technical PDFs you'd otherwise bounce off. | 🟡 Freemium<br><sub>Free tier; paid plans</sub><br><sub>✓ verified 2026-04-20</sub> | Intermediate |
 
 ### ✍️ Writing & Editing
 
@@ -61,9 +61,9 @@ Polish, paraphrase, and clarity. These refine what you've written rather than re
 
 | Tool | What it does | Best for | Cost | Level |
 |------|--------------|----------|------|-------|
-| **[Grammarly](https://www.grammarly.com)** | Grammar, clarity, and tone checking, plus generative drafting and rewriting help. | Polishing assignments, emails, and professional communication. | 🟡 Freemium<br><sub>Free; Pro paid (student pricing available)</sub> | Beginner |
-| **[QuillBot](https://quillbot.com)** | Paraphrasing, summarizing, grammar checking, and citation generation. | Tightening and rephrasing drafts without changing meaning. <br>_⚠ Paraphrasing to dodge a detector is not a free pass — disclosure rules still apply._ | 🟡 Freemium<br><sub>Free tier; Premium paid</sub> | Beginner |
-| **[Jasper](https://www.jasper.ai)** | Marketing and brand copy generation at scale with reusable brand-voice profiles. | Marketing electives and content/brand projects. | 🔴 Paid<br><sub>Paid (free trial)</sub> | Intermediate |
+| **[Grammarly](https://www.grammarly.com)** | Grammar, clarity, and tone checking, plus generative drafting and rewriting help. | Polishing assignments, emails, and professional communication. | 🟡 Freemium<br><sub>Free; Pro paid (student pricing available)</sub><br><sub>✓ verified 2026-04-20</sub> | Beginner |
+| **[QuillBot](https://quillbot.com)** | Paraphrasing, summarizing, grammar checking, and citation generation. | Tightening and rephrasing drafts without changing meaning. <br>_⚠ Paraphrasing to dodge a detector is not a free pass — disclosure rules still apply._ | 🟡 Freemium<br><sub>Free tier; Premium paid</sub><br><sub>✓ verified 2026-04-20</sub> | Beginner |
+| **[Jasper](https://www.jasper.ai)** | Marketing and brand copy generation at scale with reusable brand-voice profiles. | Marketing electives and content/brand projects. | 🔴 Paid<br><sub>Paid (free trial)</sub><br><sub>✓ verified 2026-04-20</sub> | Intermediate |
 
 ### 📊 Data Analysis & Visualization
 
@@ -71,10 +71,10 @@ Turn spreadsheets and datasets into analysis and dashboards — from chat-based 
 
 | Tool | What it does | Best for | Cost | Level |
 |------|--------------|----------|------|-------|
-| **[Julius AI](https://julius.ai)** | Chat-based data analyst — upload a dataset, ask questions in plain English, get charts and statistics. | Analyzing CSVs/Excel without writing formulas or code. | 🟡 Freemium<br><sub>Free tier; paid plans</sub> | Beginner |
-| **[Excel + Copilot](https://www.microsoft.com/microsoft-365/excel)** | Natural-language formulas, analysis, and chart generation inside Excel. | Spreadsheet analysis when you'd rather describe the task than build the formula. | 🔴 Paid<br><sub>Excel paid; Copilot in Excel requires M365 Copilot</sub> | Intermediate |
-| **[Microsoft Power BI](https://powerbi.microsoft.com)** | Business-intelligence dashboards with a Copilot for natural-language reporting; integrates tightly with Excel. | Enterprise-style reporting and dashboards for projects and capstones. | 🟡 Freemium<br><sub>Power BI Desktop free; Pro paid (student options via Microsoft)</sub> | Intermediate |
-| **[Tableau](https://www.tableau.com)** | Industry-standard visual analytics platform with AI-assisted insights. | Serious data viz and analytics-track work; a résumé-worthy skill. | 🎓 Free for students<br><sub>Paid; free 1-year license for students via Tableau Academic</sub> | Advanced |
+| **[Julius AI](https://julius.ai)** | Chat-based data analyst — upload a dataset, ask questions in plain English, get charts and statistics. | Analyzing CSVs/Excel without writing formulas or code. | 🟡 Freemium<br><sub>Free tier; paid plans</sub><br><sub>✓ verified 2026-04-20</sub> | Beginner |
+| **[Excel + Copilot](https://www.microsoft.com/microsoft-365/excel)** | Natural-language formulas, analysis, and chart generation inside Excel. | Spreadsheet analysis when you'd rather describe the task than build the formula. | 🔴 Paid<br><sub>Excel paid; Copilot in Excel requires M365 Copilot</sub><br><sub>✓ verified 2026-04-20</sub> | Intermediate |
+| **[Microsoft Power BI](https://powerbi.microsoft.com)** | Business-intelligence dashboards with a Copilot for natural-language reporting; integrates tightly with Excel. | Enterprise-style reporting and dashboards for projects and capstones. | 🟡 Freemium<br><sub>Power BI Desktop free; Pro paid (student options via Microsoft)</sub><br><sub>✓ verified 2026-04-20</sub> | Intermediate |
+| **[Tableau](https://www.tableau.com)** | Industry-standard visual analytics platform with AI-assisted insights. | Serious data viz and analytics-track work; a résumé-worthy skill. | 🎓 Free for students<br><sub>Paid; free 1-year license for students via Tableau Academic</sub><br><sub>✓ verified 2026-04-20</sub> | Advanced |
 
 ### 🖼️ Image, Design & Brand
 
@@ -82,10 +82,10 @@ Generate visuals, graphics, and brand assets. Watch licensing for anything you p
 
 | Tool | What it does | Best for | Cost | Level |
 |------|--------------|----------|------|-------|
-| **[Canva](https://www.canva.com)** | Design platform with AI (Magic Studio) for slides, social graphics, and image generation. | Producing polished visuals and decks with zero design background. | 🟡 Freemium<br><sub>Free; Pro paid (free for some students/educators)</sub> | Beginner |
-| **[Adobe Firefly](https://firefly.adobe.com)** | Generative image tool trained for commercial safety, integrated with Adobe apps. | Brand-safe imagery you intend to publish or reuse. <br>_⚠ Marketed as commercially safer than open image generators — relevant for brand work._ | 🟡 Freemium<br><sub>Free monthly credits; paid plans</sub> | Intermediate |
-| **[Midjourney](https://www.midjourney.com)** | High-quality generative image creation from text prompts. | Original, striking imagery for projects and pitches. | 🔴 Paid<br><sub>Paid (from ~$10/mo)</sub> | Intermediate |
-| **[Ideogram](https://ideogram.ai)** | Image generation with best-in-class legible text rendering — posters, logos, and graphics with words in them. | Branded graphics and social images where the text has to look right. | 🟡 Freemium<br><sub>Free tier; paid plans</sub> | Beginner |
+| **[Canva](https://www.canva.com)** | Design platform with AI (Magic Studio) for slides, social graphics, and image generation. | Producing polished visuals and decks with zero design background. | 🟡 Freemium<br><sub>Free; Pro paid (free for some students/educators)</sub><br><sub>✓ verified 2026-04-20</sub> | Beginner |
+| **[Adobe Firefly](https://firefly.adobe.com)** | Generative image tool trained for commercial safety, integrated with Adobe apps. | Brand-safe imagery you intend to publish or reuse. <br>_⚠ Marketed as commercially safer than open image generators — relevant for brand work._ | 🟡 Freemium<br><sub>Free monthly credits; paid plans</sub><br><sub>✓ verified 2026-04-20</sub> | Intermediate |
+| **[Midjourney](https://www.midjourney.com)** | High-quality generative image creation from text prompts. | Original, striking imagery for projects and pitches. | 🔴 Paid<br><sub>Paid (from ~$10/mo)</sub><br><sub>✓ verified 2026-04-20</sub> | Intermediate |
+| **[Ideogram](https://ideogram.ai)** | Image generation with best-in-class legible text rendering — posters, logos, and graphics with words in them. | Branded graphics and social images where the text has to look right. | 🟡 Freemium<br><sub>Free tier; paid plans</sub><br><sub>✓ verified 2026-05-29</sub> | Beginner |
 
 ### 🎤 Presentations & Slides
 
@@ -93,8 +93,8 @@ Get a first-draft deck in minutes. Always rework AI slides before presenting —
 
 | Tool | What it does | Best for | Cost | Level |
 |------|--------------|----------|------|-------|
-| **[Gamma](https://gamma.app)** | Generates full slide decks, docs, and simple webpages from a prompt or outline. | Getting a first-draft deck in minutes, then editing. | 🟡 Freemium<br><sub>Free credits; paid plans</sub> | Beginner |
-| **[Copilot in PowerPoint](https://www.microsoft.com/microsoft-365/powerpoint)** | Builds and redesigns slides from prompts inside PowerPoint. | Office users who want AI slides in the tool they already present from. | 🔴 Paid<br><sub>Requires M365 Copilot (paid)</sub> | Beginner |
+| **[Gamma](https://gamma.app)** | Generates full slide decks, docs, and simple webpages from a prompt or outline. | Getting a first-draft deck in minutes, then editing. | 🟡 Freemium<br><sub>Free credits; paid plans</sub><br><sub>✓ verified 2026-04-20</sub> | Beginner |
+| **[Copilot in PowerPoint](https://www.microsoft.com/microsoft-365/powerpoint)** | Builds and redesigns slides from prompts inside PowerPoint. | Office users who want AI slides in the tool they already present from. | 🔴 Paid<br><sub>Requires M365 Copilot (paid)</sub><br><sub>✓ verified 2026-04-20</sub> | Beginner |
 
 ### 🎧 Audio & Voice
 
@@ -102,8 +102,8 @@ Turn text into audio and audio into text. Listen to readings on your commute, or
 
 | Tool | What it does | Best for | Cost | Level |
 |------|--------------|----------|------|-------|
-| **[Speechify](https://speechify.com)** | Text-to-speech that reads articles, PDFs, and assigned readings aloud in natural voices, at your own speed. | Listening to reading assignments on the commute instead of reading them. <br>_⚠ A cohort favorite for turning case readings into audio. Pairs well with NotebookLM's audio overviews._ | 🟡 Freemium<br><sub>Free tier; Premium paid (student pricing available)</sub> | Beginner |
-| **[ElevenLabs](https://elevenlabs.io)** | High-quality AI voice generation and text-to-speech for narration and voiceovers. | Clean voiceover for presentation videos and recorded walkthroughs. | 🟡 Freemium<br><sub>Free tier; paid plans</sub> | Intermediate |
+| **[Speechify](https://speechify.com)** | Text-to-speech that reads articles, PDFs, and assigned readings aloud in natural voices, at your own speed. | Listening to reading assignments on the commute instead of reading them. <br>_⚠ A cohort favorite for turning case readings into audio. Pairs well with NotebookLM's audio overviews._ | 🟡 Freemium<br><sub>Free tier; Premium paid (student pricing available)</sub><br><sub>✓ verified 2026-05-29</sub> | Beginner |
+| **[ElevenLabs](https://elevenlabs.io)** | High-quality AI voice generation and text-to-speech for narration and voiceovers. | Clean voiceover for presentation videos and recorded walkthroughs. | 🟡 Freemium<br><sub>Free tier; paid plans</sub><br><sub>✓ verified 2026-05-29</sub> | Intermediate |
 
 ### 🎙️ Meetings & Note-Taking
 
@@ -111,9 +111,9 @@ Transcribe lectures and team calls, capture action items, and organize notes. Ge
 
 | Tool | What it does | Best for | Cost | Level |
 |------|--------------|----------|------|-------|
-| **[Otter.ai](https://otter.ai)** | Live transcription with AI-generated meeting and lecture notes and summaries. | Transcribing classes and capturing what was said in real time. | 🟡 Freemium<br><sub>Free tier; paid plans</sub> | Beginner |
-| **[Fireflies.ai](https://fireflies.ai)** | Records, transcribes, and summarizes meetings across Zoom, Meet, and Teams; searchable archive and action items. | Team-project meetings — auto-captured notes and to-dos. <br>_⚠ Tell participants they're being recorded before it joins._ | 🟡 Freemium<br><sub>Free tier; paid plans</sub> | Beginner |
-| **[Notion AI](https://www.notion.so/product/ai)** | AI built into Notion for notes, task management, summaries, and project docs in one workspace. | Keeping notes, study plans, and group projects organized in a single place. | 🟡 Freemium<br><sub>Paid add-on (student pricing available)</sub> | Intermediate |
+| **[Otter.ai](https://otter.ai)** | Live transcription with AI-generated meeting and lecture notes and summaries. | Transcribing classes and capturing what was said in real time. | 🟡 Freemium<br><sub>Free tier; paid plans</sub><br><sub>✓ verified 2026-04-20</sub> | Beginner |
+| **[Fireflies.ai](https://fireflies.ai)** | Records, transcribes, and summarizes meetings across Zoom, Meet, and Teams; searchable archive and action items. | Team-project meetings — auto-captured notes and to-dos. <br>_⚠ Tell participants they're being recorded before it joins._ | 🟡 Freemium<br><sub>Free tier; paid plans</sub><br><sub>✓ verified 2026-04-20</sub> | Beginner |
+| **[Notion AI](https://www.notion.so/product/ai)** | AI built into Notion for notes, task management, summaries, and project docs in one workspace. | Keeping notes, study plans, and group projects organized in a single place. | 🟡 Freemium<br><sub>Paid add-on (student pricing available)</sub><br><sub>✓ verified 2026-04-20</sub> | Intermediate |
 
 ### ⚙️ Productivity & Workflow Automation
 
@@ -121,8 +121,8 @@ Connect your apps and kill repetitive busywork.
 
 | Tool | What it does | Best for | Cost | Level |
 |------|--------------|----------|------|-------|
-| **[Zapier](https://zapier.com)** | Connects 6,000+ apps to automate multi-step workflows, now with AI steps and agents. | Automating repetitive cross-app tasks (e.g., form to sheet to email). | 🟡 Freemium<br><sub>Free tier; paid plans</sub> | Intermediate |
-| **[Make](https://www.make.com)** | Visual, node-based automation platform — a flexible Zapier alternative. | More complex automations on a tighter budget. | 🟡 Freemium<br><sub>Free tier; paid plans</sub> | Intermediate |
+| **[Zapier](https://zapier.com)** | Connects 6,000+ apps to automate multi-step workflows, now with AI steps and agents. | Automating repetitive cross-app tasks (e.g., form to sheet to email). | 🟡 Freemium<br><sub>Free tier; paid plans</sub><br><sub>✓ verified 2026-04-20</sub> | Intermediate |
+| **[Make](https://www.make.com)** | Visual, node-based automation platform — a flexible Zapier alternative. | More complex automations on a tighter budget. | 🟡 Freemium<br><sub>Free tier; paid plans</sub><br><sub>✓ verified 2026-04-20</sub> | Intermediate |
 
 ### 💻 Coding & Technical
 
@@ -130,8 +130,8 @@ For the analytics, data, and tech-track electives — or anyone learning to buil
 
 | Tool | What it does | Best for | Cost | Level |
 |------|--------------|----------|------|-------|
-| **[GitHub Copilot](https://github.com/features/copilot)** | AI pair-programmer that autocompletes and explains code inside your editor. | Coding assignments and learning to program. <br>_⚠ Verify through the GitHub Student Developer Pack._ | 🎓 Free for students<br><sub>Free for verified students (Copilot Student, launched Mar 2026)</sub> | Intermediate |
-| **[Cursor](https://www.cursor.com)** | An AI-first code editor that can read and edit your whole project conversationally. | Building apps, scripts, or analyses with heavy AI assistance. | 🟡 Freemium<br><sub>Free tier; Pro paid (student discount available)</sub> | Intermediate |
+| **[GitHub Copilot](https://github.com/features/copilot)** | AI pair-programmer that autocompletes and explains code inside your editor. | Coding assignments and learning to program. <br>_⚠ Verify through the GitHub Student Developer Pack._ | 🎓 Free for students<br><sub>Free for verified students (Copilot Student, launched Mar 2026)</sub><br><sub>✓ verified 2026-04-20</sub> | Intermediate |
+| **[Cursor](https://www.cursor.com)** | An AI-first code editor that can read and edit your whole project conversationally. | Building apps, scripts, or analyses with heavy AI assistance. | 🟡 Freemium<br><sub>Free tier; Pro paid (student discount available)</sub><br><sub>✓ verified 2026-04-20</sub> | Intermediate |
 
 ### 💼 Career & Recruiting
 
@@ -139,8 +139,8 @@ Résumés, networking, interview prep, and application tracking.
 
 | Tool | What it does | Best for | Cost | Level |
 |------|--------------|----------|------|-------|
-| **[LinkedIn (AI features)](https://www.linkedin.com)** | AI-assisted profile and résumé feedback, job matching, and interview prep. | Networking, internship/job search, and positioning. | 🟡 Freemium<br><sub>Free; Premium paid (frequent free trials)</sub> | Beginner |
-| **[Teal](https://www.tealhq.com)** | Résumé builder and job-application tracker with AI tailoring to job postings. | Tailoring résumés to specific roles and tracking applications in one place. <br>_⚠ Pair with a general assistant to draft STAR interview stories._ | 🟡 Freemium<br><sub>Free tier; paid plans</sub> | Beginner |
+| **[LinkedIn (AI features)](https://www.linkedin.com)** | AI-assisted profile and résumé feedback, job matching, and interview prep. | Networking, internship/job search, and positioning. | 🟡 Freemium<br><sub>Free; Premium paid (frequent free trials)</sub><br><sub>✓ verified 2026-04-20</sub> | Beginner |
+| **[Teal](https://www.tealhq.com)** | Résumé builder and job-application tracker with AI tailoring to job postings. | Tailoring résumés to specific roles and tracking applications in one place. <br>_⚠ Pair with a general assistant to draft STAR interview stories._ | 🟡 Freemium<br><sub>Free tier; paid plans</sub><br><sub>✓ verified 2026-04-20</sub> | Beginner |
 
 ### 🛡️ Governance, Responsible Use & Compliance
 
@@ -148,10 +148,10 @@ The part most tool lists skip. Read the Ground Rules on the site before using an
 
 | Tool | What it does | Best for | Cost | Level |
 |------|--------------|----------|------|-------|
-| **[Your course / Foster AI policy](https://foster.uw.edu)** | The single most important "tool" here — the AI-use rules for each specific course and assignment. | Knowing what's allowed before you use anything else on this list. <br>_⚠ Rules vary by course and instructor. When in doubt, ask and disclose._ | 🟢 Free<br><sub>Free</sub> | Beginner |
-| **[APA AI Citation Guidance](https://apastyle.apa.org/blog/how-to-cite-chatgpt)** | How to cite and disclose AI assistance in academic work. | Getting disclosure right — undisclosed use carries the heaviest penalties. | 🟢 Free<br><sub>Free</sub> | Beginner |
-| **[Turnitin (awareness)](https://www.turnitin.com)** | Plagiarism and AI-writing detection used by many institutions. | Understanding how submissions may be screened — and that detectors produce false positives. <br>_⚠ Proactive disclosure beats arguing with a detector after the fact._ | 🏛️ Institutional<br><sub>Institutional (used by your school, not bought by you)</sub> | Beginner |
-| **[Credo AI](https://www.credo.ai)** | Enterprise AI governance platform — policy packs, generative-AI guardrails, and audit trails. | Anyone exploring AI risk, GRC, or compliance as a career direction. <br>_⚠ Included as a career-relevant signal of where enterprise AI governance is heading._ | 🔴 Paid<br><sub>Paid / Enterprise</sub> | Advanced |
+| **[Your course / Foster AI policy](https://foster.uw.edu)** | The single most important "tool" here — the AI-use rules for each specific course and assignment. | Knowing what's allowed before you use anything else on this list. <br>_⚠ Rules vary by course and instructor. When in doubt, ask and disclose._ | 🟢 Free<br><sub>Free</sub><br><sub>✓ verified 2026-04-20</sub> | Beginner |
+| **[APA AI Citation Guidance](https://apastyle.apa.org/blog/how-to-cite-chatgpt)** | How to cite and disclose AI assistance in academic work. | Getting disclosure right — undisclosed use carries the heaviest penalties. | 🟢 Free<br><sub>Free</sub><br><sub>✓ verified 2026-04-20</sub> | Beginner |
+| **[Turnitin (awareness)](https://www.turnitin.com)** | Plagiarism and AI-writing detection used by many institutions. | Understanding how submissions may be screened — and that detectors produce false positives. <br>_⚠ Proactive disclosure beats arguing with a detector after the fact._ | 🏛️ Institutional<br><sub>Institutional (used by your school, not bought by you)</sub><br><sub>✓ verified 2026-04-20</sub> | Beginner |
+| **[Credo AI](https://www.credo.ai)** | Enterprise AI governance platform — policy packs, generative-AI guardrails, and audit trails. | Anyone exploring AI risk, GRC, or compliance as a career direction. <br>_⚠ Included as a career-relevant signal of where enterprise AI governance is heading._ | 🔴 Paid<br><sub>Paid / Enterprise</sub><br><sub>✓ verified 2026-04-20</sub> | Advanced |
 
 <!-- TOOLS:END -->
 
@@ -193,10 +193,12 @@ pip install pyyaml          # one-time
 python scripts/build.py
 
 # 3. Commit
-git add tools.yaml index.html README.md
+git add tools.yaml index.html README.md tools.json
 git commit -m "tools: <what changed>"
 git push
 ```
+
+Quarterly pricing refresh: `python scripts/stale.py` lists every tool not re-verified in 90 days.
 
 Full contributor and handoff guidance — entry schema, review cadence, the quarterly pricing refresh, and ownership transfer to C10 — lives in [`CONTRIBUTING.md`](CONTRIBUTING.md). To propose a tool, copy [`TEMPLATE.md`](TEMPLATE.md).
 

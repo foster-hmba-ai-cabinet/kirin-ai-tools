@@ -13,6 +13,11 @@
 # contexts   values: any of [education, professional, personal] (several allowed)
 # added:     ISO date the tool entered the catalog (YYYY-MM-DD). Powers the NEW
 #            badge (auto-ages out after 30 days, client-side) and the changelog.
+# last_verified: ISO date (YYYY-MM-DD) the pricing / free-tier claim was last
+#            checked on the provider's own page. Distinct from `added` — bump it
+#            on every re-check, even if nothing changed. Must be >= added.
+#            Quote all dates ("2026-06-15"). `python scripts/stale.py` lists
+#            tools not verified in the last 90 days (quarterly refresh).
 # Pricing strings are point-in-time (see pricing_as_of). Verify on the provider
 # page before quoting to the cohort.
 # =============================================================================
@@ -20,6 +25,9 @@
 meta:
   title: KIRIN AI Tools Repository
   audience: Foster Hybrid MBA students new to AI
+  # Catalog-wide pricing date. Superseded by per-tool `last_verified`; remove
+  # this field once every tool has an independently verified last_verified date
+  # (i.e. after the first full refresh, when no last_verified merely equals added).
   pricing_as_of: "2026-05"
   maintainers:
     - Tyler Futch (Technical & Governance Lead)
@@ -111,6 +119,7 @@ tools:
     difficulty: Beginner
     contexts: [education, professional, personal]
     added: "2026-04-20"
+    last_verified: "2026-04-20"
     notes: Free tier is enough for most coursework. Verify before pasting anything confidential.
 
   - name: Claude
@@ -123,6 +132,7 @@ tools:
     difficulty: Beginner
     contexts: [education, professional, personal]
     added: "2026-04-20"
+    last_verified: "2026-04-20"
     notes: Large context window handles full case packs in one go.
 
   - name: Google Gemini
@@ -135,6 +145,7 @@ tools:
     difficulty: Beginner
     contexts: [education, professional, personal]
     added: "2026-04-20"
+    last_verified: "2026-04-20"
     notes: Student year free via google.com/students — strong value.
 
   - name: Microsoft Copilot
@@ -147,6 +158,7 @@ tools:
     difficulty: Beginner
     contexts: [professional, education]
     added: "2026-04-20"
+    last_verified: "2026-04-20"
     notes: Foster/UW may provide M365 Copilot access — check before paying.
 
   # --- Research & Literature ---
@@ -160,6 +172,7 @@ tools:
     difficulty: Beginner
     contexts: [education, professional, personal]
     added: "2026-04-20"
+    last_verified: "2026-04-20"
     notes: ".gov / some .mil emails get a free Pro year with zero data retention — relevant for veterans/feds."
 
   - name: NotebookLM
@@ -172,6 +185,7 @@ tools:
     difficulty: Beginner
     contexts: [education, professional]
     added: "2026-04-20"
+    last_verified: "2026-04-20"
     notes: Its audio-overview feature turns your sources into a two-host podcast — great for the commute.
 
   - name: Elicit
@@ -184,6 +198,7 @@ tools:
     difficulty: Intermediate
     contexts: [education, professional]
     added: "2026-04-20"
+    last_verified: "2026-04-20"
 
   - name: Consensus
     url: https://consensus.app
@@ -195,6 +210,7 @@ tools:
     difficulty: Beginner
     contexts: [education, professional]
     added: "2026-04-20"
+    last_verified: "2026-04-20"
 
   - name: SciSpace
     url: https://scispace.com
@@ -206,6 +222,7 @@ tools:
     difficulty: Intermediate
     contexts: [education]
     added: "2026-04-20"
+    last_verified: "2026-04-20"
 
   # --- Writing & Editing ---
   - name: Grammarly
@@ -218,6 +235,7 @@ tools:
     difficulty: Beginner
     contexts: [education, professional, personal]
     added: "2026-04-20"
+    last_verified: "2026-04-20"
 
   - name: QuillBot
     url: https://quillbot.com
@@ -229,6 +247,7 @@ tools:
     difficulty: Beginner
     contexts: [education, professional]
     added: "2026-04-20"
+    last_verified: "2026-04-20"
     notes: Paraphrasing to dodge a detector is not a free pass — disclosure rules still apply.
 
   - name: Jasper
@@ -241,6 +260,7 @@ tools:
     difficulty: Intermediate
     contexts: [professional]
     added: "2026-04-20"
+    last_verified: "2026-04-20"
 
   # --- Data Analysis & Visualization ---
   - name: Julius AI
@@ -253,6 +273,7 @@ tools:
     difficulty: Beginner
     contexts: [education, professional]
     added: "2026-04-20"
+    last_verified: "2026-04-20"
 
   - name: Excel + Copilot
     url: https://www.microsoft.com/microsoft-365/excel
@@ -264,6 +285,7 @@ tools:
     difficulty: Intermediate
     contexts: [professional, education]
     added: "2026-04-20"
+    last_verified: "2026-04-20"
 
   - name: Microsoft Power BI
     url: https://powerbi.microsoft.com
@@ -275,6 +297,7 @@ tools:
     difficulty: Intermediate
     contexts: [professional, education]
     added: "2026-04-20"
+    last_verified: "2026-04-20"
 
   - name: Tableau
     url: https://www.tableau.com
@@ -286,6 +309,7 @@ tools:
     difficulty: Advanced
     contexts: [professional, education]
     added: "2026-04-20"
+    last_verified: "2026-04-20"
 
   # --- Image, Design & Brand ---
   - name: Canva
@@ -298,6 +322,7 @@ tools:
     difficulty: Beginner
     contexts: [education, professional, personal]
     added: "2026-04-20"
+    last_verified: "2026-04-20"
 
   - name: Adobe Firefly
     url: https://firefly.adobe.com
@@ -309,6 +334,7 @@ tools:
     difficulty: Intermediate
     contexts: [professional, personal]
     added: "2026-04-20"
+    last_verified: "2026-04-20"
     notes: Marketed as commercially safer than open image generators — relevant for brand work.
 
   - name: Midjourney
@@ -321,6 +347,7 @@ tools:
     difficulty: Intermediate
     contexts: [personal, professional]
     added: "2026-04-20"
+    last_verified: "2026-04-20"
 
   - name: Ideogram
     url: https://ideogram.ai
@@ -332,6 +359,7 @@ tools:
     difficulty: Beginner
     contexts: [professional, personal]
     added: "2026-05-29"
+    last_verified: "2026-05-29"
 
   # --- Presentations & Slides ---
   - name: Gamma
@@ -344,6 +372,7 @@ tools:
     difficulty: Beginner
     contexts: [education, professional]
     added: "2026-04-20"
+    last_verified: "2026-04-20"
 
   - name: Copilot in PowerPoint
     url: https://www.microsoft.com/microsoft-365/powerpoint
@@ -355,6 +384,7 @@ tools:
     difficulty: Beginner
     contexts: [professional, education]
     added: "2026-04-20"
+    last_verified: "2026-04-20"
 
   # --- Audio & Voice ---
   - name: Speechify
@@ -367,6 +397,7 @@ tools:
     difficulty: Beginner
     contexts: [education, professional, personal]
     added: "2026-05-29"
+    last_verified: "2026-05-29"
     notes: A cohort favorite for turning case readings into audio. Pairs well with NotebookLM's audio overviews.
 
   - name: ElevenLabs
@@ -379,6 +410,7 @@ tools:
     difficulty: Intermediate
     contexts: [professional, personal, education]
     added: "2026-05-29"
+    last_verified: "2026-05-29"
 
   # --- Meetings & Note-Taking ---
   - name: Otter.ai
@@ -391,6 +423,7 @@ tools:
     difficulty: Beginner
     contexts: [education, professional]
     added: "2026-04-20"
+    last_verified: "2026-04-20"
 
   - name: Fireflies.ai
     url: https://fireflies.ai
@@ -402,6 +435,7 @@ tools:
     difficulty: Beginner
     contexts: [professional, education]
     added: "2026-04-20"
+    last_verified: "2026-04-20"
     notes: Tell participants they're being recorded before it joins.
 
   - name: Notion AI
@@ -414,6 +448,7 @@ tools:
     difficulty: Intermediate
     contexts: [education, professional, personal]
     added: "2026-04-20"
+    last_verified: "2026-04-20"
 
   # --- Productivity & Workflow Automation ---
   - name: Zapier
@@ -426,6 +461,7 @@ tools:
     difficulty: Intermediate
     contexts: [professional, personal]
     added: "2026-04-20"
+    last_verified: "2026-04-20"
 
   - name: Make
     url: https://www.make.com
@@ -437,6 +473,7 @@ tools:
     difficulty: Intermediate
     contexts: [professional, personal]
     added: "2026-04-20"
+    last_verified: "2026-04-20"
 
   # --- Coding & Technical ---
   - name: GitHub Copilot
@@ -449,6 +486,7 @@ tools:
     difficulty: Intermediate
     contexts: [education, professional]
     added: "2026-04-20"
+    last_verified: "2026-04-20"
     notes: Verify through the GitHub Student Developer Pack.
 
   - name: Cursor
@@ -461,6 +499,7 @@ tools:
     difficulty: Intermediate
     contexts: [education, professional]
     added: "2026-04-20"
+    last_verified: "2026-04-20"
 
   # --- Career & Recruiting ---
   - name: LinkedIn (AI features)
@@ -473,6 +512,7 @@ tools:
     difficulty: Beginner
     contexts: [professional]
     added: "2026-04-20"
+    last_verified: "2026-04-20"
 
   - name: Teal
     url: https://www.tealhq.com
@@ -484,6 +524,7 @@ tools:
     difficulty: Beginner
     contexts: [professional]
     added: "2026-04-20"
+    last_verified: "2026-04-20"
     notes: Pair with a general assistant to draft STAR interview stories.
 
   # --- Governance, Responsible Use & Compliance ---
@@ -497,6 +538,7 @@ tools:
     difficulty: Beginner
     contexts: [education]
     added: "2026-04-20"
+    last_verified: "2026-04-20"
     notes: Rules vary by course and instructor. When in doubt, ask and disclose.
 
   - name: APA AI Citation Guidance
@@ -509,6 +551,7 @@ tools:
     difficulty: Beginner
     contexts: [education, professional]
     added: "2026-04-20"
+    last_verified: "2026-04-20"
 
   - name: Turnitin (awareness)
     url: https://www.turnitin.com
@@ -520,6 +563,7 @@ tools:
     difficulty: Beginner
     contexts: [education]
     added: "2026-04-20"
+    last_verified: "2026-04-20"
     notes: Proactive disclosure beats arguing with a detector after the fact.
 
   - name: Credo AI
@@ -532,4 +576,5 @@ tools:
     difficulty: Advanced
     contexts: [professional]
     added: "2026-04-20"
+    last_verified: "2026-04-20"
     notes: Included as a career-relevant signal of where enterprise AI governance is heading.

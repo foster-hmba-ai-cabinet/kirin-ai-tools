@@ -1,7 +1,7 @@
 # New Tool Proposal Template
 
 Copy the block below into `tools.yaml` under `tools:` and fill it in. Then run
-`python scripts/build.py` to render it into the README.
+`python scripts/build.py` to render it into the website and README.
 
 ```yaml
   - name: # Tool name as it's officially branded
@@ -13,7 +13,8 @@ Copy the block below into `tools.yaml` under `tools:` and fill it in. Then run
     cost_tier: # Free | Freemium | Paid | Free for students | Institutional
     difficulty: # Beginner | Intermediate | Advanced
     contexts: # list, any of [education, professional, personal] — e.g. [education, professional]
-    added: # today's date, YYYY-MM-DD — powers the NEW badge + changelog
+    added: # today's date, QUOTED: "YYYY-MM-DD" — powers the NEW badge + changelog
+    last_verified: # date you checked pricing on the provider's page, QUOTED: "YYYY-MM-DD" (usually = added)
     notes: # OPTIONAL: a caveat, privacy flag, or student-deal tip. Renders as ⚠.
 ```
 
@@ -24,3 +25,5 @@ Copy the block below into `tools.yaml` under `tools:` and fill it in. Then run
 - [ ] Are `cost_tier` and `difficulty` realistic (not optimistic)?
 - [ ] If it handles student data, did you add a privacy note?
 - [ ] Did you set `contexts` (who it's for) and `added` (today's date)?
+- [ ] Did you set `last_verified` to the date you checked the pricing (usually the same as `added`)?
+- [ ] Are both dates quoted (`"2026-06-15"`)?
