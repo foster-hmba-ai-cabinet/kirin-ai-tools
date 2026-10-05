@@ -1,0 +1,242 @@
+{
+  "chatgpt": {
+    "tool": "ChatGPT",
+    "site": "https://chatgpt.com",
+    "icon": "chatgpt.png",
+    "source": "https://chatgpt.com/cdn/assets/favicon-180x180-od45eci6.webp"
+  },
+  "claude": {
+    "tool": "Claude",
+    "site": "https://claude.ai",
+    "home_error": "HTTP Error 403: Forbidden",
+    "icon": "claude.png",
+    "source": "https://claude.ai/favicon.ico"
+  },
+  "google-gemini": {
+    "tool": "Google Gemini",
+    "site": "https://gemini.google.com",
+    "icon": "google-gemini.png",
+    "source": "https://www.gstatic.com/lamda/images/gemini_sparkle_4g_512_lt_f94943af3be039176192d.png"
+  },
+  "microsoft-copilot": {
+    "tool": "Microsoft Copilot",
+    "site": "https://copilot.microsoft.com",
+    "icon": "microsoft-copilot.svg",
+    "source": "https://copilot.microsoft.com/static/cmc/favicon.svg"
+  },
+  "perplexity": {
+    "tool": "Perplexity",
+    "site": "https://www.perplexity.ai",
+    "home_error": "HTTP Error 403: Forbidden",
+    "icon": "perplexity.png",
+    "source": "https://www.perplexity.ai/favicon.ico"
+  },
+  "gemini-notebook-formerly-notebooklm": {
+    "tool": "Gemini Notebook (formerly NotebookLM)",
+    "site": "https://notebook.google.com/",
+    "fallback": "excluded: generic google.com icon, not the product icon"
+  },
+  "elicit": {
+    "tool": "Elicit",
+    "site": "https://elicit.com",
+    "icon": "elicit.png",
+    "source": "https://framerusercontent.com/images/GWXKVhGBLC34aTLlmLIMsRVb4.png"
+  },
+  "consensus": {
+    "tool": "Consensus",
+    "site": "https://consensus.app",
+    "icon": "consensus.png",
+    "source": "https://consensus.app/images/icon-384.png"
+  },
+  "scispace": {
+    "tool": "SciSpace",
+    "site": "https://scispace.com",
+    "icon": "scispace.svg",
+    "source": "https://scispace.com/favicon.ico"
+  },
+  "grammarly": {
+    "tool": "Grammarly",
+    "site": "https://www.grammarly.com",
+    "icon": "grammarly.png",
+    "source": "https://static-web.grammarly.com/cms/master/public/favicon-32x32.png"
+  },
+  "quillbot": {
+    "tool": "QuillBot",
+    "site": "https://quillbot.com",
+    "home_error": "HTTP Error 403: Forbidden",
+    "tried": [
+      "https://quillbot.com/favicon.ico -> HTTP Error 403: Forbidden"
+    ],
+    "fallback": "lettermark: site blocked automated fetch (HTTP 403)"
+  },
+  "jasper": {
+    "tool": "Jasper",
+    "site": "https://www.jasper.ai",
+    "icon": "jasper.png",
+    "source": "https://cdn.prod.website-files.com/6807ee8d73c233fb82842313/681e121f9445a06741087852_Webclip.png"
+  },
+  "julius-ai": {
+    "tool": "Julius AI",
+    "site": "https://julius.ai",
+    "icon": "julius-ai.png",
+    "source": "https://julius.ai/favicon.ico?23f30d1c0141030b"
+  },
+  "excel-copilot": {
+    "tool": "Excel + Copilot",
+    "site": "https://www.microsoft.com/microsoft-365/excel",
+    "icon": "excel-copilot.png",
+    "source": "https://www.microsoft.com/favicon.ico?v2"
+  },
+  "microsoft-power-bi": {
+    "tool": "Microsoft Power BI",
+    "site": "https://powerbi.microsoft.com",
+    "home_error": "HTTP Error 403: Forbidden",
+    "icon": "microsoft-power-bi.png",
+    "source": "https://community.fabric.microsoft.com/t5/s/yrjkf47658/m_assets/themes/customTheme1/microsoft_favicon-1767013280843.png?image-dimensions=32x32"
+  },
+  "tableau": {
+    "tool": "Tableau",
+    "site": "https://www.tableau.com",
+    "home_error": "HTTP Error 403: Forbidden",
+    "icon": "tableau.png",
+    "source": "https://www.tableau.com/favicon.ico"
+  },
+  "canva": {
+    "tool": "Canva",
+    "site": "https://www.canva.com",
+    "icon": "canva.png",
+    "source": "https://static.canva.com/domain-assets/canva/static/images/apple-touch-180x180-1.png"
+  },
+  "adobe-firefly": {
+    "tool": "Adobe Firefly",
+    "site": "https://firefly.adobe.com",
+    "icon": "adobe-firefly.png",
+    "source": "https://firefly.adobe.com/releases/99b701b9df4a74fd12a09c2314d31b41f6a0a676/assets/fi_touch_icon_180-BmBtoxt-.png"
+  },
+  "midjourney": {
+    "tool": "Midjourney",
+    "site": "https://www.midjourney.com",
+    "home_error": "HTTP Error 403: Forbidden",
+    "tried": [
+      "https://www.midjourney.com/favicon.ico -> HTTP Error 403: Forbidden"
+    ],
+    "fallback": "lettermark: site blocked automated fetch (HTTP 403)"
+  },
+  "ideogram": {
+    "tool": "Ideogram",
+    "site": "https://ideogram.ai",
+    "home_error": "HTTP Error 403: Forbidden",
+    "tried": [
+      "https://ideogram.ai/favicon.ico -> buffer is not large enough"
+    ],
+    "fallback": "lettermark: site blocked automated fetch (HTTP 403)"
+  },
+  "gamma": {
+    "tool": "Gamma",
+    "site": "https://gamma.app",
+    "home_error": "HTTP Error 403: Forbidden",
+    "tried": [
+      "https://gamma.app/favicon.ico -> HTTP Error 403: Forbidden"
+    ],
+    "fallback": "lettermark: site blocked automated fetch (HTTP 403)"
+  },
+  "copilot-in-powerpoint": {
+    "tool": "Copilot in PowerPoint",
+    "site": "https://www.microsoft.com/microsoft-365/powerpoint",
+    "icon": "copilot-in-powerpoint.png",
+    "source": "https://www.microsoft.com/favicon.ico?v2"
+  },
+  "speechify": {
+    "tool": "Speechify",
+    "site": "https://speechify.com",
+    "icon": "speechify.png",
+    "source": "https://speechify.com/apple-icon.png?apple-icon.04iq4tvtx2n2e.png"
+  },
+  "elevenlabs": {
+    "tool": "ElevenLabs",
+    "site": "https://elevenlabs.io",
+    "icon": "elevenlabs.png",
+    "source": "https://elevenlabs.io/apple-icon.png?6592732ab34b1d42"
+  },
+  "otter-ai": {
+    "tool": "Otter.ai",
+    "site": "https://otter.ai",
+    "icon": "otter-ai.png",
+    "source": "https://cdn.prod.website-files.com/618e9316785b3582a5178502/618e943a80919a98b5e9bf69_apple-icon.png"
+  },
+  "fireflies-ai": {
+    "tool": "Fireflies.ai",
+    "site": "https://fireflies.ai",
+    "icon": "fireflies-ai.png",
+    "source": "https://fireflies.ai/apple-icon.png?81a7679a0c7e6094"
+  },
+  "notion-ai": {
+    "tool": "Notion AI",
+    "site": "https://www.notion.so/product/ai",
+    "icon": "notion-ai.png",
+    "source": "https://www.notion.com/front-static/logo-ios.png"
+  },
+  "zapier": {
+    "tool": "Zapier",
+    "site": "https://zapier.com",
+    "icon": "zapier.png",
+    "source": "https://zapier.com/favicon.ico"
+  },
+  "make": {
+    "tool": "Make",
+    "site": "https://www.make.com",
+    "home_error": "HTTP Error 403: Forbidden",
+    "icon": "make.png",
+    "source": "https://www.make.com/favicon.ico"
+  },
+  "github-copilot": {
+    "tool": "GitHub Copilot",
+    "site": "https://github.com/features/copilot",
+    "icon": "github-copilot.svg",
+    "source": "https://github.githubassets.com/favicons/favicon.svg"
+  },
+  "cursor": {
+    "tool": "Cursor",
+    "site": "https://www.cursor.com",
+    "icon": "cursor.png",
+    "source": "https://cursor.com/marketing-static/apple-touch-icon-light.png"
+  },
+  "linkedin-ai-features": {
+    "tool": "LinkedIn (AI features)",
+    "site": "https://www.linkedin.com",
+    "icon": "linkedin-ai-features.svg",
+    "source": "https://static.licdn.com/aero-v1/sc/h/akt4ae504epesldzj74dzred8"
+  },
+  "teal": {
+    "tool": "Teal",
+    "site": "https://www.tealhq.com",
+    "icon": "teal.png",
+    "source": "https://imagedelivery.net/EneR9MSHVX-rSdBwAY2uLA/astro-migrated/webflow/64b5bdf99a666bb0da0b1908-teal-webclip-575ba9e6/hero"
+  },
+  "your-course-foster-ai-policy": {
+    "tool": "Your course / Foster AI policy",
+    "site": "https://foster.uw.edu",
+    "fallback": "excluded: UW/Foster mark (no UW marks rule)"
+  },
+  "apa-ai-citation-guidance": {
+    "tool": "APA AI Citation Guidance",
+    "site": "https://apastyle.apa.org/blog/how-to-cite-chatgpt",
+    "fallback": "excluded: illegible at card size"
+  },
+  "turnitin-awareness": {
+    "tool": "Turnitin (awareness)",
+    "site": "https://www.turnitin.com",
+    "icon": "turnitin-awareness.png",
+    "source": "https://www.turnitin.com/system/favicon/favicon.png"
+  },
+  "credo-ai": {
+    "tool": "Credo AI",
+    "site": "https://www.credo.ai",
+    "fallback": "excluded: wordmark illegible at card size"
+  },
+  "claude-for-financial-services-agent-templates": {
+    "tool": "Claude for Financial Services (agent templates)",
+    "site": "https://github.com/anthropics/financial-services",
+    "fallback": "lettermark: URL is a GitHub repo, so the site icon would be GitHub's mark, not the product's"
+  }
+}

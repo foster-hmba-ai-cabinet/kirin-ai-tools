@@ -6,232 +6,244 @@
 <title>KIRIN AI Tools | Foster HMBA Field Guide</title>
 <meta name="description" content="A curated, maintained guide to AI tools for Foster Hybrid MBA students. Find the right tool for any problem: personal, professional, or educational." />
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%234b2e83'/%3E%3Ccircle cx='16' cy='16' r='5' fill='%23fff'/%3E%3C/svg%3E" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@400..700&display=swap" rel="stylesheet" />
+<link rel="preload" href="assets/fonts/encode-sans-latin-var.woff2" as="font" type="font/woff2" crossorigin />
 <style>
+  @font-face{font-family:"Encode Sans"; src:url(assets/fonts/encode-sans-latin-var.woff2) format("woff2"); font-weight:400 700; font-display:optional}
   :root{
     /* UW brand: Husky Purple dominant, Husky Gold for rules and accents,
-       metallic gold for gold TEXT (on pure white only: 4.52:1) */
-    --bg:#fff; --surface:#fff; --tint:#f4f4f4;
-    --ink:#222; --ink-soft:#444444; --ink-faint:#444444;
-    --line:#d9d9d9; --line-strong:#bdbdbd;
-    --accent:#4b2e83; --accent-hover:#3a2367; --accent-tint:#f1edf7;
-    --gold:#b7a57a; --gold-text:#85754d;
-    --ring:0 0 0 1px var(--line);
-    --lift:0 0 0 1px var(--line), 0 1px 2px rgba(28,28,33,.04);
-    --lift-hover:0 0 0 1px var(--line-strong), 0 12px 32px -14px rgba(28,28,33,.22);
-    --ease:cubic-bezier(.32,.72,0,1);
+       metallic gold (#85754d) for gold TEXT on pure white only (4.52:1) */
+    --purple:#4b2e83; --purple-deep:#3a2367; --gold:#b7a57a; --gold-text:#85754d;
+    --ink:#1f1f22; --soft:#444; --line:#d9d9d9; --tint:#f4f4f6; --ptint:#f1edf7; --section:#f7f5fb;
+    --ease:cubic-bezier(.16,1,.3,1);
+    /* shape rule: cards 16px, inputs 12px, buttons and chips full pill */
+    --r-card:16px; --r-input:12px;
     --font:"Encode Sans",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
   }
   *{box-sizing:border-box}
   [hidden]{display:none !important}
   html{scroll-behavior:smooth}
-  body{margin:0; background:var(--bg); color:var(--ink); font-family:var(--font); font-size:16px; line-height:1.55; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility}
-  .wrap{max-width:min(2000px,92vw); margin:0 auto; padding:0 clamp(16px,4vw,64px)}
-  a{color:var(--accent); text-underline-offset:3px; text-decoration-thickness:1px; transition:color .2s var(--ease)}
-  a:hover{color:var(--accent-hover)}
-  :focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radius:6px}
-  h1,h2,h3{font-weight:700; letter-spacing:-.01em}
+  body{margin:0; font-family:var(--font); color:var(--ink); background:#fff; font-size:16px; line-height:1.55; -webkit-font-smoothing:antialiased}
+  img{max-width:100%; display:block}
+  a{color:var(--purple); text-underline-offset:3px; text-decoration-thickness:1px}
+  :focus-visible{outline:2px solid var(--purple); outline-offset:3px; border-radius:8px}
+  h1,h2,h3{margin:0; font-weight:700; letter-spacing:-.015em}
+  .wrap{width:100%; max-width:1400px; margin-inline:auto; padding-inline:clamp(16px,4vw,56px)}
+  .ic{width:1em; height:1em; flex:none}
 
-  /* hero band: photo behind a purple overlay, solid purple if the image fails */
-  .hero{position:relative; isolation:isolate; overflow:hidden; background:var(--accent); color:#fff; border-bottom:6px solid var(--gold)}
-  .hero-img{position:absolute; inset:0; z-index:-2; width:100%; height:100%; object-fit:cover; object-position:70% 35%}
-  .hero::before{content:""; position:absolute; inset:0; z-index:-1; background:linear-gradient(90deg, rgba(75,46,131,.95) 0%, rgba(75,46,131,.9) 40%, rgba(75,46,131,.82) 60%, rgba(75,46,131,.5) 100%)}
+  /* hero: Rainier photo behind a purple overlay; solid purple if the image fails */
+  .hero{position:relative; isolation:isolate; overflow:hidden; min-height:max(560px,84svh); display:flex; flex-direction:column; color:#fff; background:var(--purple)}
+  .hero picture,.hero-img{position:absolute; inset:0; width:100%; height:100%; z-index:-2}
+  .hero-img{object-fit:cover; object-position:68% 40%; transform-origin:60% 40%}
+  .hero::before{content:""; position:absolute; inset:0; z-index:-1;
+    background:linear-gradient(180deg, rgba(75,46,131,.6) 0%, rgba(75,46,131,.68) 35%, rgba(58,35,103,.9) 72%, rgba(58,35,103,.96) 100%)}
   .hero a{color:#fff}
   .hero :focus-visible{outline-color:#fff}
-  .hero-rule{display:block; width:72px; height:4px; border-radius:2px; background:var(--gold); margin:0 0 28px}
+  .nav{display:flex; align-items:center; justify-content:space-between; gap:16px; height:68px; font-size:15px; font-weight:500}
+  .nav a{text-decoration:none}
+  .nav .links{display:flex; gap:28px; white-space:nowrap}
+  .nav .links a:hover{text-decoration:underline; text-decoration-color:var(--gold); text-underline-offset:5px}
+  .mark{display:inline-flex; align-items:center; gap:10px; font-weight:600; white-space:nowrap}
+  .mark .dot{width:22px; height:22px; border-radius:7px; background:var(--gold); position:relative; flex:none}
+  .mark .dot::after{content:""; position:absolute; inset:7.5px; border-radius:50%; background:var(--purple)}
+  .hero-copy{margin-top:auto; padding-bottom:clamp(48px,7vw,88px)}
+  .hero h1{font-size:clamp(56px,9.6vw,148px); line-height:.95; letter-spacing:-.035em; max-width:8.2em; text-wrap:balance}
+  .rule{display:block; width:88px; height:4px; border-radius:2px; background:var(--gold); margin:28px 0 22px}
+  .sub{font-size:clamp(18px,1.7vw,22px); line-height:1.45; max-width:34ch; margin:0 0 30px}
+  .ctas{display:flex; flex-wrap:wrap; gap:12px}
+  .btn{display:inline-flex; align-items:center; gap:10px; height:48px; padding:0 22px; border-radius:999px; font-weight:600; font-size:16px; text-decoration:none; white-space:nowrap; transition:transform .3s var(--ease), background-color .3s var(--ease), box-shadow .3s var(--ease)}
+  .btn:active{transform:scale(.98)}
+  .btn .ic{width:18px; height:18px; transition:transform .3s var(--ease)}
+  .btn:hover .ic{transform:translateX(3px)}
+  .hero .btn.primary{background:#fff; color:var(--purple)}
+  .btn.primary:hover{box-shadow:0 10px 30px -10px rgba(20,10,40,.6)}
+  .hero .btn.ghost{border:1.5px solid rgba(255,255,255,.75); background:rgba(255,255,255,.06)}
+  .btn.ghost:hover{background:rgba(255,255,255,.14)}
 
-  /* top bar */
-  .topnav{display:flex; align-items:center; justify-content:space-between; gap:16px; padding:20px 0; font-size:14px}
-  .topnav .mark{display:inline-flex; align-items:center; gap:10px; font-weight:600; text-decoration:none}
-  .topnav .mark i{width:22px; height:22px; border-radius:7px; background:var(--gold); display:grid; place-items:center}
-  .topnav .mark i::after{content:""; width:7px; height:7px; border-radius:50%; background:var(--accent)}
-  .topnav .links{display:flex; gap:22px; white-space:nowrap}
-  .topnav .mark{white-space:nowrap}
-  .topnav .links a{text-decoration:none; font-weight:500}
-  .topnav .links a:hover{text-decoration:underline; text-underline-offset:4px; text-decoration-color:var(--gold)}
+  /* stat strip */
+  .stats{display:grid; grid-template-columns:repeat(3,auto); justify-content:start; padding-block:22px}
+  .stats div{padding:0 clamp(18px,3vw,40px); border-left:1px solid var(--line)}
+  .stats div:first-child{padding-left:0; border-left:0}
+  .stats b{display:block; font-size:clamp(22px,2.2vw,30px); letter-spacing:-.02em; color:var(--purple); font-variant-numeric:tabular-nums}
+  .stats span{font-size:14px; color:var(--soft)}
 
-  header.site{padding:clamp(40px,8vw,104px) 0 clamp(48px,6vw,88px)}
-  h1{font-size:clamp(42px,6vw,84px); line-height:1.04; letter-spacing:-.02em; margin:0 0 24px; max-width:14ch}
-  .lede{font-size:clamp(18px,1.6vw,21px); line-height:1.5; max-width:52ch; margin:0}
-  .lede em{font-style:normal; font-weight:600}
-  .byline{font-size:15px; margin:20px 0 0; max-width:62ch}
-  .byline b{font-weight:600}
-
-  /* double-bezel shell */
-  .shell{background:rgba(28,28,33,.035); box-shadow:var(--ring); border-radius:26px; padding:6px}
-  .shell > .core{background:var(--surface); border-radius:20px; box-shadow:inset 0 1px 0 rgba(255,255,255,.9), 0 1px 2px rgba(28,28,33,.04); height:100%}
-
-  .panels{display:grid; grid-template-columns:1.35fr 1fr; gap:20px; margin:clamp(32px,5vw,56px) 0 8px}
-  .panel{padding:28px 30px}
-  .panel h2{font-size:24px; margin:0 0 16px; color:var(--accent)}
+  /* intro panels */
+  .panels{display:grid; grid-template-columns:1.3fr 1fr; gap:16px; padding-block:clamp(40px,5vw,64px) 8px}
+  .panel{padding:28px 30px; border-radius:var(--r-card); background:#fff; border:1px solid rgba(75,46,131,.12); box-shadow:inset 0 1px 0 #fff, 0 1px 2px rgba(58,35,103,.06)}
+  .panel h2{font-size:24px; letter-spacing:-.025em; color:var(--purple); margin-bottom:16px}
   .panel ol{margin:0; padding:0; list-style:none; counter-reset:s}
-  .panel ol li{counter-increment:s; position:relative; padding-left:38px; margin:12px 0; color:var(--ink-soft); max-width:50ch}
+  .panel ol li{counter-increment:s; position:relative; padding-left:38px; margin:12px 0; color:var(--soft); max-width:52ch}
   .panel ol li b{color:var(--ink); font-weight:600}
-  .panel ol li::before{content:counter(s); position:absolute; left:0; top:1px; width:24px; height:24px; border-radius:50%; background:var(--accent-tint); color:var(--accent); font-size:13px; font-weight:600; display:grid; place-items:center}
-  .stack-note{font-size:15px; color:var(--ink-soft); margin:0 0 12px} .stack-note:last-child{margin:0}
+  .panel ol li::before{content:counter(s); position:absolute; left:0; top:1px; width:24px; height:24px; border-radius:50%; background:var(--ptint); color:var(--purple); font-size:13px; font-weight:700; display:grid; place-items:center}
+  .stack-note{font-size:15px; color:var(--soft); margin:0 0 12px; max-width:54ch} .stack-note:last-child{margin:0}
   .stack-note b{color:var(--ink); font-weight:600}
+  .recent{margin:16px 0 0; display:flex; flex-wrap:wrap; align-items:center; gap:10px 12px; padding:14px 18px; border-radius:var(--r-card); border:1px solid rgba(75,46,131,.12); background:#fff}
+  .recent .rlabel{font-weight:700; font-size:15px; margin-right:4px}
+  .recent .tag{display:inline-block; background:var(--purple); color:#fff; box-shadow:0 0 0 2px var(--gold); font-size:11px; font-weight:700; letter-spacing:.04em; padding:2px 8px; border-radius:999px; vertical-align:1px; margin-right:8px}
+  .recent a{font-size:14px; text-decoration:none; background:var(--ptint); padding:5px 12px; border-radius:999px}
+  .recent a:hover{text-decoration:underline}
 
-  /* recently added strip */
-  .recent{margin:20px 0 0; background:var(--surface); box-shadow:var(--lift); border-radius:18px; padding:14px 18px; display:flex; flex-wrap:wrap; align-items:center; gap:10px 12px}
-  .recent .rlabel{font-weight:600; font-size:14.5px; margin-right:4px}
-  .recent .rlabel .tag{display:inline-block; background:var(--accent); color:#fff; box-shadow:0 0 0 2px var(--gold); font-size:11px; font-weight:600; letter-spacing:.04em; padding:2px 8px; border-radius:999px; vertical-align:1px; margin-right:8px}
-  .recent a{font-size:14px; text-decoration:none; background:var(--tint); padding:5px 12px; border-radius:999px; transition:background .25s var(--ease)}
-  .recent a:hover{background:var(--accent-tint)}
-
-  /* filter bar: floats, sticky on wide screens */
-  .controls{position:sticky; top:12px; z-index:30; margin-top:44px}
-  .bar{background:#fff; border:1px solid var(--line); border-bottom:2px solid var(--gold); box-shadow:0 6px 10px -8px rgba(34,34,34,.18); border-radius:22px; padding:12px}
-  .inner{display:flex; flex-wrap:wrap; align-items:center; gap:10px 18px}
-  .inner::before{content:""; order:5; flex-basis:100%}
-  .search{flex:0 1 360px; min-width:220px; position:relative; order:1}
-  .search input{width:100%; height:42px; padding:0 14px 0 40px; border:0; border-radius:12px; background:var(--tint); font:inherit; font-size:15px; color:var(--ink); transition:box-shadow .25s var(--ease), background .25s var(--ease)}
-  .search input::placeholder{color:var(--ink-faint)}
+  /* tools section */
+  .tools{background:var(--section); border-block:1px solid #ece8f3; margin-top:clamp(40px,5vw,64px); padding-block:clamp(40px,5vw,64px) clamp(56px,6vw,88px)}
+  .tools-h{font-size:clamp(28px,2.8vw,38px); letter-spacing:-.025em; margin-bottom:18px}
+  .controls{position:sticky; top:12px; z-index:30}
+  .bar{display:flex; flex-wrap:wrap; align-items:center; gap:12px 20px; padding:12px; border-radius:20px; background:#fff; border:1px solid var(--line); border-bottom:2px solid var(--gold); box-shadow:0 6px 10px -8px rgba(58,35,103,.22)}
+  .search{position:relative; flex:0 1 340px; min-width:220px; display:flex; align-items:center}
+  .search .ic{position:absolute; left:14px; width:18px; height:18px; color:var(--soft)}
+  .search input{width:100%; height:44px; border:1px solid transparent; border-radius:var(--r-input); background:var(--tint); padding:0 14px 0 42px; font:inherit; font-size:15px; color:var(--ink); transition:border-color .2s var(--ease), background-color .2s var(--ease)}
+  .search input::placeholder{color:#5f5f66}
   .search input::-webkit-search-cancel-button{filter:grayscale(1); opacity:.6; cursor:pointer}
-  .search input:focus{outline:none; background:var(--surface); box-shadow:0 0 0 1px var(--accent), 0 0 0 4px rgba(75,46,131,.15)}
-  .search svg{position:absolute; left:14px; top:50%; transform:translateY(-50%); color:var(--ink-faint)}
-  .filters{display:contents}
-  #ctxFilters{order:2} #costFilters{order:6} #lvlFilters{order:7; margin-left:14px}
-  .filtgroup{display:flex; align-items:center; gap:6px}
-  .filtgroup .label{font-size:12px; color:var(--gold-text); font-weight:600; margin-right:4px}
-  .chip{font:inherit; font-size:13.5px; font-weight:500; height:34px; padding:0 14px; border:0; background:var(--surface); box-shadow:var(--ring); border-radius:999px; cursor:pointer; color:var(--ink-soft); white-space:nowrap; transition:background .25s var(--ease), color .25s var(--ease), box-shadow .25s var(--ease), transform .2s var(--ease)}
-  .chip:hover{color:var(--accent); box-shadow:0 0 0 1px var(--accent)}
+  .search input:focus{outline:none; background:#fff; border-color:var(--purple); box-shadow:0 0 0 3px rgba(75,46,131,.18)}
+  .filters{display:flex; flex-wrap:wrap; gap:10px 20px; flex:1 1 auto}
+  .fg{display:flex; align-items:center; gap:6px}
+  .fl{font-size:12.5px; font-weight:600; color:var(--soft); margin-right:2px}
+  .chip{font:inherit; font-size:14px; font-weight:500; height:36px; padding:0 14px; border-radius:999px; border:1px solid var(--line); background:#fff; color:var(--soft); cursor:pointer; white-space:nowrap; transition:background-color .25s var(--ease), color .25s var(--ease), border-color .25s var(--ease), transform .2s var(--ease)}
+  .chip:hover{border-color:var(--purple); color:var(--purple)}
   .chip:active{transform:scale(.97)}
-  .chip[aria-pressed="true"]{background:var(--accent); color:#fff; box-shadow:none}
-  .count{order:4; font-size:13.5px; color:var(--ink-soft); white-space:nowrap; font-variant-numeric:tabular-nums} .count b{color:var(--ink); font-weight:600}
-  #clear{order:3; margin-left:auto}
-  .clear{font:inherit; font-size:13.5px; font-weight:500; background:none; border:none; color:var(--accent); cursor:pointer; padding:0}
-  .clear:hover{color:var(--accent-hover); text-decoration:underline; text-underline-offset:3px}
-  .catnav{display:flex; flex-wrap:wrap; gap:4px; margin:14px -12px 0; padding:0}
-  .catnav a{flex:none; font-size:13px; white-space:nowrap; color:var(--ink-soft); text-decoration:none; padding:6px 12px; border-radius:999px; transition:background .25s var(--ease), color .25s var(--ease)}
-  .catnav a:hover{background:var(--tint); color:var(--ink)}
-
-  main{padding:8px 0 40px}
-  section.cat{padding-top:clamp(56px,6vw,88px); scroll-margin-top:150px}
-  .cat-head{display:flex; align-items:baseline; gap:14px; padding-bottom:14px; border-bottom:2px solid var(--gold)}
-  .cat-head h2{font-size:clamp(24px,2.4vw,32px); margin:0; color:var(--accent)}
-  .cat-head .num{font-size:14px; color:var(--gold-text); font-weight:700; font-variant-numeric:tabular-nums}
-  .cat-blurb{color:var(--ink-soft); max-width:54ch; margin:16px 0 28px; font-size:16px}
-  .grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:16px}
-  .card{position:relative; background:var(--surface); border-radius:20px; padding:22px 22px 18px; display:flex; flex-direction:column; box-shadow:var(--lift); transition:transform .45s var(--ease), box-shadow .45s var(--ease); scroll-margin-top:170px}
-  .card:hover{transform:translateY(-2px); box-shadow:var(--lift-hover)}
+  .chip[aria-pressed="true"]{background:var(--purple); border-color:var(--purple); color:#fff}
+  .count{margin:0 0 0 auto; font-size:14px; color:var(--soft); white-space:nowrap; font-variant-numeric:tabular-nums} .count b{color:var(--ink)}
+  .reset{font:inherit; font-size:14px; font-weight:600; color:var(--purple); background:none; border:0; padding:6px 4px; cursor:pointer}
+  .reset:hover{text-decoration:underline; text-underline-offset:3px}
+  .catnav{display:flex; flex-wrap:wrap; gap:6px; margin-top:16px}
+  .catnav a{font-size:13.5px; color:var(--soft); text-decoration:none; padding:6px 12px; border-radius:999px; background:#fff; border:1px solid rgba(75,46,131,.12); white-space:nowrap; transition:border-color .25s var(--ease), color .25s var(--ease)}
+  .catnav a:hover{border-color:var(--purple); color:var(--purple)}
+  section.cat{padding-top:clamp(40px,4.5vw,64px); scroll-margin-top:150px}
+  .cat-head h2{font-size:clamp(22px,2.2vw,30px); letter-spacing:-.025em; color:var(--purple)}
+  .cat-blurb{color:var(--soft); max-width:58ch; margin:8px 0 20px; font-size:15.5px}
+  .grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(min(100%,320px),1fr)); gap:16px}
+  /* "glass" cards: translucent white, inner highlight, tinted shadow. No backdrop-filter on scrolling content. */
+  .card{position:relative; display:flex; flex-direction:column; border-radius:var(--r-card); padding:22px; scroll-margin-top:170px;
+    background:linear-gradient(180deg,rgba(255,255,255,.97),rgba(255,255,255,.88)); border:1px solid rgba(75,46,131,.10);
+    box-shadow:inset 0 1px 0 #fff, 0 1px 2px rgba(58,35,103,.06); transition:transform .45s var(--ease), box-shadow .45s var(--ease), border-color .45s var(--ease)}
+  .card:hover{transform:translateY(-4px); border-color:rgba(75,46,131,.22); box-shadow:inset 0 1px 0 #fff, 0 22px 44px -26px rgba(58,35,103,.5)}
   .card.flash{animation:flash 1.6s var(--ease)}
-  @keyframes flash{0%,100%{box-shadow:var(--lift)} 20%{box-shadow:0 0 0 3px var(--accent)}}
-  .newbadge{position:absolute; top:20px; right:20px; background:var(--accent); color:#fff; box-shadow:0 0 0 2px var(--gold); font-size:11px; font-weight:600; letter-spacing:.04em; padding:3px 9px; border-radius:999px}
-  .ctxtags{display:flex; flex-wrap:wrap; gap:6px; margin:0 0 14px}
-  .ctxtags span{font-size:12px; color:var(--ink-soft); background:var(--tint); border-radius:999px; padding:2px 10px}
-  .card h3{margin:0 0 8px; font-size:19px; padding-right:52px}
-  .card h3 a{color:var(--ink); text-decoration:none; display:inline-flex; align-items:center; gap:8px}
-  .card h3 a::after{content:"↗"; flex:none; width:22px; height:22px; border-radius:50%; background:var(--tint); color:var(--ink-soft); font-size:12px; display:grid; place-items:center; transition:transform .35s var(--ease), background .35s var(--ease), color .35s var(--ease)}
-  .card h3 a:hover{color:var(--accent)}
-  .card h3 a:hover::after{transform:translate(2px,-2px); background:var(--accent); color:#fff}
-  .what{font-size:15px; margin:0 0 12px; color:var(--ink)}
-  .best{font-size:14px; color:var(--ink-soft); margin:0 0 16px}
-  .best b{color:var(--ink); font-weight:600}
-  .note{font-size:13px; color:var(--ink-soft); margin:-6px 0 16px; padding:9px 12px; background:var(--tint); border-radius:12px; line-height:1.45}
-  .meta{display:flex; align-items:flex-end; justify-content:space-between; gap:12px; margin-top:auto; padding-top:14px; border-top:1px solid var(--line)}
-  .cost{display:inline-flex; flex-direction:column; font-size:13.5px; font-weight:600; color:var(--ink)}
-  .cost .price{font-weight:400; color:var(--ink-soft); font-size:12.5px; margin-top:1px}
-  .cost .verified{font-weight:400; color:var(--ink-faint); font-size:12px; margin-top:4px}
-  .cost .verified.due{color:var(--gold-text); font-weight:600}
-  .lvl{display:flex; align-items:center; gap:7px; font-size:12px; color:var(--ink-soft); white-space:nowrap}
+  @keyframes flash{20%{box-shadow:0 0 0 3px var(--purple)}}
+  .newbadge{position:absolute; top:22px; right:22px; background:var(--purple); color:#fff; box-shadow:0 0 0 2px var(--gold); font-size:11px; font-weight:700; letter-spacing:.04em; padding:2px 9px; border-radius:999px}
+  .card h3{font-size:19px; margin:0 0 10px; padding-right:56px}
+  .tool{display:inline-flex; align-items:center; gap:12px; color:var(--ink); text-decoration:none}
+  .tool:hover .name{color:var(--purple)}
+  .tool .go{width:16px; height:16px; color:var(--soft); transition:transform .3s var(--ease), color .3s var(--ease)}
+  .tool:hover .go{transform:translate(2px,-2px); color:var(--purple)}
+  .logo{width:28px; height:28px; border-radius:8px; flex:none; object-fit:contain}
+  .lm{display:grid; place-items:center; background:var(--ptint); color:var(--purple); font-weight:700; font-size:15px}
+  .what{margin:0 0 12px; font-size:15px}
+  .best{margin:0 0 12px; font-size:14px; color:var(--soft)} .best b{color:var(--ink); font-weight:600; margin-right:4px}
+  .note{margin:0 0 12px; padding:9px 12px; border-radius:12px; background:var(--tint); font-size:13px; color:var(--soft); line-height:1.45}
+  .for{margin:0 0 16px; font-size:13px; color:var(--soft)}
+  .meta{display:flex; justify-content:space-between; align-items:flex-end; gap:12px; margin-top:auto; padding-top:14px; border-top:1px solid rgba(75,46,131,.12); font-size:13.5px}
+  .cost{color:var(--soft)} .cost b{display:block; color:var(--ink); font-size:14px}
+  .lvl{display:flex; align-items:center; gap:7px; color:var(--soft); white-space:nowrap}
   .pips{display:inline-flex; gap:3px}
-  .pip{width:6px; height:6px; border-radius:50%; background:var(--line-strong)}
-  .pip.on{background:var(--accent)}
-  .noresults{display:none; text-align:center; padding:88px 0; color:var(--ink-soft); font-size:16px}
-  .noresults.show{display:block}
-  .noresults .clear{display:block; margin:10px auto 0; font-size:15px}
+  .pip{width:6px; height:6px; border-radius:50%; background:var(--line)} .pip.on{background:var(--purple)}
+  .ver{margin-top:6px; font-size:12.5px; color:var(--soft)}
+  .ver.due{color:var(--purple); font-weight:600}
+  .empty{text-align:center; padding:72px 16px; color:var(--soft)} .empty p{margin:0 0 8px; font-size:17px}
+  ::view-transition-group(root){animation-duration:.25s}
 
-  .rules{margin-top:clamp(64px,7vw,104px)}
-  .rules .core{padding:clamp(24px,3vw,40px)}
-  .rules h2{font-size:clamp(26px,2.6vw,34px); margin:0; color:var(--accent)}
-  .rules p.sub{color:var(--ink-soft); max-width:64ch; margin:0 0 24px; font-size:16px}
-  .rules ol{margin:0; padding:0; list-style:none; counter-reset:r; display:grid; grid-template-columns:1fr 1fr; gap:18px 36px}
-  .rules ol li{counter-increment:r; padding-left:40px; position:relative; font-size:15px; color:var(--ink-soft); max-width:50ch}
-  .rules ol li::before{content:counter(r); position:absolute; left:0; top:0; width:26px; height:26px; border-radius:50%; background:var(--accent-tint); color:var(--accent); font-weight:600; font-size:13px; display:grid; place-items:center}
-  .rules ol li b{color:var(--ink); font-weight:600}
+  /* ground rules */
+  .rules{margin-top:clamp(56px,6vw,88px); border-radius:var(--r-card); border:1px solid rgba(75,46,131,.12); background:#fff}
+  .rules details{padding:clamp(24px,3vw,36px)}
   .rules summary{list-style:none; cursor:pointer; display:flex; align-items:center; gap:14px; border-radius:12px}
   .rules summary::-webkit-details-marker{display:none}
-  .rules summary .toggle{margin-left:auto; flex:none; width:36px; height:36px; border-radius:50%; background:var(--tint); color:var(--ink); display:grid; place-items:center; font-size:20px; line-height:1; transition:transform .45s var(--ease), background .25s var(--ease)}
-  .rules summary:hover .toggle{background:var(--accent-tint)}
-  .rules details[open] summary .toggle{transform:rotate(45deg)}
+  .rules h2{font-size:clamp(26px,2.6vw,34px); letter-spacing:-.025em; color:var(--purple)}
+  .rules .hint{display:block; font-size:15px; color:var(--soft); margin-top:4px}
   .rules .summary-head{flex:1}
-  .rules .summary-head .hint{display:block; font-size:15px; color:var(--ink-soft); margin-top:4px}
-  .rules details > .rules-body{margin-top:24px}
-  .rules .policy-eg{margin:28px 0 0; background:var(--tint); border-radius:18px; padding:20px 22px}
-  .rules .policy-eg .eg-label{display:inline-block; background:var(--accent-tint); color:var(--accent); font-size:12px; font-weight:600; padding:3px 10px; border-radius:999px; margin-bottom:10px}
-  .rules .policy-eg h3{margin:0 0 8px; font-size:19px}
-  .rules .policy-eg p{margin:0 0 8px; font-size:14.5px; color:var(--ink-soft); line-height:1.55; max-width:52ch}
-  .rules .policy-eg p:last-child{margin-bottom:0}
-  .rules .policy-eg b{color:var(--ink); font-weight:600}
+  .rules .toggle{flex:none; width:36px; height:36px; border-radius:50%; background:var(--ptint); color:var(--purple); display:grid; place-items:center; font-size:20px; line-height:1; transition:transform .45s var(--ease)}
+  .rules details[open] .toggle{transform:rotate(45deg)}
+  .rules-body{margin-top:24px}
+  .rules .lead{color:var(--soft); max-width:56ch; margin:0 0 24px; font-size:16px}
+  .rules ol{margin:0; padding:0; list-style:none; counter-reset:r; display:grid; grid-template-columns:1fr 1fr; gap:18px 36px}
+  .rules ol li{counter-increment:r; padding-left:40px; position:relative; font-size:15px; color:var(--soft); max-width:50ch}
+  .rules ol li::before{content:counter(r); position:absolute; left:0; top:0; width:26px; height:26px; border-radius:50%; background:var(--ptint); color:var(--purple); font-weight:700; font-size:13px; display:grid; place-items:center}
+  .rules ol li b{color:var(--ink); font-weight:600}
+  .policy-eg{margin-top:28px; background:var(--tint); border-radius:var(--r-card); padding:20px 22px}
+  .policy-eg .eg-label{display:inline-block; background:var(--ptint); color:var(--purple); font-size:12px; font-weight:700; padding:3px 10px; border-radius:999px; margin-bottom:10px}
+  .policy-eg h3{font-size:19px; margin-bottom:8px}
+  .policy-eg p{margin:0 0 8px; font-size:14.5px; color:var(--soft); max-width:56ch}
+  .policy-eg p:last-child{margin-bottom:0}
+  .policy-eg b{color:var(--ink); font-weight:600}
 
-  .changelog{margin-top:clamp(56px,6vw,88px)}
-  .changelog h2{font-size:26px; margin:0 0 6px; color:var(--accent)}
-  .changelog p.sub{color:var(--ink-soft); margin:0 0 20px; font-size:15px}
+  /* changelog + footer */
+  .changelog{margin-top:clamp(48px,5vw,72px)}
+  .changelog h2{font-size:clamp(24px,2.4vw,30px); letter-spacing:-.025em; color:var(--purple); margin-bottom:6px}
+  .changelog .lead{color:var(--soft); margin:0 0 18px; font-size:15px}
   .clentry{display:flex; gap:24px; padding:16px 0; border-top:1px solid var(--line)}
-  .clentry .mo{font-weight:600; font-size:14.5px; flex:0 0 130px}
-  .clentry .items{font-size:14.5px; color:var(--ink-soft); max-width:52ch}
+  .clentry .mo{font-weight:700; font-size:14.5px; flex:0 0 130px}
+  .clentry .items{font-size:14.5px; color:var(--soft); max-width:56ch}
   .clentry .items a{text-decoration:none} .clentry .items a:hover{text-decoration:underline}
-
-  footer{border-top:2px solid var(--gold); margin-top:64px; padding:32px 0 64px; font-size:13.5px; color:var(--ink-soft)}
+  footer{margin-top:clamp(48px,5vw,72px); padding-block:28px 56px; border-top:2px solid var(--gold); font-size:13.5px; color:var(--soft)}
   footer .frow{display:flex; flex-wrap:wrap; gap:8px 28px; align-items:center}
   footer .frow + .frow{margin-top:10px}
   footer b{color:var(--ink); font-weight:600}
   footer code{background:var(--tint); padding:2px 7px; border-radius:6px; font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:12.5px}
 
-  @media(max-width:760px){
-    .hero::before{background:rgba(75,46,131,.84)}
-    .hero-img{object-position:62% 30%}
-    .topnav .links a:not([href="#ground-rules"]){display:none}
+  @media (max-width:767px){
+    .hero{min-height:max(520px,82svh)}
+    .hero-img{object-position:50% 30%}
+    .hero h1{font-size:clamp(48px,14vw,64px)}
+    .nav .links a:not([href="#ground-rules"]){display:none}
+    .stats{grid-template-columns:repeat(3,1fr)} .stats div{padding:0 12px} .stats b{font-size:20px} .stats span{font-size:13px}
     .panels{grid-template-columns:1fr}
     .panel{padding:22px 20px}
     /* phone: not sticky; search, then one scrolling chip row, then one scrolling category row */
-    .controls{position:static; margin-top:32px}
-    .bar{padding:10px; border-radius:20px}
-    .inner{gap:10px}
+    .controls{position:static}
+    .bar{padding:10px; gap:10px}
     .search{flex:1 1 100%; min-width:0}
-    .inner::before{display:none}
-    #lvlFilters{margin-left:0}
-    .filters{display:flex; order:6; flex:1 1 100%; flex-wrap:nowrap; overflow-x:auto; scrollbar-width:none; gap:16px; margin:0 -10px; padding:0 10px; -webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 32px),transparent); mask-image:linear-gradient(90deg,#000 calc(100% - 32px),transparent)}
-    .filters::-webkit-scrollbar{display:none}
-    .filtgroup{flex:none}
-    .count{order:7}
-    #clear{order:8}
-    .catnav{flex-wrap:nowrap; overflow-x:auto; scrollbar-width:none; margin:12px -16px 0; padding:0 16px; -webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 32px),transparent); mask-image:linear-gradient(90deg,#000 calc(100% - 32px),transparent)}
-    .catnav::-webkit-scrollbar{display:none}
+    .filters{flex:1 1 100%; flex-wrap:nowrap; overflow-x:auto; scrollbar-width:none; margin:0 -10px; padding:0 10px; gap:16px;
+      -webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 28px),transparent); mask-image:linear-gradient(90deg,#000 calc(100% - 28px),transparent)}
+    .filters::-webkit-scrollbar,.catnav::-webkit-scrollbar{display:none}
+    .fg{flex:none}
+    .count{margin:0}
+    .catnav{flex-wrap:nowrap; overflow-x:auto; scrollbar-width:none; margin-inline:-16px; padding-inline:16px;
+      -webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 32px),transparent); mask-image:linear-gradient(90deg,#000 calc(100% - 32px),transparent)}
     section.cat, .card{scroll-margin-top:16px}
     .rules ol{grid-template-columns:1fr}
     .clentry{flex-direction:column; gap:4px}
   }
-  @media(prefers-reduced-motion:reduce){
+  @media (prefers-reduced-motion: no-preference){
+    .hero-copy > *{animation:intro .9s var(--ease) both; animation-delay:calc(var(--d,0) * 90ms)}
+    @keyframes intro{from{opacity:0; transform:translateY(18px)}}
+    /* the only scroll-linked motion on the page: the hero photo zooms gently as the top screen scrolls away */
+    @supports (animation-timeline: scroll()){
+      .hero-img{animation:heroZoom linear both; animation-timeline:scroll(root); animation-range:0 100svh}
+      @keyframes heroZoom{to{transform:scale(1.1) translateY(2%)}}
+    }
+  }
+  @media (prefers-reduced-motion: reduce){
     html{scroll-behavior:auto}
-    *,*::before,*::after{transition:none !important; animation:none !important}
-    .card:hover{transform:none}
+    *,*::before,*::after{animation:none !important; transition:none !important}
   }
 </style>
 </head>
 <body>
-  <div class="hero">
-    <img class="hero-img" src="assets/rainier.webp" width="1920" height="872" alt="Mount Rainier in winter, snow blowing off its summit ridges under a clear blue sky" decoding="async" fetchpriority="high" onerror="this.remove()" />
-    <div class="wrap">
-    <nav class="topnav" aria-label="Site">
-      <a class="mark" href="#"><i aria-hidden="true"></i>Foster HMBA AI Cabinet</a>
-      <div class="links"><a href="#main">Tools</a><a href="#ground-rules">Ground rules</a><a href="#changelog">Changelog</a></div>
+  <header class="hero">
+    <picture>
+      <source media="(max-width:767px)" srcset="assets/rainier-portrait-800.webp" width="800" height="1000" />
+      <img class="hero-img" src="assets/rainier.webp" srcset="assets/rainier-960.webp 960w, assets/rainier.webp 1920w" sizes="100vw" width="1920" height="872" alt="Mount Rainier in winter, snow blowing off its summit ridges under a clear blue sky" fetchpriority="high" decoding="async" onerror="this.closest('picture').remove()" />
+    </picture>
+    <nav class="nav wrap" aria-label="Site">
+      <a class="mark" href="#"><span class="dot" aria-hidden="true"></span>Foster HMBA AI Cabinet</a>
+      <div class="links"><a href="#tools">Tools</a><a href="#changelog">Changelog</a><a href="#ground-rules">Ground rules</a></div>
     </nav>
-    <header class="site">
-      <h1>The AI Tools Field&nbsp;Guide</h1>
-      <span class="hero-rule" aria-hidden="true"></span>
-      <p class="lede">Find the right AI tool for the problem in front of you, whether it's <em>personal, professional, or for your coursework</em>. Organized by what you're trying to get done, not by hype.</p>
-      <p class="byline"><b>Pick one tool per task, learn it well, and read the ground rules before graded work.</b></p>
-    </header>
+    <div class="hero-copy wrap">
+      <h1 style="--d:0">The AI Tools Field&nbsp;Guide</h1>
+      <span class="rule" style="--d:1" aria-hidden="true"></span>
+      <p class="sub" style="--d:2">Find the right AI tool for the problem in front of you, organized by the job it does.</p>
+      <div class="ctas" style="--d:3">
+        <a class="btn primary" href="#tools">Browse tools<svg class="ic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+        <a class="btn ghost" href="#ground-rules">Ground rules</a>
+      </div>
     </div>
-  </div>
+  </header>
+
+  <section class="stats wrap" aria-label="Guide at a glance">
+    <div><b id="toolcount">38</b><span>tools reviewed</span></div>
+    <div><b id="catcount">12</b><span>categories</span></div>
+    <div><b id="asof">2026-05</b><span>pricing checked</span></div>
+  </section>
 
   <div class="wrap">
-
     <div class="panels">
-      <div class="shell"><div class="core panel">
+      <div class="panel">
         <h2>Start here: the 60-second plan</h2>
         <ol>
           <li><b>Pick one daily driver</b> from General-Purpose Assistants. Learn it well before adding anything else.</li>
@@ -239,42 +251,40 @@
           <li><b>Reach for a specialist only when a task demands it</b>: a deck, a dashboard, audio for your readings.</li>
           <li><b>Read the Ground Rules</b> before using any of it on graded work.</li>
         </ol>
-      </div></div>
-      <div class="shell"><div class="core panel">
+      </div>
+      <div class="panel">
         <h2>The near-zero-cost stack</h2>
         <p class="stack-note">The free tier of <b>ChatGPT, Claude, or Gemini</b> plus <b>Gemini Notebook</b> (free) handles most day-to-day coursework at no cost. Two verified student offers stretch that further: <b>Gemini AI Pro free for 12 months</b> for verified US college students (verify through SheerID, redeem by 2026-12-31, auto-renews at full price afterward) and <b>GitHub Copilot Student</b>, free for verified students. Paid tiers earn their keep only once you hit free limits regularly. <b>Don't pay on day one.</b></p>
-        <p class="stack-note"><b>Student offers expire and change.</b> Before relying on one, check the ✓ Verified date on that tool's card, then confirm on the provider's page.</p>
-      </div></div>
+        <p class="stack-note"><b>Student offers expire and change.</b> Before relying on one, check the Verified date on that tool's card, then confirm on the provider's page.</p>
+      </div>
     </div>
-
     <div class="recent" id="recent" hidden></div>
   </div>
 
-  <div class="controls">
-    <div class="wrap"><div class="bar">
-      <div class="inner">
-        <div class="search">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
-          <input id="q" type="search" aria-label="Search tools" placeholder="Search tools, tasks, or keywords…" autocomplete="off" />
+  <main class="tools" id="tools" aria-labelledby="tools-h">
+    <div class="wrap">
+      <h2 class="tools-h" id="tools-h">Browse the tools</h2>
+      <div class="controls">
+        <div class="bar">
+          <label class="search"><svg class="ic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"/></svg><input id="q" type="search" aria-label="Search tools" placeholder="Search tools, tasks, or keywords" autocomplete="off" /></label>
+          <div class="filters">
+            <div class="fg" id="ctxFilters"><span class="fl">For</span></div>
+            <div class="fg" id="costFilters"><span class="fl">Cost</span></div>
+            <div class="fg" id="lvlFilters"><span class="fl">Level</span></div>
+          </div>
+          <button type="button" class="reset" id="clear" hidden>Reset</button>
+          <p class="count" id="count" aria-live="polite"></p>
         </div>
-        <div class="filters">
-          <div class="filtgroup" id="ctxFilters"><span class="label">For</span></div>
-          <div class="filtgroup" id="costFilters"><span class="label">Cost</span></div>
-          <div class="filtgroup" id="lvlFilters"><span class="label">Level</span></div>
-        </div>
-        <button class="clear" id="clear" hidden>Reset</button>
-        <span class="count" id="count"></span>
       </div>
-    </div></div>
-  </div>
-  <div class="wrap"><nav class="catnav" id="catnav" aria-label="Categories"></nav></div>
+      <nav class="catnav" id="catnav" aria-label="Categories"></nav>
+      <div id="cats"></div>
+      <div class="empty" id="noresults" role="status" hidden><p>No tools match those filters.</p><button type="button" class="reset" id="clear2">Reset filters</button></div>
+    </div>
+  </main>
 
   <div class="wrap">
-    <main id="main"></main>
-    <div class="noresults" id="noresults" role="status">No tools match those filters. <button class="clear" id="clear2">Reset filters</button></div>
-
-    <section class="rules shell" id="ground-rules">
-      <details class="core">
+    <section class="rules" id="ground-rules">
+      <details>
         <summary>
           <div class="summary-head">
             <h2>Ground Rules</h2>
@@ -283,7 +293,7 @@
           <span class="toggle" aria-hidden="true">+</span>
         </summary>
         <div class="rules-body">
-          <p class="sub">How we use AI reflects on the program. These principles sit behind the Governance category above.</p>
+          <p class="lead">How we use AI reflects on the program. These principles sit behind the Governance category above.</p>
           <ol>
             <li><b>Course policy wins.</b> Rules differ by course and assignment. If a syllabus is silent, ask. Don't assume permission.</li>
             <li><b>Disclose, disclose, disclose.</b> Undisclosed use carries the heaviest penalties; proactive disclosure, the lightest.</li>
@@ -306,25 +316,28 @@
     <section class="changelog" id="changelog"></section>
 
     <footer>
-      <div class="frow"><span>Pricing accurate as of <b id="asof">2026-05</b>. Always verify on the provider's page. <a href="https://github.com/foster-hmba-ai-cabinet/kirin-ai-tools/blob/main/CHANGELOG.md" target="_blank" rel="noopener">See what's changed →</a></span></div>
+      <div class="frow"><span>Pricing changes often. Always verify on the provider's page. <a href="https://github.com/foster-hmba-ai-cabinet/kirin-ai-tools/blob/main/CHANGELOG.md" target="_blank" rel="noopener">See what's changed</a></span></div>
       <div class="frow">
-        <span><b id="toolcount">38</b> tools · <b id="catcount">12</b> categories</span>
-        <span>Maintained by <b id="maintainers">the Foster HMBA AI Cabinet</b></span>
-        <span>To update: edit <code>tools.yaml</code> → run <code>build.py</code> → push.</span>
+        <span>Maintained by the <b>Foster HMBA AI Cabinet</b><span id="maint-names" hidden>: <b id="maintainers"></b></span></span>
+        <span>To update: edit <code>tools.yaml</code>, run <code>build.py</code>, push.</span>
         <span>Content licensed <b>CC BY 4.0</b>.</span>
       </div>
     </footer>
   </div>
 
+  <!-- Which tools have a site icon in assets/logos (see assets/logos/sources.json). Tools not listed get a lettermark. -->
+  <script id="logo-map" type="application/json">{"chatgpt":"chatgpt.png","claude":"claude.png","google-gemini":"google-gemini.png","microsoft-copilot":"microsoft-copilot.svg","perplexity":"perplexity.png","elicit":"elicit.png","consensus":"consensus.png","scispace":"scispace.svg","grammarly":"grammarly.png","jasper":"jasper.png","julius-ai":"julius-ai.png","excel-copilot":"excel-copilot.png","microsoft-power-bi":"microsoft-power-bi.png","tableau":"tableau.png","canva":"canva.png","adobe-firefly":"adobe-firefly.png","copilot-in-powerpoint":"copilot-in-powerpoint.png","speechify":"speechify.png","elevenlabs":"elevenlabs.png","otter-ai":"otter-ai.png","fireflies-ai":"fireflies-ai.png","notion-ai":"notion-ai.png","zapier":"zapier.png","make":"make.png","github-copilot":"github-copilot.svg","cursor":"cursor.png","linkedin-ai-features":"linkedin-ai-features.svg","teal":"teal.png","turnitin-awareness":"turnitin-awareness.png"}</script>
   <!-- Tool data is injected here by scripts/build.py from tools.yaml. Do not hand-edit. -->
   <script id="tools-data" type="application/json">{"meta": {"title": "KIRIN AI Tools Repository", "audience": "Foster Hybrid MBA students new to AI", "pricing_as_of": "2026-05", "maintainers": ["Tyler Futch (Technical & Governance Lead)", "Nick Trezza (AI Chair)"], "handoff_to": "Cohort 10 (Sept 2026 onboarding)"}, "categories": [{"id": "general", "title": "💬 General-Purpose Assistants", "order": 1, "blurb": "Start here. These are the Swiss-army tools that handle writing, analysis, brainstorming, summarizing, and light coding in one chat box. Pick ONE as your daily driver before reaching for anything specialized."}, {"id": "research", "title": "🔎 Research & Literature", "order": 2, "blurb": "Cited answers, paper discovery, and synthesis of sources. Use these when \"I need evidence\" matters more than \"I need a draft.\""}, {"id": "writing", "title": "✍️ Writing & Editing", "order": 3, "blurb": "Polish, paraphrase, and clarity. These refine what you've written rather than replace your thinking."}, {"id": "data", "title": "📊 Data Analysis & Visualization", "order": 4, "blurb": "Turn spreadsheets and datasets into analysis and dashboards — from chat-based analysts to enterprise BI."}, {"id": "design", "title": "🖼️ Image, Design & Brand", "order": 5, "blurb": "Generate visuals, graphics, and brand assets. Watch licensing for anything you publish."}, {"id": "slides", "title": "🎤 Presentations & Slides", "order": 6, "blurb": "Get a first-draft deck in minutes. Always rework AI slides before presenting — they read as generic out of the box."}, {"id": "audio", "title": "🎧 Audio & Voice", "order": 7, "blurb": "Turn text into audio and audio into text. Listen to readings on your commute, or generate clean voiceovers for presentations."}, {"id": "meetings", "title": "🎙️ Meetings & Note-Taking", "order": 8, "blurb": "Transcribe lectures and team calls, capture action items, and organize notes. Get consent before recording others."}, {"id": "automation", "title": "⚙️ Productivity & Workflow Automation", "order": 9, "blurb": "Connect your apps and kill repetitive busywork."}, {"id": "coding", "title": "💻 Coding & Technical", "order": 10, "blurb": "For the analytics, data, and tech-track electives — or anyone learning to build."}, {"id": "career", "title": "💼 Career & Recruiting", "order": 11, "blurb": "Résumés, networking, interview prep, and application tracking."}, {"id": "governance", "title": "🛡️ Governance, Responsible Use & Compliance", "order": 12, "blurb": "The part most tool lists skip. Read the Ground Rules on the site before using anything above in graded work."}], "tools": [{"name": "ChatGPT", "url": "https://chatgpt.com", "category": "general", "what": "Conversational assistant for writing, analysis, brainstorming, and light coding; built-in data analysis, image generation, and web browsing.", "best_for": "A reliable all-rounder and most people's first tool.", "pricing": "Free; Go $8/mo (Free and Go may include ads in the US); Plus $20/mo; Pro from $100/mo (3 usage tiers) — Plus and Pro are ad-free", "cost_tier": "Freemium", "difficulty": "Beginner", "contexts": ["education", "professional", "personal"], "added": "2026-04-20", "last_verified": "2026-09-30", "notes": "Free tier is enough for most coursework. Verify before pasting anything confidential."}, {"name": "Claude", "url": "https://claude.ai", "category": "general", "what": "Conversational assistant especially strong at long-document analysis, careful reasoning, and natural writing.", "best_for": "Nuanced writing, reading large PDFs/case packs, and work where tone matters.", "pricing": "Free; Pro $20/mo ($17/mo billed annually); Max $100–200/mo", "cost_tier": "Freemium", "difficulty": "Beginner", "contexts": ["education", "professional", "personal"], "added": "2026-04-20", "last_verified": "2026-09-30", "notes": "Large context window handles full case packs in one go."}, {"name": "Google Gemini", "url": "https://gemini.google.com", "category": "general", "what": "Google's assistant with a very large context window, deeply integrated into Gmail, Docs, Drive, and Sheets; also generates images.", "best_for": "Students who live in Google Workspace; fits an entire semester of notes in context.", "pricing": "Free; AI Plus ~$7.99/mo, AI Pro $19.99/mo — verified US college students get 12 months of AI Pro free, redeem by 2026-12-31", "cost_tier": "Free for students", "difficulty": "Beginner", "contexts": ["education", "professional", "personal"], "added": "2026-04-20", "last_verified": "2026-09-30", "notes": "Free student year of AI Pro: verify student status through SheerID and redeem by 2026-12-31. Auto-renews at full price afterward."}, {"name": "Microsoft Copilot", "url": "https://copilot.microsoft.com", "category": "general", "what": "Microsoft's assistant, embedded across Word, Excel, Outlook, PowerPoint, and Teams.", "best_for": "Office-heavy workflows where you want AI inside the apps you already use.", "pricing": "Free chat; M365 Copilot is a paid add-on (check school licensing)", "cost_tier": "Freemium", "difficulty": "Beginner", "contexts": ["professional", "education"], "added": "2026-04-20", "last_verified": "2026-04-20", "notes": "Foster/UW may provide M365 Copilot access — check before paying."}, {"name": "Perplexity", "url": "https://www.perplexity.ai", "category": "research", "what": "AI answer engine that searches the live web and returns sourced, cited answers.", "best_for": "Cited research, fact-checking, and current-events questions where a citation trail matters.", "pricing": "Free; Pro paid, ~$9/mo on a limited-time 50% off annual promo as of 2026-09-30 (standard rate is higher) — the previously listed $4.99/mo Education Pro rate no longer appears on the plan page", "cost_tier": "Freemium", "difficulty": "Beginner", "contexts": ["education", "professional", "personal"], "added": "2026-04-20", "last_verified": "2026-09-30"}, {"name": "Gemini Notebook (formerly NotebookLM)", "url": "https://notebook.google.com/", "category": "research", "what": "Grounded research assistant that answers only from sources YOU upload; generates summaries, study guides, and podcast-style audio overviews.", "best_for": "Synthesizing assigned readings and case packs with minimal hallucination.", "pricing": "Free with usage limits", "cost_tier": "Free", "difficulty": "Beginner", "contexts": ["education", "professional"], "added": "2026-04-20", "last_verified": "2026-09-30", "notes": "Its audio-overview feature turns your sources into a two-host podcast — great for the commute. Renamed from NotebookLM in July 2026."}, {"name": "Elicit", "url": "https://elicit.com", "category": "research", "what": "Research assistant that finds academic papers and extracts findings into comparison tables.", "best_for": "Literature reviews and evidence synthesis for term papers.", "pricing": "Free tier; paid plans for higher volume", "cost_tier": "Freemium", "difficulty": "Intermediate", "contexts": ["education", "professional"], "added": "2026-04-20", "last_verified": "2026-04-20"}, {"name": "Consensus", "url": "https://consensus.app", "category": "research", "what": "Search engine that surfaces conclusions from peer-reviewed research for a given question.", "best_for": "Quickly answering \"what does the research say about X?\" with citations.", "pricing": "Free tier; Premium paid", "cost_tier": "Freemium", "difficulty": "Beginner", "contexts": ["education", "professional"], "added": "2026-04-20", "last_verified": "2026-04-20"}, {"name": "SciSpace", "url": "https://scispace.com", "category": "research", "what": "Reads and explains dense academic papers, clarifies jargon and math, and supports literature search.", "best_for": "Getting through technical PDFs you'd otherwise bounce off.", "pricing": "Free tier; paid plans", "cost_tier": "Freemium", "difficulty": "Intermediate", "contexts": ["education"], "added": "2026-04-20", "last_verified": "2026-04-20"}, {"name": "Grammarly", "url": "https://www.grammarly.com", "category": "writing", "what": "Grammar, clarity, and tone checking, plus generative drafting and rewriting help.", "best_for": "Polishing assignments, emails, and professional communication.", "pricing": "Free; Pro paid (student pricing available)", "cost_tier": "Freemium", "difficulty": "Beginner", "contexts": ["education", "professional", "personal"], "added": "2026-04-20", "last_verified": "2026-04-20"}, {"name": "QuillBot", "url": "https://quillbot.com", "category": "writing", "what": "Paraphrasing, summarizing, grammar checking, and citation generation.", "best_for": "Tightening and rephrasing drafts without changing meaning.", "pricing": "Free tier; Premium paid", "cost_tier": "Freemium", "difficulty": "Beginner", "contexts": ["education", "professional"], "added": "2026-04-20", "last_verified": "2026-04-20", "notes": "Paraphrasing to dodge a detector is not a free pass — disclosure rules still apply."}, {"name": "Jasper", "url": "https://www.jasper.ai", "category": "writing", "what": "Marketing and brand copy generation at scale with reusable brand-voice profiles.", "best_for": "Marketing electives and content/brand projects.", "pricing": "Paid (free trial)", "cost_tier": "Paid", "difficulty": "Intermediate", "contexts": ["professional"], "added": "2026-04-20", "last_verified": "2026-04-20"}, {"name": "Julius AI", "url": "https://julius.ai", "category": "data", "what": "Chat-based data analyst — upload a dataset, ask questions in plain English, get charts and statistics.", "best_for": "Analyzing CSVs/Excel without writing formulas or code.", "pricing": "Free tier; paid plans", "cost_tier": "Freemium", "difficulty": "Beginner", "contexts": ["education", "professional"], "added": "2026-04-20", "last_verified": "2026-04-20"}, {"name": "Excel + Copilot", "url": "https://www.microsoft.com/microsoft-365/excel", "category": "data", "what": "Natural-language formulas, analysis, and chart generation inside Excel.", "best_for": "Spreadsheet analysis when you'd rather describe the task than build the formula.", "pricing": "Excel paid; Copilot in Excel requires M365 Copilot", "cost_tier": "Paid", "difficulty": "Intermediate", "contexts": ["professional", "education"], "added": "2026-04-20", "last_verified": "2026-04-20"}, {"name": "Microsoft Power BI", "url": "https://powerbi.microsoft.com", "category": "data", "what": "Business-intelligence dashboards with a Copilot for natural-language reporting; integrates tightly with Excel.", "best_for": "Enterprise-style reporting and dashboards for projects and capstones.", "pricing": "Power BI Desktop free; Pro paid (student options via Microsoft)", "cost_tier": "Freemium", "difficulty": "Intermediate", "contexts": ["professional", "education"], "added": "2026-04-20", "last_verified": "2026-04-20"}, {"name": "Tableau", "url": "https://www.tableau.com", "category": "data", "what": "Industry-standard visual analytics platform with AI-assisted insights.", "best_for": "Serious data viz and analytics-track work; a résumé-worthy skill.", "pricing": "Tableau Desktop paid; Tableau Desktop Public Edition free for students via Tableau Academic (non-commercial, publishes to Tableau Public only)", "cost_tier": "Free for students", "difficulty": "Advanced", "contexts": ["professional", "education"], "added": "2026-04-20", "last_verified": "2026-09-30"}, {"name": "Claude for Financial Services (agent templates)", "url": "https://github.com/anthropics/financial-services", "category": "data", "what": "Anthropic's open-source finance skills and agents for Claude, including Market Researcher, Model Builder, and Earnings Reviewer, that build comps, DCF, LBO, and three-statement models in Excel.", "best_for": "Finance and valuation coursework, case comps, and practicing analyst-style models.", "pricing": "Free (Apache 2.0); Skills work on every Claude plan including Free, with code execution turned on; full agents need paid data feeds", "cost_tier": "Freemium", "difficulty": "Advanced", "contexts": ["education", "professional"], "added": "2026-10-04", "last_verified": "2026-10-04", "notes": "The base DCF, LBO, and three-statement skills are free to use. The full agents expect FactSet, S&P Capital IQ, or similar data access, so they are realistic only if the school provides it. Read the Ground Rules before using them on graded work."}, {"name": "Canva", "url": "https://www.canva.com", "category": "design", "what": "Design platform with AI (Magic Studio) for slides, social graphics, and image generation.", "best_for": "Producing polished visuals and decks with zero design background.", "pricing": "Free; Pro paid (free for some students/educators)", "cost_tier": "Freemium", "difficulty": "Beginner", "contexts": ["education", "professional", "personal"], "added": "2026-04-20", "last_verified": "2026-04-20"}, {"name": "Adobe Firefly", "url": "https://firefly.adobe.com", "category": "design", "what": "Generative image tool trained for commercial safety, integrated with Adobe apps.", "best_for": "Brand-safe imagery you intend to publish or reuse.", "pricing": "Free monthly credits; paid plans", "cost_tier": "Freemium", "difficulty": "Intermediate", "contexts": ["professional", "personal"], "added": "2026-04-20", "last_verified": "2026-04-20", "notes": "Marketed as commercially safer than open image generators — relevant for brand work."}, {"name": "Midjourney", "url": "https://www.midjourney.com", "category": "design", "what": "High-quality generative image creation from text prompts.", "best_for": "Original, striking imagery for projects and pitches.", "pricing": "Paid only, from ~$10/mo (no free tier)", "cost_tier": "Paid", "difficulty": "Intermediate", "contexts": ["personal", "professional"], "added": "2026-04-20", "last_verified": "2026-09-30"}, {"name": "Ideogram", "url": "https://ideogram.ai", "category": "design", "what": "Image generation with best-in-class legible text rendering — posters, logos, and graphics with words in them.", "best_for": "Branded graphics and social images where the text has to look right.", "pricing": "Free tier; paid plans", "cost_tier": "Freemium", "difficulty": "Beginner", "contexts": ["professional", "personal"], "added": "2026-05-29", "last_verified": "2026-05-29"}, {"name": "Gamma", "url": "https://gamma.app", "category": "slides", "what": "Generates full slide decks, docs, and simple webpages from a prompt or outline.", "best_for": "Getting a first-draft deck in minutes, then editing.", "pricing": "Free credits; paid plans", "cost_tier": "Freemium", "difficulty": "Beginner", "contexts": ["education", "professional"], "added": "2026-04-20", "last_verified": "2026-04-20"}, {"name": "Copilot in PowerPoint", "url": "https://www.microsoft.com/microsoft-365/powerpoint", "category": "slides", "what": "Builds and redesigns slides from prompts inside PowerPoint.", "best_for": "Office users who want AI slides in the tool they already present from.", "pricing": "Requires M365 Copilot (paid)", "cost_tier": "Paid", "difficulty": "Beginner", "contexts": ["professional", "education"], "added": "2026-04-20", "last_verified": "2026-04-20"}, {"name": "Speechify", "url": "https://speechify.com", "category": "audio", "what": "Text-to-speech that reads articles, PDFs, and assigned readings aloud in natural voices, at your own speed.", "best_for": "Listening to reading assignments on the commute instead of reading them.", "pricing": "Free tier; Premium paid (student pricing available)", "cost_tier": "Freemium", "difficulty": "Beginner", "contexts": ["education", "professional", "personal"], "added": "2026-05-29", "last_verified": "2026-05-29", "notes": "A cohort favorite for turning case readings into audio. Pairs well with Gemini Notebook's audio overviews."}, {"name": "ElevenLabs", "url": "https://elevenlabs.io", "category": "audio", "what": "High-quality AI voice generation and text-to-speech for narration and voiceovers.", "best_for": "Clean voiceover for presentation videos and recorded walkthroughs.", "pricing": "Free tier; paid plans", "cost_tier": "Freemium", "difficulty": "Intermediate", "contexts": ["professional", "personal", "education"], "added": "2026-05-29", "last_verified": "2026-05-29"}, {"name": "Otter.ai", "url": "https://otter.ai", "category": "meetings", "what": "Live transcription with AI-generated meeting and lecture notes and summaries.", "best_for": "Transcribing classes and capturing what was said in real time.", "pricing": "Free tier; paid plans", "cost_tier": "Freemium", "difficulty": "Beginner", "contexts": ["education", "professional"], "added": "2026-04-20", "last_verified": "2026-04-20"}, {"name": "Fireflies.ai", "url": "https://fireflies.ai", "category": "meetings", "what": "Records, transcribes, and summarizes meetings across Zoom, Meet, and Teams; searchable archive and action items.", "best_for": "Team-project meetings — auto-captured notes and to-dos.", "pricing": "Free tier; paid plans", "cost_tier": "Freemium", "difficulty": "Beginner", "contexts": ["professional", "education"], "added": "2026-04-20", "last_verified": "2026-04-20", "notes": "Tell participants they're being recorded before it joins."}, {"name": "Notion AI", "url": "https://www.notion.so/product/ai", "category": "meetings", "what": "AI built into Notion for notes, task management, summaries, and project docs in one workspace.", "best_for": "Keeping notes, study plans, and group projects organized in a single place.", "pricing": "Bundled into Notion plans, not a separate add-on: Free has limited AI, Plus $10/user/mo, Business $20/user/mo has full AI — Plus is free for students and educators (1 member)", "cost_tier": "Freemium", "difficulty": "Intermediate", "contexts": ["education", "professional", "personal"], "added": "2026-04-20", "last_verified": "2026-09-30"}, {"name": "Zapier", "url": "https://zapier.com", "category": "automation", "what": "Connects 6,000+ apps to automate multi-step workflows, now with AI steps and agents.", "best_for": "Automating repetitive cross-app tasks (e.g., form to sheet to email).", "pricing": "Free tier; paid plans", "cost_tier": "Freemium", "difficulty": "Intermediate", "contexts": ["professional", "personal"], "added": "2026-04-20", "last_verified": "2026-04-20"}, {"name": "Make", "url": "https://www.make.com", "category": "automation", "what": "Visual, node-based automation platform — a flexible Zapier alternative.", "best_for": "More complex automations on a tighter budget.", "pricing": "Free tier; paid plans", "cost_tier": "Freemium", "difficulty": "Intermediate", "contexts": ["professional", "personal"], "added": "2026-04-20", "last_verified": "2026-04-20"}, {"name": "GitHub Copilot", "url": "https://github.com/features/copilot", "category": "coding", "what": "AI pair-programmer that autocompletes and explains code inside your editor.", "best_for": "Coding assignments and learning to program.", "pricing": "Free tier; Pro $10/mo, Pro+ $39/mo, Max $100/mo — Copilot Student is free for verified students", "cost_tier": "Free for students", "difficulty": "Intermediate", "contexts": ["education", "professional"], "added": "2026-04-20", "last_verified": "2026-09-30", "notes": "Verify through the GitHub Student Developer Pack."}, {"name": "Cursor", "url": "https://www.cursor.com", "category": "coding", "what": "An AI-first code editor that can read and edit your whole project conversationally.", "best_for": "Building apps, scripts, or analyses with heavy AI assistance.", "pricing": "Free tier; Pro paid (student discount available)", "cost_tier": "Freemium", "difficulty": "Intermediate", "contexts": ["education", "professional"], "added": "2026-04-20", "last_verified": "2026-04-20"}, {"name": "LinkedIn (AI features)", "url": "https://www.linkedin.com", "category": "career", "what": "AI-assisted profile and résumé feedback, job matching, and interview prep.", "best_for": "Networking, internship/job search, and positioning.", "pricing": "Free; Premium paid (frequent free trials)", "cost_tier": "Freemium", "difficulty": "Beginner", "contexts": ["professional"], "added": "2026-04-20", "last_verified": "2026-04-20"}, {"name": "Teal", "url": "https://www.tealhq.com", "category": "career", "what": "Résumé builder and job-application tracker with AI tailoring to job postings.", "best_for": "Tailoring résumés to specific roles and tracking applications in one place.", "pricing": "Free tier; paid plans", "cost_tier": "Freemium", "difficulty": "Beginner", "contexts": ["professional"], "added": "2026-04-20", "last_verified": "2026-04-20", "notes": "Pair with a general assistant to draft STAR interview stories."}, {"name": "Your course / Foster AI policy", "url": "https://foster.uw.edu", "category": "governance", "what": "The single most important \"tool\" here — the AI-use rules for each specific course and assignment.", "best_for": "Knowing what's allowed before you use anything else on this list.", "pricing": "Free", "cost_tier": "Free", "difficulty": "Beginner", "contexts": ["education"], "added": "2026-04-20", "last_verified": "2026-04-20", "notes": "Rules vary by course and instructor. When in doubt, ask and disclose."}, {"name": "APA AI Citation Guidance", "url": "https://apastyle.apa.org/blog/how-to-cite-chatgpt", "category": "governance", "what": "How to cite and disclose AI assistance in academic work.", "best_for": "Getting disclosure right — undisclosed use carries the heaviest penalties.", "pricing": "Free", "cost_tier": "Free", "difficulty": "Beginner", "contexts": ["education", "professional"], "added": "2026-04-20", "last_verified": "2026-04-20"}, {"name": "Turnitin (awareness)", "url": "https://www.turnitin.com", "category": "governance", "what": "Plagiarism and AI-writing detection used by many institutions.", "best_for": "Understanding how submissions may be screened — and that detectors produce false positives.", "pricing": "Institutional (used by your school, not bought by you)", "cost_tier": "Institutional", "difficulty": "Beginner", "contexts": ["education"], "added": "2026-04-20", "last_verified": "2026-04-20", "notes": "Proactive disclosure beats arguing with a detector after the fact."}, {"name": "Credo AI", "url": "https://www.credo.ai", "category": "governance", "what": "Enterprise AI governance platform — policy packs, generative-AI guardrails, and audit trails.", "best_for": "Anyone exploring AI risk, GRC, or compliance as a career direction.", "pricing": "Paid / Enterprise", "cost_tier": "Paid", "difficulty": "Advanced", "contexts": ["professional"], "added": "2026-04-20", "last_verified": "2026-04-20", "notes": "Included as a career-relevant signal of where enterprise AI governance is heading."}]}</script>
-
   <script>
   (function(){
     const DATA = JSON.parse(document.getElementById('tools-data').textContent);
+    const LOGOS = JSON.parse(document.getElementById('logo-map').textContent);
     const LVL = {Beginner:1, Intermediate:2, Advanced:3};
     const CTX = {education:"Education", professional:"Professional", personal:"Personal"};
-    const esc = s => (s||"").replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+    // catalog copy may contain em dashes; render them as commas
+    const esc = s => String(s||"").replace(/\s*[\u2014\u2013]\s*/g, ', ').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+    const title = s => String(s||"").replace(/^[^\p{L}\p{N}]+/u, '');  // drop leading emoji from category titles
     const slug = s => s.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
     const DAY = 86400000, now = new Date();
     const isNew = d => { const x=(now-new Date(d))/DAY; return x>=0 && x<=30; };
@@ -332,79 +345,81 @@
     const localDate = d => { const [y,m,dd]=String(d).split('-').map(Number); return new Date(y,m-1,dd); };
     const isStale = d => (now-localDate(d))/DAY > STALE_DAYS;
     const fmtDay = d => localDate(d).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
+    const fmtMonth = k => { const [y,m]=String(k).split('-').map(Number); return m ? new Date(y,m-1,1).toLocaleString('en-US',{month:'long',year:'numeric'}) : String(k); };
+    const ARROW = '<svg class="ic go" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg>';
+    const logo = t => LOGOS[slug(t.name)]
+      ? `<img class="logo" src="assets/logos/${esc(LOGOS[slug(t.name)])}" width="28" height="28" alt="" loading="lazy" decoding="async">`
+      : `<span class="logo lm" aria-hidden="true">${esc(t.name.replace(/[^A-Za-z]/g,'').charAt(0).toUpperCase())}</span>`;
 
     const meta = DATA.meta || {};
-    document.getElementById('asof').textContent = meta.pricing_as_of || "—";
     document.getElementById('toolcount').textContent = DATA.tools.length;
     document.getElementById('catcount').textContent = DATA.categories.length;
-    if (Array.isArray(meta.maintainers) && meta.maintainers.length)
-      document.getElementById('maintainers').textContent = meta.maintainers.join(' · ');
+    document.getElementById('asof').textContent = fmtMonth(meta.pricing_as_of || '');
+    if (Array.isArray(meta.maintainers) && meta.maintainers.length) {
+      document.getElementById('maintainers').textContent = meta.maintainers.join(', ');
+      document.getElementById('maint-names').hidden = false;
+    }
 
     const usedCosts = [...new Set(DATA.tools.map(t=>t.cost_tier))];
 
     // ---- sections + cards ----
     const cats = [...DATA.categories].sort((a,b)=>a.order-b.order);
     const byCat = {}; DATA.tools.forEach(t=>(byCat[t.category]=byCat[t.category]||[]).push(t));
-    const main = document.getElementById('main'), catnav = document.getElementById('catnav');
-
-    cats.forEach((c,i)=>{
+    const host = document.getElementById('cats'), catnav = document.getElementById('catnav');
+    let navHtml = '', html = '';
+    cats.forEach(c=>{
       const rows = byCat[c.id]||[]; if(!rows.length) return;
-      catnav.insertAdjacentHTML('beforeend', `<a href="#cat-${c.id}">${esc(c.title)}</a>`);
+      navHtml += `<a href="#cat-${c.id}">${esc(title(c.title))}</a>`;
       const cards = rows.map(t=>{
         const n = LVL[t.difficulty]||1;
         const pips = [1,2,3].map(k=>`<span class="pip ${k<=n?'on':''}"></span>`).join('');
-        const note = t.notes ? `<p class="note">${esc(t.notes)}</p>` : '';
-        const ctx = (t.contexts||[]);
-        const ctxTags = ctx.map(x=>`<span>${esc(CTX[x]||x)}</span>`).join('');
-        const badge = isNew(t.added) ? `<span class="newbadge">NEW</span>` : '';
+        const ctx = t.contexts||[];
         const due = isStale(t.last_verified);
-        const verified = t.last_verified
-          ? `<span class="verified${due?' due':''}" title="Pricing last checked on the provider's page">✓ Verified ${esc(fmtDay(t.last_verified))}${due?' · re-check due':''}</span>`
-          : '';
         const hay = (t.name+' '+t.what+' '+t.best_for+' '+(t.notes||'')+' '+c.title+' '+ctx.join(' ')).toLowerCase();
         return `<article class="card" id="card-${slug(t.name)}" data-hay="${esc(hay)}" data-cost="${esc(t.cost_tier)}" data-lvl="${esc(t.difficulty)}" data-ctx="${esc(ctx.join(' '))}">
-          ${badge}
-          <div class="ctxtags">${ctxTags}</div>
-          <h3><a href="${esc(t.url)}" target="_blank" rel="noopener">${esc(t.name)}</a></h3>
+          ${isNew(t.added) ? '<span class="newbadge">NEW</span>' : ''}
+          <h3><a class="tool" href="${esc(t.url)}" target="_blank" rel="noopener">${logo(t)}<span class="name">${esc(t.name)}</span>${ARROW}</a></h3>
           <p class="what">${esc(t.what)}</p>
-          <p class="best"><b>Best for:</b> ${esc(t.best_for)}</p>
-          ${note}
+          <p class="best"><b>Best for</b> ${esc(t.best_for)}</p>
+          ${t.notes ? `<p class="note">${esc(t.notes)}</p>` : ''}
+          <p class="for">${ctx.map(x=>CTX[x]||x).join(', ')}</p>
           <div class="meta">
-            <span class="cost">${esc(t.cost_tier)}<span class="price">${esc(t.pricing)}</span>${verified}</span>
+            <span class="cost"><b>${esc(t.cost_tier)}</b> ${esc(t.pricing)}</span>
             <span class="lvl"><span class="pips" aria-hidden="true">${pips}</span>${esc(t.difficulty)}</span>
           </div>
+          ${t.last_verified ? `<span class="ver${due?' due':''}" title="Pricing last checked on the provider's page">Verified ${esc(fmtDay(t.last_verified))}${due?' (re-check due)':''}</span>` : ''}
         </article>`;
       }).join('');
-      main.insertAdjacentHTML('beforeend', `<section class="cat" id="cat-${c.id}" data-cat="${c.id}">
-        <div class="cat-head"><span class="num">${String(i+1).padStart(2,'0')}</span><h2>${esc(c.title)}</h2></div>
+      html += `<section class="cat" id="cat-${c.id}" aria-labelledby="h-${c.id}">
+        <div class="cat-head"><h2 id="h-${c.id}">${esc(title(c.title))}</h2></div>
         <p class="cat-blurb">${esc(c.blurb)}</p>
         <div class="grid">${cards}</div>
-      </section>`);
+      </section>`;
     });
+    catnav.innerHTML = navHtml; host.innerHTML = html;
 
     // ---- recently added strip ----
     const recents = DATA.tools.filter(t=>isNew(t.added)).sort((a,b)=>new Date(b.added)-new Date(a.added)).slice(0,8);
     if(recents.length){
       const box = document.getElementById('recent');
-      box.hidden = false;
       box.innerHTML = `<span class="rlabel"><span class="tag">NEW</span>Recently added</span>` +
         recents.map(t=>`<a href="#card-${slug(t.name)}">${esc(t.name)}</a>`).join('');
+      box.hidden = false;
     }
 
     // ---- changelog (grouped by month, newest first) ----
     const groups = {};
     DATA.tools.forEach(t=>{ const k=t.added.slice(0,7); (groups[k]=groups[k]||[]).push(t); });
     const months = Object.keys(groups).sort().reverse();
-    const fmtMonth = k => { const [y,m]=k.split('-'); return new Date(y,m-1,1).toLocaleString('en-US',{month:'long',year:'numeric'}); };
     document.getElementById('changelog').innerHTML =
-      `<h2>Changelog</h2><p class="sub">What's been added, newest first. The <b>NEW</b> badge on a card clears automatically 30 days after it's added.</p>` +
+      `<h2>Changelog</h2><p class="lead">What's been added, newest first. The <b>NEW</b> badge on a card clears automatically 30 days after it's added.</p>` +
       months.map(k=>{
         const items = groups[k].sort((a,b)=>a.name.localeCompare(b.name))
           .map(t=>`<a href="#card-${slug(t.name)}">${esc(t.name)}</a>`).join(', ');
         return `<div class="clentry"><div class="mo">${fmtMonth(k)}</div><div class="items">Added (${groups[k].length}): ${items}</div></div>`;
       }).join('');
 
-    // smooth-scroll + flash when jumping to a card
+    // flash a card when jumping to it
     document.addEventListener('click', e=>{
       const a = e.target.closest('a[href^="#card-"]'); if(!a) return;
       const el = document.querySelector(a.getAttribute('href'));
@@ -412,40 +427,42 @@
     });
 
     // ---- filters ----
-    const ctxSet=new Set(), costSet=new Set(), lvlSet=new Set();
-    function chipRow(host, items, set, cls){
+    const sel = {ctx:new Set(), cost:new Set(), lvl:new Set()};
+    const calm = matchMedia('(prefers-reduced-motion: reduce)');
+    function chipRow(id, key, items){
+      const row = document.getElementById(id);
       items.forEach(([val,lbl])=>{
-        const b=document.createElement('button'); b.className='chip'+(cls?' '+cls:''); b.textContent=lbl; b.setAttribute('aria-pressed','false');
-        b.onclick=()=>{ const on=b.getAttribute('aria-pressed')==='true'; b.setAttribute('aria-pressed',!on); on?set.delete(val):set.add(val); apply(); };
-        host.appendChild(b);
+        const b=document.createElement('button'); b.type='button'; b.className='chip'; b.textContent=lbl; b.setAttribute('aria-pressed','false');
+        b.addEventListener('click', ()=>{ const on=b.getAttribute('aria-pressed')==='true'; b.setAttribute('aria-pressed',String(!on)); on?sel[key].delete(val):sel[key].add(val); transition(); });
+        row.appendChild(b);
       });
     }
-    chipRow(document.getElementById('ctxFilters'), Object.entries(CTX), ctxSet, 'ctx');
-    chipRow(document.getElementById('costFilters'), usedCosts.map(c=>[c,c]), costSet);
-    chipRow(document.getElementById('lvlFilters'), [['Beginner','Beginner'],['Intermediate','Intermediate'],['Advanced','Advanced']], lvlSet);
+    chipRow('ctxFilters', 'ctx', Object.entries(CTX));
+    chipRow('costFilters', 'cost', usedCosts.map(c=>[c,c]));
+    chipRow('lvlFilters', 'lvl', [['Beginner','Beginner'],['Intermediate','Intermediate'],['Advanced','Advanced']]);
 
     const q=document.getElementById('q'), count=document.getElementById('count'),
           clearBtn=document.getElementById('clear'), nores=document.getElementById('noresults');
+    const cards=[...host.querySelectorAll('.card')], sections=[...host.querySelectorAll('section.cat')];
     function apply(){
       const term=q.value.trim().toLowerCase(); let shown=0;
-      document.querySelectorAll('.card').forEach(card=>{
+      cards.forEach(card=>{
         const cardCtx = card.dataset.ctx.split(' ');
         const ok = (!term || card.dataset.hay.includes(term))
-          && (!costSet.size || costSet.has(card.dataset.cost))
-          && (!lvlSet.size  || lvlSet.has(card.dataset.lvl))
-          && (!ctxSet.size  || [...ctxSet].some(x=>cardCtx.includes(x)));
-        card.style.display = ok?'':'none'; if(ok) shown++;
+          && (!sel.cost.size || sel.cost.has(card.dataset.cost))
+          && (!sel.lvl.size  || sel.lvl.has(card.dataset.lvl))
+          && (!sel.ctx.size  || [...sel.ctx].some(x=>cardCtx.includes(x)));
+        card.hidden = !ok; if(ok) shown++;
       });
-      document.querySelectorAll('section.cat').forEach(s=>{
-        const any=[...s.querySelectorAll('.card')].some(c=>c.style.display!=='none');
-        s.style.display=any?'':'none';
-      });
+      sections.forEach(s=>{ s.hidden = !s.querySelector('.card:not([hidden])'); });
       count.innerHTML = `<b>${shown}</b> of ${DATA.tools.length} tools`;
-      clearBtn.hidden = !(term||costSet.size||lvlSet.size||ctxSet.size);
-      nores.classList.toggle('show', shown===0);
+      clearBtn.hidden = !(term||sel.cost.size||sel.lvl.size||sel.ctx.size);
+      nores.hidden = shown !== 0;
     }
-    function reset(){ q.value=''; ctxSet.clear(); costSet.clear(); lvlSet.clear();
-      document.querySelectorAll('.chip').forEach(c=>c.setAttribute('aria-pressed','false')); apply(); }
+    // filter changes cross-fade via View Transitions when supported and motion is allowed
+    const transition = () => (document.startViewTransition && !calm.matches) ? document.startViewTransition(apply) : apply();
+    function reset(){ q.value=''; Object.values(sel).forEach(s=>s.clear());
+      document.querySelectorAll('.chip').forEach(c=>c.setAttribute('aria-pressed','false')); transition(); }
     q.addEventListener('input', apply);
     clearBtn.addEventListener('click', reset);
     document.getElementById('clear2').addEventListener('click', reset);

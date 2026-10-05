@@ -238,6 +238,12 @@ Content is shared under **CC BY 4.0** — fork it, adapt it, pass it on. Attribu
 - Copy used: https://commons.wikimedia.org/wiki/File:Mount_Rainier_in_Winter_(522c96a0-9a05-47b1-8d9a-c11597f8793f).JPG
 - Cropped to 1920x872 and compressed to WebP (`assets/rainier.webp`).
 
-**Typeface:** Encode Sans (SIL Open Font License), served by Google Fonts.
+**Mobile crops:** `assets/rainier-960.webp` and `assets/rainier-portrait-800.webp` are cut from the same photo.
+
+**Typeface:** Encode Sans (SIL Open Font License), self-hosted in `assets/fonts/` with its license (`OFL.txt`).
+
+**Interface icons:** Phosphor Icons (MIT License), inlined from the library's own SVG files.
+
+**Tool logos:** each tool's own site icon, shown small and linked to that tool for identification only (nominative use). Sources are recorded in `assets/logos/sources.json`. Tools without a usable icon get a lettermark.
 
 The site uses the UW brand colors only. It contains no UW logos, W mark, or Husky marks.
