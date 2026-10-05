@@ -225,3 +225,18 @@ python -m http.server 8000   # then open http://localhost:8000
 ## 📄 License
 
 Content is shared under **CC BY 4.0** — fork it, adapt it, pass it on. Attribution to the Foster HMBA AI Cabinet appreciated.
+
+---
+
+## Credits
+
+**Hero photo:** "Mount Rainier in Winter," Mount Rainier National Park (MORA), taken 2019-02-21.
+- Author: National Park Service (NPS Photo)
+- License: Public domain (work of the U.S. federal government, PD-USGov-NPS)
+- Source: https://npgallery.nps.gov/AssetDetail/522c96a0-9a05-47b1-8d9a-c11597f8793f
+- Copy used: https://commons.wikimedia.org/wiki/File:Mount_Rainier_in_Winter_(522c96a0-9a05-47b1-8d9a-c11597f8793f).JPG
+- Cropped to 1920x872 and compressed to WebP (`assets/rainier.webp`).
+
+**Typeface:** Encode Sans (SIL Open Font License), served by Google Fonts.
+
+The site uses the UW brand colors only. It contains no UW logos, W mark, or Husky marks.
