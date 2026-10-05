@@ -26,6 +26,8 @@ try:
 except ImportError:
     sys.exit("Missing dependency. Run:  pip install pyyaml")
 
+import check_assets  # sibling module: fails the build on missing or git-ignored assets
+
 ROOT = Path(__file__).resolve().parent.parent
 CATALOG = ROOT / "tools.yaml"
 INDEX = ROOT / "index.html"
@@ -183,6 +185,10 @@ def main() -> None:
     validate(catalog)
     build_site(catalog)
     build_readme(catalog)
+    problems = check_assets.check(ROOT)
+    if problems:
+        sys.exit("Asset check failed (index.html references files that won't "
+                 "reach the live site):\n  " + "\n  ".join(problems))
     print(f"Built: index.html + README.md + tools.json "
           f"({len(catalog['tools'])} tools, {len(catalog['categories'])} categories).")
 
