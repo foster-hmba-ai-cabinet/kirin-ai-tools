@@ -17,6 +17,7 @@
     --shadow:0 1px 2px rgba(31,27,22,.05), 0 8px 24px -12px rgba(31,27,22,.18);
   }
   *{box-sizing:border-box}
+  [hidden]{display:none !important}
   html{scroll-behavior:smooth}
   body{margin:0; background:var(--paper); color:var(--ink); font-family:"Public Sans",ui-sans-serif,system-ui,sans-serif; font-size:16px; line-height:1.55; -webkit-font-smoothing:antialiased}
   body::before{content:""; position:fixed; inset:0; pointer-events:none; z-index:0; opacity:.5; background-image:radial-gradient(rgba(31,27,22,.04) 1px, transparent 1px); background-size:4px 4px}
@@ -142,6 +143,7 @@
 
   @media(max-width:760px){
     .panels{grid-template-columns:1fr}
+    .controls{position:static; box-shadow:none}
     .rules ol{grid-template-columns:1fr}
     .rules{padding:28px 22px}
     .count{width:100%; margin-left:0; order:6}
