@@ -1,10 +1,10 @@
 # 🧭 KIRIN AI Tools Repository
 
-> A curated, maintained guide to AI tools for **Foster Hybrid MBA students** — organized by *what you're trying to get done*, not by hype.
+> A curated, maintained guide to AI tools for **Foster Hybrid MBA students**, organized by *what you're trying to get done*, not by hype.
 
 Most "best AI tools" lists are SEO bait. This one is built by your cohort, for your cohort: every entry tells you what a tool actually does, who it's for, what it costs, and how hard it is to pick up. Start with your task, find the category, pick one tool, and go.
 
-**🌐 Live site:** `index.html` is a standalone website (open it locally, or deploy — see below). This README is the maintainers' page; the website is what you send students.
+**🌐 Live site:** `index.html` is a standalone website (open it locally or deploy it, see below). This README is the maintainers' page; the website is what you send students.
 **Maintained by the Foster HMBA AI Cabinet** · Technical & Governance Lead: Tyler Futch · AI Chair: Nick Trezza
 **Handoff:** This repo passes to **Cohort 10** at the Sept 2026 onboarding. See [`CONTRIBUTING.md`](CONTRIBUTING.md).
 **What's changed:** pricing corrections, renames, and other edits are logged in [`CHANGELOG.md`](CHANGELOG.md).
@@ -15,9 +15,9 @@ Most "best AI tools" lists are SEO bait. This one is built by your cohort, for y
 
 **New to all of this?** Don't install ten things. Do this:
 
-1. **Pick one daily driver** from *General-Purpose Assistants* — ChatGPT, Claude, or Gemini. Learn it well.
-2. **Add a research tool** when you need citations — Perplexity or Gemini Notebook (formerly NotebookLM).
-3. **Add specialized tools only when a task demands it** — a deck (Gamma), a dashboard (Power BI), meeting notes (Otter).
+1. **Pick one daily driver** from *General-Purpose Assistants*, such as ChatGPT, Claude, or Gemini. Learn it well.
+2. **Add a research tool** when you need citations, such as Perplexity or Gemini Notebook (formerly NotebookLM).
+3. **Add specialized tools only when a task demands it**, such as a deck (Gamma), a dashboard (Power BI), meeting notes (Otter).
 4. **Read the [Ground Rules](#-ground-rules-read-before-graded-work) before using any of it on graded work.**
 
 **The near-zero-cost stack** (honest version): the free tier of **ChatGPT, Claude, or Gemini** plus **Gemini Notebook** (free) handles most day-to-day coursework without a paid subscription. Two verified student offers stretch that further: **Gemini AI Pro free for 12 months** for verified US college students (verify through SheerID, redeem by 2026-12-31, auto-renews at full price afterward) and **GitHub Copilot Student**, free for verified students. Paid tiers are worth it only once you hit free-tier limits regularly. Don't pay on day one.
@@ -33,7 +33,7 @@ Most "best AI tools" lists are SEO bait. This one is built by your cohort, for y
 
 <!-- TOOLS:START -->
 
-_Tool count: **38** across **12** categories. Pricing accurate as of **2026-05** — always verify on the provider's page._
+_Tool count: **38** across **12** categories. Pricing accurate as of **2026-05**. Always verify on the provider's page._
 
 ### 💬 General-Purpose Assistants
 
@@ -165,28 +165,28 @@ The part most tool lists skip. Read the Ground Rules on the site before using an
 
 The Governance category above lists resources; these are the principles behind them. As a cohort representing Foster, how we use AI reflects on the program.
 
-1. **Course policy wins.** Rules differ by course, instructor, and assignment. If a syllabus is silent, ask — don't assume permission.
+1. **Course policy wins.** Rules differ by course, instructor, and assignment. If a syllabus is silent, ask. Don't assume permission.
 2. **Disclose, disclose, disclose.** Undisclosed AI use carries the heaviest penalties at most institutions; proactive disclosure usually carries the lightest. When unsure, add a one-line note on how you used AI.
 3. **Never paste confidential or personal data into a consumer AI tool.** No employer data, client info, unpublished research, NDAs, or PII. Assume free-tier inputs may be used for training unless you've turned that off in settings.
 4. **AI is a starting point, not a source.** Verify every fact, number, and citation it gives you. Models invent plausible-sounding references.
-5. **Get consent before recording people.** Transcription tools (Otter, Fireflies) capture others' words — tell the room first.
+5. **Get consent before recording people.** Transcription tools (Otter, Fireflies) capture others' words, so tell the room first.
 6. **Paraphrasing to beat a detector is still misconduct.** Detectors are imperfect and produce false positives; disclosure is the real protection, not obfuscation.
 
 ---
 
 ## 🔌 KIRIN integration
 
-[`tools.yaml`](tools.yaml) is the canonical, structured source of truth. On every build it's also exported to [`tools.json`](tools.json) — formatted for ingestion as a **KIRIN knowledge-base module** (clean keys, no markdown inside values), so KIRIN can answer "what's the best tool for X?" from the cabinet's curated list. The website and README tables are generated from the same data.
+[`tools.yaml`](tools.yaml) is the canonical, structured source of truth. On every build it's also exported to [`tools.json`](tools.json), formatted for ingestion as a **KIRIN knowledge-base module** (clean keys, no markdown inside values), so KIRIN can answer "what's the best tool for X?" from the cabinet's curated list. The website and README tables are generated from the same data.
 
 **Keeping the cohort coming back.** Two mechanisms turn this from a static directory into a living resource, both driven by the `added` date in `tools.yaml`:
-- **On the site** — a "Recently added" strip and per-tool **NEW** badges that auto-clear after 30 days, plus a changelog. Nothing to maintain; it's all derived from `added`.
-- **Pushed monthly** — a "what's new this month" email to the cohort via n8n + SES, reading the same `tools.json`. Spec and ready-to-paste Code node in [`docs/monthly-digest.md`](docs/monthly-digest.md). It only sends when something was actually added.
+- **On the site.** A "Recently added" strip and per-tool **NEW** badges that auto-clear after 30 days, plus a changelog. Nothing to maintain; it's all derived from `added`.
+- **Pushed monthly.** A "what's new this month" email to the cohort via n8n + SES, reading the same `tools.json`. Spec and ready-to-paste Code node in [`docs/monthly-digest.md`](docs/monthly-digest.md). It only sends when something was actually added.
 
 ---
 
 ## 🛠️ Maintaining this repo
 
-The website (`index.html`) and the tables above are **generated** — never hand-edit them.
+The website (`index.html`) and the tables above are **generated**. Never hand-edit them.
 
 ```bash
 # 1. Edit the catalog
@@ -204,7 +204,7 @@ git push
 
 Quarterly pricing refresh: `python scripts/stale.py` lists every tool not re-verified in 90 days.
 
-Full contributor and handoff guidance — entry schema, review cadence, the quarterly pricing refresh, and ownership transfer to C10 — lives in [`CONTRIBUTING.md`](CONTRIBUTING.md). To propose a tool, copy [`TEMPLATE.md`](TEMPLATE.md).
+Full contributor and handoff guidance, covering entry schema, review cadence, the quarterly pricing refresh, and ownership transfer to C10, lives in [`CONTRIBUTING.md`](CONTRIBUTING.md). To propose a tool, copy [`TEMPLATE.md`](TEMPLATE.md).
 
 ---
 
@@ -217,15 +217,15 @@ Full contributor and handoff guidance — entry schema, review cadence, the quar
 python -m http.server 8000   # then open http://localhost:8000
 ```
 
-**Vercel** (matches the team's existing workflow) — import the GitHub repo; framework preset **Other**, no build command, output dir = repo root. Pushes to `main` auto-deploy.
+**Vercel** (matches the team's existing workflow). Import the GitHub repo; framework preset **Other**, no build command, output dir = repo root. Pushes to `main` auto-deploy.
 
-**GitHub Pages** (zero extra accounts) — repo **Settings → Pages → Deploy from a branch → `main` / root**. Done.
+**GitHub Pages** (zero extra accounts). In the repo, go to **Settings → Pages → Deploy from a branch → `main` / root**. Done.
 
 ---
 
 ## 📄 License
 
-Content is shared under **CC BY 4.0** — fork it, adapt it, pass it on. Attribution to the Foster HMBA AI Cabinet appreciated.
+Content is shared under **CC BY 4.0**. Fork it, adapt it, pass it on. Attribution to the Foster HMBA AI Cabinet appreciated.
 
 ---
 

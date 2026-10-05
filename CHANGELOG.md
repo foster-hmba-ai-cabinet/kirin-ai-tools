@@ -12,9 +12,11 @@ Every change to `tools.yaml` gets an entry here, new tools included. (The site's
 ## 2026-10-05
 
 ### Added
+- `build.py` fails if the generated `index.html` or `README.md` contains an em dash or en dash, printing the file, line, and nearby text for each.
 - `scripts/check_assets.py`, run by `build.py`: the build now fails if `index.html` references a local file (src, href, srcset, CSS url(), or a logo-map entry) that is missing on disk or ignored by git. `python scripts/check_assets.py --self-test` proves the check.
 
 ### Changed
+- **README and build output:** replaced the remaining em dashes in `build.py` (including the two strings it writes into the README) and in the README's hand-written sections with commas or periods.
 - **Catalog copy:** replaced the em dashes in tool and category text with commas or periods (and a hyphen in Claude's Max price range). Three entries gained a connecting word ("with" or "for"); no facts, prices, or dates changed.
 
 ## 2026-10-04

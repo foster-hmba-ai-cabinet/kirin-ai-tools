@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-build.py — regenerate the website and the README from tools.yaml.
+build.py. Regenerate the website and the README from tools.yaml.
 
 `tools.yaml` is the single source of truth. This script:
   1. Injects the tool data (as JSON) into index.html  -> the live website,
@@ -52,7 +52,7 @@ def load_catalog() -> dict:
     """Load tools.yaml, normalizing date fields to 'YYYY-MM-DD' strings.
 
     Unquoted YAML dates (added: 2026-06-15) load as datetime.date objects,
-    which json.dumps can't serialize — normalize them here so either form works.
+    which json.dumps can't serialize. Normalize them here so either form works.
     """
     catalog = yaml.safe_load(CATALOG.read_text(encoding="utf-8"))
     for t in catalog.get("tools", []):
@@ -118,7 +118,7 @@ def build_site(catalog: dict) -> None:
     static = {
         "toolcount": str(len(catalog["tools"])),
         "catcount": str(len(catalog["categories"])),
-        "asof": str(catalog.get("meta", {}).get("pricing_as_of", "—")),
+        "asof": str(catalog.get("meta", {}).get("pricing_as_of", "n/a")),
     }
     for el_id, value in static.items():
         el = re.compile(rf'(<b id="{el_id}">)[^<]*(</b>)')
@@ -147,7 +147,7 @@ def build_readme(catalog: dict) -> None:
     lines = [
         f"_Tool count: **{len(catalog['tools'])}** across **{len(cats)}** "
         f"categories. Pricing accurate as of "
-        f"**{catalog['meta']['pricing_as_of']}** — always verify on the "
+        f"**{catalog['meta']['pricing_as_of']}**. Always verify on the "
         "provider's page._",
         "",
     ]
@@ -155,7 +155,7 @@ def build_readme(catalog: dict) -> None:
         lines += [f"### {c['title']}", "", c["blurb"].strip(), ""]
         rows = by_cat.get(c["id"], [])
         if not rows:
-            lines += ["_No tools listed yet — contributions welcome._", ""]
+            lines += ["_No tools listed yet. Contributions welcome._", ""]
             continue
         lines += ["| Tool | What it does | Best for | Cost | Level |",
                   "|------|--------------|----------|------|-------|"]
@@ -180,11 +180,29 @@ def build_readme(catalog: dict) -> None:
     README.write_text(f"{pre}{R_START}\n\n{block}\n{R_END}{post}", encoding="utf-8")
 
 
+DASHES = re.compile("[\u2014\u2013]")  # em dash, en dash
+
+
+def find_dashes(path: Path) -> list[str]:
+    """One line per em/en dash in a generated file: file:line, then nearby text."""
+    hits = []
+    for n, line in enumerate(path.read_text(encoding="utf-8").splitlines(), 1):
+        for m in DASHES.finditer(line):
+            ctx = line[max(0, m.start() - 40):m.end() + 40].strip()
+            name = "em dash" if m.group() == "\u2014" else "en dash"
+            hits.append(f"{path.name}:{n}: {name} in ...{ctx}...")
+    return hits
+
+
 def main() -> None:
     catalog = load_catalog()
     validate(catalog)
     build_site(catalog)
     build_readme(catalog)
+    dashes = find_dashes(INDEX) + find_dashes(README)
+    if dashes:
+        sys.exit("Dash check failed (this project bans em and en dashes; use a "
+                 "comma, period, or hyphen):\n  " + "\n  ".join(dashes))
     problems = check_assets.check(ROOT)
     if problems:
         sys.exit("Asset check failed (index.html references files that won't "
