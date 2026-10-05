@@ -6,8 +6,13 @@ corrections, tool renames, copy changes, and tooling. The format follows
 so entries are grouped by date, newest first.
 
 Every change to `tools.yaml` gets an entry here, new tools included. (The site's
-**📜 Changelog** section separately lists new tools automatically from each tool's
+**Changelog** section separately lists new tools automatically from each tool's
 `added` date.)
+
+## 2026-10-05
+
+### Changed
+- **Catalog copy:** replaced the em dashes in tool and category text with commas or periods (and a hyphen in Claude's Max price range). Three entries gained a connecting word ("with" or "for"); no facts, prices, or dates changed.
 
 ## 2026-10-04
 

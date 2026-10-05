@@ -32,7 +32,7 @@
       "id": "data",
       "title": "📊 Data Analysis & Visualization",
       "order": 4,
-      "blurb": "Turn spreadsheets and datasets into analysis and dashboards — from chat-based analysts to enterprise BI."
+      "blurb": "Turn spreadsheets and datasets into analysis and dashboards, from chat-based analysts to enterprise BI."
     },
     {
       "id": "design",
@@ -44,7 +44,7 @@
       "id": "slides",
       "title": "🎤 Presentations & Slides",
       "order": 6,
-      "blurb": "Get a first-draft deck in minutes. Always rework AI slides before presenting — they read as generic out of the box."
+      "blurb": "Get a first-draft deck in minutes. Always rework AI slides before presenting. They read as generic out of the box."
     },
     {
       "id": "audio",
@@ -68,7 +68,7 @@
       "id": "coding",
       "title": "💻 Coding & Technical",
       "order": 10,
-      "blurb": "For the analytics, data, and tech-track electives — or anyone learning to build."
+      "blurb": "For the analytics, data, and tech-track electives, or anyone learning to build."
     },
     {
       "id": "career",
@@ -90,7 +90,7 @@
       "category": "general",
       "what": "Conversational assistant for writing, analysis, brainstorming, and light coding; built-in data analysis, image generation, and web browsing.",
       "best_for": "A reliable all-rounder and most people's first tool.",
-      "pricing": "Free; Go $8/mo (Free and Go may include ads in the US); Plus $20/mo; Pro from $100/mo (3 usage tiers) — Plus and Pro are ad-free",
+      "pricing": "Free; Go $8/mo (Free and Go may include ads in the US); Plus $20/mo; Pro from $100/mo (3 usage tiers). Plus and Pro are ad-free",
       "cost_tier": "Freemium",
       "difficulty": "Beginner",
       "contexts": [
@@ -108,7 +108,7 @@
       "category": "general",
       "what": "Conversational assistant especially strong at long-document analysis, careful reasoning, and natural writing.",
       "best_for": "Nuanced writing, reading large PDFs/case packs, and work where tone matters.",
-      "pricing": "Free; Pro $20/mo ($17/mo billed annually); Max $100–200/mo",
+      "pricing": "Free; Pro $20/mo ($17/mo billed annually); Max $100-200/mo",
       "cost_tier": "Freemium",
       "difficulty": "Beginner",
       "contexts": [
@@ -126,7 +126,7 @@
       "category": "general",
       "what": "Google's assistant with a very large context window, deeply integrated into Gmail, Docs, Drive, and Sheets; also generates images.",
       "best_for": "Students who live in Google Workspace; fits an entire semester of notes in context.",
-      "pricing": "Free; AI Plus ~$7.99/mo, AI Pro $19.99/mo — verified US college students get 12 months of AI Pro free, redeem by 2026-12-31",
+      "pricing": "Free; AI Plus ~$7.99/mo, AI Pro $19.99/mo. Verified US college students get 12 months of AI Pro free, redeem by 2026-12-31",
       "cost_tier": "Free for students",
       "difficulty": "Beginner",
       "contexts": [
@@ -153,7 +153,7 @@
       ],
       "added": "2026-04-20",
       "last_verified": "2026-04-20",
-      "notes": "Foster/UW may provide M365 Copilot access — check before paying."
+      "notes": "Foster/UW may provide M365 Copilot access. Check before paying."
     },
     {
       "name": "Perplexity",
@@ -161,7 +161,7 @@
       "category": "research",
       "what": "AI answer engine that searches the live web and returns sourced, cited answers.",
       "best_for": "Cited research, fact-checking, and current-events questions where a citation trail matters.",
-      "pricing": "Free; Pro paid, ~$9/mo on a limited-time 50% off annual promo as of 2026-09-30 (standard rate is higher) — the previously listed $4.99/mo Education Pro rate no longer appears on the plan page",
+      "pricing": "Free; Pro paid, ~$9/mo on a limited-time 50% off annual promo as of 2026-09-30 (standard rate is higher). The previously listed $4.99/mo Education Pro rate no longer appears on the plan page",
       "cost_tier": "Freemium",
       "difficulty": "Beginner",
       "contexts": [
@@ -187,7 +187,7 @@
       ],
       "added": "2026-04-20",
       "last_verified": "2026-09-30",
-      "notes": "Its audio-overview feature turns your sources into a two-host podcast — great for the commute. Renamed from NotebookLM in July 2026."
+      "notes": "Its audio-overview feature turns your sources into a two-host podcast, great for the commute. Renamed from NotebookLM in July 2026."
     },
     {
       "name": "Elicit",
@@ -268,7 +268,7 @@
       ],
       "added": "2026-04-20",
       "last_verified": "2026-04-20",
-      "notes": "Paraphrasing to dodge a detector is not a free pass — disclosure rules still apply."
+      "notes": "Paraphrasing to dodge a detector is not a free pass. Disclosure rules still apply."
     },
     {
       "name": "Jasper",
@@ -289,7 +289,7 @@
       "name": "Julius AI",
       "url": "https://julius.ai",
       "category": "data",
-      "what": "Chat-based data analyst — upload a dataset, ask questions in plain English, get charts and statistics.",
+      "what": "Chat-based data analyst. Upload a dataset, ask questions in plain English, get charts and statistics.",
       "best_for": "Analyzing CSVs/Excel without writing formulas or code.",
       "pricing": "Free tier; paid plans",
       "cost_tier": "Freemium",
@@ -398,7 +398,7 @@
       ],
       "added": "2026-04-20",
       "last_verified": "2026-04-20",
-      "notes": "Marketed as commercially safer than open image generators — relevant for brand work."
+      "notes": "Marketed as commercially safer than open image generators, relevant for brand work."
     },
     {
       "name": "Midjourney",
@@ -420,7 +420,7 @@
       "name": "Ideogram",
       "url": "https://ideogram.ai",
       "category": "design",
-      "what": "Image generation with best-in-class legible text rendering — posters, logos, and graphics with words in them.",
+      "what": "Image generation with best-in-class legible text rendering, for posters, logos, and graphics with words in them.",
       "best_for": "Branded graphics and social images where the text has to look right.",
       "pricing": "Free tier; paid plans",
       "cost_tier": "Freemium",
@@ -520,7 +520,7 @@
       "url": "https://fireflies.ai",
       "category": "meetings",
       "what": "Records, transcribes, and summarizes meetings across Zoom, Meet, and Teams; searchable archive and action items.",
-      "best_for": "Team-project meetings — auto-captured notes and to-dos.",
+      "best_for": "Team-project meetings, with auto-captured notes and to-dos.",
       "pricing": "Free tier; paid plans",
       "cost_tier": "Freemium",
       "difficulty": "Beginner",
@@ -538,7 +538,7 @@
       "category": "meetings",
       "what": "AI built into Notion for notes, task management, summaries, and project docs in one workspace.",
       "best_for": "Keeping notes, study plans, and group projects organized in a single place.",
-      "pricing": "Bundled into Notion plans, not a separate add-on: Free has limited AI, Plus $10/user/mo, Business $20/user/mo has full AI — Plus is free for students and educators (1 member)",
+      "pricing": "Bundled into Notion plans, not a separate add-on: Free has limited AI, Plus $10/user/mo, Business $20/user/mo has full AI. Plus is free for students and educators (1 member)",
       "cost_tier": "Freemium",
       "difficulty": "Intermediate",
       "contexts": [
@@ -569,7 +569,7 @@
       "name": "Make",
       "url": "https://www.make.com",
       "category": "automation",
-      "what": "Visual, node-based automation platform — a flexible Zapier alternative.",
+      "what": "Visual, node-based automation platform, a flexible Zapier alternative.",
       "best_for": "More complex automations on a tighter budget.",
       "pricing": "Free tier; paid plans",
       "cost_tier": "Freemium",
@@ -587,7 +587,7 @@
       "category": "coding",
       "what": "AI pair-programmer that autocompletes and explains code inside your editor.",
       "best_for": "Coding assignments and learning to program.",
-      "pricing": "Free tier; Pro $10/mo, Pro+ $39/mo, Max $100/mo — Copilot Student is free for verified students",
+      "pricing": "Free tier; Pro $10/mo, Pro+ $39/mo, Max $100/mo. Copilot Student is free for verified students",
       "cost_tier": "Free for students",
       "difficulty": "Intermediate",
       "contexts": [
@@ -649,7 +649,7 @@
       "name": "Your course / Foster AI policy",
       "url": "https://foster.uw.edu",
       "category": "governance",
-      "what": "The single most important \"tool\" here — the AI-use rules for each specific course and assignment.",
+      "what": "The single most important \"tool\" here, the AI-use rules for each specific course and assignment.",
       "best_for": "Knowing what's allowed before you use anything else on this list.",
       "pricing": "Free",
       "cost_tier": "Free",
@@ -666,7 +666,7 @@
       "url": "https://apastyle.apa.org/blog/how-to-cite-chatgpt",
       "category": "governance",
       "what": "How to cite and disclose AI assistance in academic work.",
-      "best_for": "Getting disclosure right — undisclosed use carries the heaviest penalties.",
+      "best_for": "Getting disclosure right. Undisclosed use carries the heaviest penalties.",
       "pricing": "Free",
       "cost_tier": "Free",
       "difficulty": "Beginner",
@@ -682,7 +682,7 @@
       "url": "https://www.turnitin.com",
       "category": "governance",
       "what": "Plagiarism and AI-writing detection used by many institutions.",
-      "best_for": "Understanding how submissions may be screened — and that detectors produce false positives.",
+      "best_for": "Understanding how submissions may be screened, and that detectors produce false positives.",
       "pricing": "Institutional (used by your school, not bought by you)",
       "cost_tier": "Institutional",
       "difficulty": "Beginner",
@@ -697,7 +697,7 @@
       "name": "Credo AI",
       "url": "https://www.credo.ai",
       "category": "governance",
-      "what": "Enterprise AI governance platform — policy packs, generative-AI guardrails, and audit trails.",
+      "what": "Enterprise AI governance platform with policy packs, generative-AI guardrails, and audit trails.",
       "best_for": "Anyone exploring AI risk, GRC, or compliance as a career direction.",
       "pricing": "Paid / Enterprise",
       "cost_tier": "Paid",
