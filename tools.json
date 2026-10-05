@@ -350,6 +350,23 @@
       "last_verified": "2026-09-30"
     },
     {
+      "name": "Claude for Financial Services (agent templates)",
+      "url": "https://github.com/anthropics/financial-services",
+      "category": "data",
+      "what": "Anthropic's open-source finance skills and agents for Claude, including Market Researcher, Model Builder, and Earnings Reviewer, that build comps, DCF, LBO, and three-statement models in Excel.",
+      "best_for": "Finance and valuation coursework, case comps, and practicing analyst-style models.",
+      "pricing": "Free (Apache 2.0); Skills work on every Claude plan including Free, with code execution turned on; full agents need paid data feeds",
+      "cost_tier": "Freemium",
+      "difficulty": "Advanced",
+      "contexts": [
+        "education",
+        "professional"
+      ],
+      "added": "2026-10-04",
+      "last_verified": "2026-10-04",
+      "notes": "The base DCF, LBO, and three-statement skills are free to use. The full agents expect FactSet, S&P Capital IQ, or similar data access, so they are realistic only if the school provides it. Read the Ground Rules before using them on graded work."
+    },
+    {
       "name": "Canva",
       "url": "https://www.canva.com",
       "category": "design",

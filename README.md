@@ -33,7 +33,7 @@ Most "best AI tools" lists are SEO bait. This one is built by your cohort, for y
 
 <!-- TOOLS:START -->
 
-_Tool count: **37** across **12** categories. Pricing accurate as of **2026-05** — always verify on the provider's page._
+_Tool count: **38** across **12** categories. Pricing accurate as of **2026-05** — always verify on the provider's page._
 
 ### 💬 General-Purpose Assistants
 
@@ -78,6 +78,7 @@ Turn spreadsheets and datasets into analysis and dashboards — from chat-based 
 | **[Excel + Copilot](https://www.microsoft.com/microsoft-365/excel)** | Natural-language formulas, analysis, and chart generation inside Excel. | Spreadsheet analysis when you'd rather describe the task than build the formula. | 🔴 Paid<br><sub>Excel paid; Copilot in Excel requires M365 Copilot</sub><br><sub>✓ verified 2026-04-20</sub> | Intermediate |
 | **[Microsoft Power BI](https://powerbi.microsoft.com)** | Business-intelligence dashboards with a Copilot for natural-language reporting; integrates tightly with Excel. | Enterprise-style reporting and dashboards for projects and capstones. | 🟡 Freemium<br><sub>Power BI Desktop free; Pro paid (student options via Microsoft)</sub><br><sub>✓ verified 2026-04-20</sub> | Intermediate |
 | **[Tableau](https://www.tableau.com)** | Industry-standard visual analytics platform with AI-assisted insights. | Serious data viz and analytics-track work; a résumé-worthy skill. | 🎓 Free for students<br><sub>Tableau Desktop paid; Tableau Desktop Public Edition free for students via Tableau Academic (non-commercial, publishes to Tableau Public only)</sub><br><sub>✓ verified 2026-09-30</sub> | Advanced |
+| **[Claude for Financial Services (agent templates)](https://github.com/anthropics/financial-services)** | Anthropic's open-source finance skills and agents for Claude, including Market Researcher, Model Builder, and Earnings Reviewer, that build comps, DCF, LBO, and three-statement models in Excel. | Finance and valuation coursework, case comps, and practicing analyst-style models. <br>_⚠ The base DCF, LBO, and three-statement skills are free to use. The full agents expect FactSet, S&P Capital IQ, or similar data access, so they are realistic only if the school provides it. Read the Ground Rules before using them on graded work._ | 🟡 Freemium<br><sub>Free (Apache 2.0); Skills work on every Claude plan including Free, with code execution turned on; full agents need paid data feeds</sub><br><sub>✓ verified 2026-10-04</sub> | Advanced |
 
 ### 🖼️ Image, Design & Brand
 

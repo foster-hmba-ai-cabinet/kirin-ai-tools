@@ -9,6 +9,11 @@ Every change to `tools.yaml` gets an entry here, new tools included. (The site's
 **📜 Changelog** section separately lists new tools automatically from each tool's
 `added` date.)
 
+## 2026-10-04
+
+### Added
+- **Claude for Financial Services:** Anthropic's free, open-source finance agents and skills (DCF, LBO, three-statement models). The base skills work on any Claude plan; the full agents need institutional data access such as FactSet or S&P Capital IQ.
+
 ## 2026-09-30
 
 Covers [#1](https://github.com/foster-hmba-ai-cabinet/kirin-ai-tools/pull/1),
