@@ -16,6 +16,7 @@ Usage:
 """
 
 import datetime as dt
+import html as htmllib
 import json
 import re
 import sys
@@ -35,6 +36,9 @@ README = ROOT / "README.md"
 TOOLS_JSON = ROOT / "tools.json"
 
 R_START, R_END = "<!-- TOOLS:START -->", "<!-- TOOLS:END -->"
+# docs/ pages render on GitHub; the static site doesn't render Markdown.
+# Keep in sync with REPO in index.html.
+REPO_BLOB = "https://github.com/foster-hmba-ai-cabinet/kirin-ai-tools/blob/main/"
 COST_BADGE = {
     "Free": "🟢 Free",
     "Freemium": "🟡 Freemium",
@@ -134,7 +138,24 @@ def build_site(catalog: dict) -> None:
             sys.exit(f'Could not find <b id="{el_id}"> in index.html')
         html = el.sub(lambda m: m.group(1) + esc_html(value) + m.group(2),
                       html, count=1)
+    html = inject_rules_guide(html, catalog)
     INDEX.write_text(html, encoding="utf-8")
+
+
+def inject_rules_guide(html: str, catalog: dict) -> str:
+    """Write the governance guide link into the Ground Rules section as
+    static markup, so it reads correctly without JavaScript."""
+    guide = next((c.get("guide") for c in catalog["categories"]
+                  if c["id"] == "governance"), None)
+    if not guide:
+        sys.exit("The governance category needs a 'guide' for the Ground Rules link")
+    el = re.compile(r'(<p class="rules-guide" id="rules-guide">).*?(</p>)', re.DOTALL)
+    if not el.search(html):
+        sys.exit('Could not find <p id="rules-guide"> in index.html')
+    href = htmllib.escape(REPO_BLOB + guide["path"], quote=True)
+    link = (f'<a href="{href}" target="_blank" rel="noopener">'
+            f'{htmllib.escape(guide["label"], quote=False)}</a>')
+    return el.sub(lambda m: m.group(1) + link + m.group(2), html, count=1)
 
 
 def esc_html(text: str) -> str:
