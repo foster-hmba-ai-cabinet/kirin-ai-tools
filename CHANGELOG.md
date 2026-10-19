@@ -13,6 +13,7 @@ Every change to `tools.yaml` gets an entry here, new tools included. (The site's
 
 ### Fixed
 - **Governance guide link without JavaScript:** the site's link to [AI Governance: Where to Start](docs/ai-governance.md) was rendered only by the page script, so visitors without JavaScript never saw it. `build.py` now also writes a static link into the Ground Rules section of `index.html`, from the Governance category's `guide` in `tools.yaml`, and fails if the placeholder is missing. The script-rendered link under the Governance category is unchanged.
+- **Dashes in `stale.py` output:** the `--markdown` heading and the `--help` description used em dashes, which ended up in pasted issues and PRs. Both now use a colon. `build.py`'s dash check now also runs `stale.py` (Markdown, table, and `--help`, listing every tool) and fails on any em or en dash in its output, or if `stale.py` itself fails.
 
 ### Added
 - **AI Governance: Where to Start** ([`docs/ai-governance.md`](docs/ai-governance.md)): a reference page for students asked to help write or evaluate AI policy at work, covering ISO/IEC 42001, ISO/IEC 27090, ISO/IEC 27001/27002, and the NIST AI RMF, with guidance on choosing between them and a note on cost. Linked from the README and the site's Governance category. These are standards, not tools, so they are not entries in `tools.yaml`.

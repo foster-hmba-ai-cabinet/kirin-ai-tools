@@ -19,6 +19,7 @@ import datetime as dt
 import html as htmllib
 import json
 import re
+import subprocess
 import sys
 from pathlib import Path
 
@@ -216,12 +217,32 @@ DASHES = re.compile("[\u2014\u2013]")  # em dash, en dash
 
 def find_dashes(path: Path) -> list[str]:
     """One line per em/en dash in a generated file: file:line, then nearby text."""
+    return dashes_in(path.read_text(encoding="utf-8"), path.name)
+
+
+def dashes_in(text: str, label: str) -> list[str]:
     hits = []
-    for n, line in enumerate(path.read_text(encoding="utf-8").splitlines(), 1):
+    for n, line in enumerate(text.splitlines(), 1):
         for m in DASHES.finditer(line):
             ctx = line[max(0, m.start() - 40):m.end() + 40].strip()
             name = "em dash" if m.group() == "\u2014" else "en dash"
-            hits.append(f"{path.name}:{n}: {name} in ...{ctx}...")
+            hits.append(f"{label}:{n}: {name} in ...{ctx}...")
+    return hits
+
+
+def find_stale_dashes() -> list[str]:
+    """Dashes in stale.py's output: its checklist gets pasted into issues and PRs.
+    --days -1 lists every tool, so every catalog string the output uses is checked."""
+    hits = []
+    for args in (["--markdown"], [], ["--help"]):
+        cmd = ["--days", "-1", *args]
+        r = subprocess.run(
+            [sys.executable, str(ROOT / "scripts" / "stale.py"), *cmd],
+            capture_output=True, text=True, encoding="utf-8",
+        )
+        if r.returncode not in (0, 1) or not r.stdout.strip():  # 1 = tools are stale
+            sys.exit(f"stale.py {' '.join(cmd)} failed (exit {r.returncode}):\n{r.stderr}")
+        hits += dashes_in(r.stdout, f"stale.py {' '.join(cmd)}")
     return hits
 
 
@@ -230,7 +251,7 @@ def main() -> None:
     validate(catalog)
     build_site(catalog)
     build_readme(catalog)
-    dashes = find_dashes(INDEX) + find_dashes(README)
+    dashes = find_dashes(INDEX) + find_dashes(README) + find_stale_dashes()
     if dashes:
         sys.exit("Dash check failed (this project bans em and en dashes; use a "
                  "comma, period, or hyphen):\n  " + "\n  ".join(dashes))

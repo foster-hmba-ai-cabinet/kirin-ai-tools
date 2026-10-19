@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-stale.py — list tools whose pricing hasn't been re-verified recently.
+stale.py: list tools whose pricing hasn't been re-verified recently.
 
 The quarterly pricing refresh in one command. Reads tools.yaml (the same
 loader as build.py) and prints every tool whose `last_verified` date is older
@@ -58,7 +58,7 @@ def main() -> None:
               f"{args.days} days (as of {args.as_of.isoformat()}).")
 
     if args.markdown:
-        print(f"## Pricing refresh — {args.as_of.isoformat()}\n")
+        print(f"## Pricing refresh: {args.as_of.isoformat()}\n")
         print(f"_{header}_\n")
         print("For each: check the provider's page, update `pricing` if it "
               "changed, set `last_verified` to the check date, then run "
