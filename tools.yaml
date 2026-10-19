@@ -18,6 +18,9 @@
 #            on every re-check, even if nothing changed. Must be >= added.
 #            Quote all dates ("2026-06-15"). `python scripts/stale.py` lists
 #            tools not verified in the last 90 days (quarterly refresh).
+# guide:     optional on a category: {label, path} links a reference page in docs/
+#            (frameworks, standards, anything that isn't a tool) from that
+#            category on the site and in the README.
 # Pricing strings are point-in-time (see pricing_as_of). Verify on the provider
 # page before quoting to the cohort.
 # =============================================================================
@@ -106,6 +109,9 @@ categories:
     blurb: >-
       The part most tool lists skip. Read the Ground Rules on the site before
       using anything above in graded work.
+    guide:
+      label: "Writing or evaluating AI policy at work? Start with AI Governance: Where to Start"
+      path: docs/ai-governance.md
 
 tools:
   # --- General-Purpose Assistants ---

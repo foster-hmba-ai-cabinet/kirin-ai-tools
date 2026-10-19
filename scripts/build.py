@@ -64,6 +64,14 @@ def load_catalog() -> dict:
 
 def validate(catalog: dict) -> None:
     cat_ids = {c["id"] for c in catalog["categories"]}
+    for c in catalog["categories"]:
+        g = c.get("guide")
+        if g is None:
+            continue
+        if not g.get("label") or not g.get("path"):
+            sys.exit(f"Category '{c['id']}' guide needs both 'label' and 'path'")
+        if not (ROOT / g["path"]).is_file():
+            sys.exit(f"Category '{c['id']}' guide path '{g['path']}' does not exist")
     req = {"name", "url", "category", "what", "best_for", "pricing",
            "cost_tier", "difficulty", "contexts", "added", "last_verified"}
     today = dt.date.today()
@@ -153,6 +161,8 @@ def build_readme(catalog: dict) -> None:
     ]
     for c in cats:
         lines += [f"### {c['title']}", "", c["blurb"].strip(), ""]
+        if c.get("guide"):
+            lines += [f"📘 [{esc(c['guide']['label'])}]({c['guide']['path']})", ""]
         rows = by_cat.get(c["id"], [])
         if not rows:
             lines += ["_No tools listed yet. Contributions welcome._", ""]

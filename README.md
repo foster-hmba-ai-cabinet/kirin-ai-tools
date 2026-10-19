@@ -150,6 +150,8 @@ Résumés, networking, interview prep, and application tracking.
 
 The part most tool lists skip. Read the Ground Rules on the site before using anything above in graded work.
 
+📘 [Writing or evaluating AI policy at work? Start with AI Governance: Where to Start](docs/ai-governance.md)
+
 | Tool | What it does | Best for | Cost | Level |
 |------|--------------|----------|------|-------|
 | **[Your course / Foster AI policy](https://foster.uw.edu)** | The single most important "tool" here, the AI-use rules for each specific course and assignment. | Knowing what's allowed before you use anything else on this list. <br>_⚠ Rules vary by course and instructor. When in doubt, ask and disclose._ | 🟢 Free<br><sub>Free</sub><br><sub>✓ verified 2026-04-20</sub> | Beginner |
@@ -164,6 +166,8 @@ The part most tool lists skip. Read the Ground Rules on the site before using an
 ## 🛡️ Ground Rules (read before graded work)
 
 The Governance category above lists resources; these are the principles behind them. As a cohort representing Foster, how we use AI reflects on the program.
+
+**Helping write or evaluate AI policy at work?** See [AI Governance: Where to Start](docs/ai-governance.md) for the frameworks and standards (ISO/IEC 42001, ISO/IEC 27090, ISO/IEC 27001/27002, NIST AI RMF) and how to choose between them.
 
 1. **Course policy wins.** Rules differ by course, instructor, and assignment. If a syllabus is silent, ask. Don't assume permission.
 2. **Disclose, disclose, disclose.** Undisclosed AI use carries the heaviest penalties at most institutions; proactive disclosure usually carries the lightest. When unsure, add a one-line note on how you used AI.

@@ -80,7 +80,11 @@
       "id": "governance",
       "title": "🛡️ Governance, Responsible Use & Compliance",
       "order": 12,
-      "blurb": "The part most tool lists skip. Read the Ground Rules on the site before using anything above in graded work."
+      "blurb": "The part most tool lists skip. Read the Ground Rules on the site before using anything above in graded work.",
+      "guide": {
+        "label": "Writing or evaluating AI policy at work? Start with AI Governance: Where to Start",
+        "path": "docs/ai-governance.md"
+      }
     }
   ],
   "tools": [
