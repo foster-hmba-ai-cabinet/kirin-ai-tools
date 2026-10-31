@@ -20,7 +20,7 @@ Most "best AI tools" lists are SEO bait. This one is built by your cohort, for y
 3. **Add specialized tools only when a task demands it**, such as a deck (Gamma), a dashboard (Power BI), meeting notes (Otter).
 4. **Read the [Ground Rules](#-ground-rules-read-before-graded-work) before using any of it on graded work.**
 
-**The near-zero-cost stack** (honest version): the free tier of **ChatGPT, Claude, or Gemini** plus **Gemini Notebook** (free) handles most day-to-day coursework without a paid subscription. Two verified student offers stretch that further: **Gemini AI Pro free for 12 months** for verified US college students (verify through SheerID, redeem by 2026-12-31, auto-renews at full price afterward) and **GitHub Copilot Student**, free for verified students. Paid tiers are worth it only once you hit free-tier limits regularly. Don't pay on day one.
+**The near-zero-cost stack** (honest version): start with **Purple (UW)**. It's free for UW students and run by UW, so coursework you put into it stays inside UW's environment and isn't used to train public models. For anything school-related, that makes it a better default than a consumer free tier. Add **Gemini Notebook** (free) for working from your readings. Purple is limited to university-related purposes, so keep the free tier of **ChatGPT, Claude, or Gemini** for everything else. Two verified student offers stretch that further: **Gemini AI Pro free for 12 months** for verified US college students (verify through SheerID, redeem by 2026-12-31, auto-renews at full price afterward) and **GitHub Copilot Student**, free for verified students. Paid tiers are worth it only once you hit free-tier limits regularly. Don't pay on day one.
 
 > **Student offers expire and change.** Before relying on one, check the **✓ verified** date on that tool's entry, then confirm on the provider's page.
 
@@ -33,7 +33,7 @@ Most "best AI tools" lists are SEO bait. This one is built by your cohort, for y
 
 <!-- TOOLS:START -->
 
-_Tool count: **38** across **12** categories. Pricing accurate as of **2026-05**. Always verify on the provider's page._
+_Tool count: **40** across **12** categories. Pricing accurate as of **2026-05**. Always verify on the provider's page._
 
 ### 💬 General-Purpose Assistants
 
@@ -41,6 +41,7 @@ Start here. These are the Swiss-army tools that handle writing, analysis, brains
 
 | Tool | What it does | Best for | Cost | Level |
 |------|--------------|----------|------|-------|
+| **[Purple (UW)](https://purple.uw.edu)** | UW's institutionally supported generative AI assistant, run in a University-managed environment and signed into with your NetID. | Coursework and other UW work where you want a free assistant that keeps your data inside UW's environment. <br>_⚠ UW's institutionally supported generative AI tool, available to students since 2026-07-15. Runs in a University-managed environment. Data entered is not used to train public models, inactive chats are deleted after 180 days, and UW does not monitor conversations. Named-user license tied to your NetID; it cannot be assigned to a shared NetID. Use is limited to university-related purposes. The UW pages describe "approved AI models" without naming them._ | 🟢 Free<br><sub>Free for UW students, faculty and staff</sub><br><sub>✓ verified 2026-10-31</sub> | Beginner |
 | **[ChatGPT](https://chatgpt.com)** | Conversational assistant for writing, analysis, brainstorming, and light coding; built-in data analysis, image generation, and web browsing. | A reliable all-rounder and most people's first tool. <br>_⚠ Free tier is enough for most coursework. Verify before pasting anything confidential._ | 🟡 Freemium<br><sub>Free; Go $8/mo (Free and Go may include ads in the US); Plus $20/mo; Pro from $100/mo (3 usage tiers). Plus and Pro are ad-free</sub><br><sub>✓ verified 2026-09-30</sub> | Beginner |
 | **[Claude](https://claude.ai)** | Conversational assistant especially strong at long-document analysis, careful reasoning, and natural writing. | Nuanced writing, reading large PDFs/case packs, and work where tone matters. <br>_⚠ Large context window handles full case packs in one go._ | 🟡 Freemium<br><sub>Free; Pro $20/mo ($17/mo billed annually); Max $100-200/mo</sub><br><sub>✓ verified 2026-09-30</sub> | Beginner |
 | **[Google Gemini](https://gemini.google.com)** | Google's assistant with a very large context window, deeply integrated into Gmail, Docs, Drive, and Sheets; also generates images. | Students who live in Google Workspace; fits an entire semester of notes in context. <br>_⚠ Free student year of AI Pro: verify student status through SheerID and redeem by 2026-12-31. Auto-renews at full price afterward._ | 🎓 Free for students<br><sub>Free; AI Plus ~$7.99/mo, AI Pro $19.99/mo. Verified US college students get 12 months of AI Pro free, redeem by 2026-12-31</sub><br><sub>✓ verified 2026-09-30</sub> | Beginner |
@@ -117,6 +118,7 @@ Transcribe lectures and team calls, capture action items, and organize notes. Ge
 |------|--------------|----------|------|-------|
 | **[Otter.ai](https://otter.ai)** | Live transcription with AI-generated meeting and lecture notes and summaries. | Transcribing classes and capturing what was said in real time. | 🟡 Freemium<br><sub>Free tier; paid plans</sub><br><sub>✓ verified 2026-04-20</sub> | Beginner |
 | **[Fireflies.ai](https://fireflies.ai)** | Records, transcribes, and summarizes meetings across Zoom, Meet, and Teams; searchable archive and action items. | Team-project meetings, with auto-captured notes and to-dos. <br>_⚠ Tell participants they're being recorded before it joins._ | 🟡 Freemium<br><sub>Free tier; paid plans</sub><br><sub>✓ verified 2026-04-20</sub> | Beginner |
+| **[Granola](https://www.granola.ai)** | AI meeting notes that transcribe your meetings and turn them into structured notes, on desktop and mobile. | Team-project meetings and calls where you want clean notes afterward. <br>_⚠ AI meeting notes. The free tier keeps 30 days of history and integrates only with Slack. Desktop and mobile apps._ | 🟡 Freemium<br><sub>Free (Basic, 30-day meeting history); Business $14/user/mo; Enterprise $35/user/mo</sub><br><sub>✓ verified 2026-10-31</sub> | Beginner |
 | **[Notion AI](https://www.notion.so/product/ai)** | AI built into Notion for notes, task management, summaries, and project docs in one workspace. | Keeping notes, study plans, and group projects organized in a single place. | 🟡 Freemium<br><sub>Bundled into Notion plans, not a separate add-on: Free has limited AI, Plus $10/user/mo, Business $20/user/mo has full AI. Plus is free for students and educators (1 member)</sub><br><sub>✓ verified 2026-09-30</sub> | Intermediate |
 
 ### ⚙️ Productivity & Workflow Automation
