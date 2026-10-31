@@ -9,6 +9,15 @@ Every change to `tools.yaml` gets an entry here, new tools included. (The site's
 **Changelog** section separately lists new tools automatically from each tool's
 `added` date.)
 
+## 2026-10-31
+
+### Added
+- **Purple (UW):** UW's own generative AI assistant, free for UW students, faculty and staff, and available to students since 2026-07-15. It runs in a University-managed environment, data entered isn't used to train public models, and inactive chats are deleted after 180 days. Use is limited to university-related purposes, and the license is tied to your NetID. Listed first under General-Purpose Assistants. Suggested by a classmate.
+- **Granola:** AI meeting notes on desktop and mobile. Free Basic plan with 30 days of meeting history (Slack is its only integration); Business $14/user/mo; Enterprise $35/user/mo. Listed under Meetings & Note-Taking. Suggested by a classmate.
+
+### Changed
+- **Near-zero-cost stack** (README and site hero): now leads with Purple as the default for anything school-related, since it's free, UW-run, and keeps coursework inside UW's environment rather than a consumer free tier. Gemini Notebook stays as the free reading tool. The consumer free tiers (ChatGPT, Claude, Gemini) are now for use outside university work, because Purple is limited to university-related purposes. The Gemini AI Pro and GitHub Copilot Student offers remain the next step.
+
 ## 2026-10-19
 
 ### Fixed
