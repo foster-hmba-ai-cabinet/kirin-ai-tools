@@ -17,6 +17,8 @@ Every change to `tools.yaml` gets an entry here, new tools included. (The site's
 
 ### Changed
 - **Near-zero-cost stack** (README and site hero): now leads with Purple as the default for anything school-related, since it's free, UW-run, and keeps coursework inside UW's environment rather than a consumer free tier. Gemini Notebook stays as the free reading tool. The consumer free tiers (ChatGPT, Claude, Gemini) are now for use outside university work, because Purple is limited to university-related purposes. The Gemini AI Pro and GitHub Copilot Student offers remain the next step.
+- **Granola:** the note now says recording others requires their consent, so tell participants before you record. This matches Fireflies.ai's note and Ground Rule 5 on recording people.
+- **Start here, step 1** (README and site): the daily driver is now **Purple (UW)** for university work, with the free tier of ChatGPT, Claude, or Gemini for anything outside it. The README's step previously suggested only ChatGPT, Claude, or Gemini, which contradicted the near-zero-cost stack copy that now leads with Purple; the site's step named no tool and now matches. Steps 2 and 3 are unchanged.
 
 ## 2026-10-19
 

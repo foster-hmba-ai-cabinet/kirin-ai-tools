@@ -481,7 +481,7 @@ tools:
     contexts: [education, professional]
     added: "2026-10-31"
     last_verified: "2026-10-31"
-    notes: AI meeting notes. The free tier keeps 30 days of history and integrates only with Slack. Desktop and mobile apps.
+    notes: AI meeting notes. The free tier keeps 30 days of history and integrates only with Slack. Desktop and mobile apps. Recording others requires their consent. Tell participants before you record.
     # Source: https://www.granola.ai/pricing
 
   - name: Notion AI
