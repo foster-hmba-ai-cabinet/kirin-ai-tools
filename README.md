@@ -15,7 +15,7 @@ Most "best AI tools" lists are SEO bait. This one is built by your cohort, for y
 
 **New to all of this?** Don't install ten things. Do this:
 
-1. **Pick one daily driver** from *General-Purpose Assistants*, such as ChatGPT, Claude, or Gemini. Learn it well.
+1. **Pick one daily driver.** For university work, that's **Purple (UW)** from *General-Purpose Assistants*; for anything outside it, use the free tier of ChatGPT, Claude, or Gemini. Learn it well.
 2. **Add a research tool** when you need citations, such as Perplexity or Gemini Notebook (formerly NotebookLM).
 3. **Add specialized tools only when a task demands it**, such as a deck (Gamma), a dashboard (Power BI), meeting notes (Otter).
 4. **Read the [Ground Rules](#-ground-rules-read-before-graded-work) before using any of it on graded work.**
@@ -118,7 +118,7 @@ Transcribe lectures and team calls, capture action items, and organize notes. Ge
 |------|--------------|----------|------|-------|
 | **[Otter.ai](https://otter.ai)** | Live transcription with AI-generated meeting and lecture notes and summaries. | Transcribing classes and capturing what was said in real time. | 🟡 Freemium<br><sub>Free tier; paid plans</sub><br><sub>✓ verified 2026-04-20</sub> | Beginner |
 | **[Fireflies.ai](https://fireflies.ai)** | Records, transcribes, and summarizes meetings across Zoom, Meet, and Teams; searchable archive and action items. | Team-project meetings, with auto-captured notes and to-dos. <br>_⚠ Tell participants they're being recorded before it joins._ | 🟡 Freemium<br><sub>Free tier; paid plans</sub><br><sub>✓ verified 2026-04-20</sub> | Beginner |
-| **[Granola](https://www.granola.ai)** | AI meeting notes that transcribe your meetings and turn them into structured notes, on desktop and mobile. | Team-project meetings and calls where you want clean notes afterward. <br>_⚠ AI meeting notes. The free tier keeps 30 days of history and integrates only with Slack. Desktop and mobile apps._ | 🟡 Freemium<br><sub>Free (Basic, 30-day meeting history); Business $14/user/mo; Enterprise $35/user/mo</sub><br><sub>✓ verified 2026-10-31</sub> | Beginner |
+| **[Granola](https://www.granola.ai)** | AI meeting notes that transcribe your meetings and turn them into structured notes, on desktop and mobile. | Team-project meetings and calls where you want clean notes afterward. <br>_⚠ AI meeting notes. The free tier keeps 30 days of history and integrates only with Slack. Desktop and mobile apps. Recording others requires their consent. Tell participants before you record._ | 🟡 Freemium<br><sub>Free (Basic, 30-day meeting history); Business $14/user/mo; Enterprise $35/user/mo</sub><br><sub>✓ verified 2026-10-31</sub> | Beginner |
 | **[Notion AI](https://www.notion.so/product/ai)** | AI built into Notion for notes, task management, summaries, and project docs in one workspace. | Keeping notes, study plans, and group projects organized in a single place. | 🟡 Freemium<br><sub>Bundled into Notion plans, not a separate add-on: Free has limited AI, Plus $10/user/mo, Business $20/user/mo has full AI. Plus is free for students and educators (1 member)</sub><br><sub>✓ verified 2026-09-30</sub> | Intermediate |
 
 ### ⚙️ Productivity & Workflow Automation
